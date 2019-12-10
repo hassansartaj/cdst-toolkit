@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_UryU1s18EemaKvDE14XQLQ" name="Plane">
+  <packageImport xmi:id="_UryU1818EemaKvDE14XQLQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ury7UM18EemaKvDE14XQLQ" name="Airplane">
+    <ownedAttribute xmi:id="_Ury7Uc18EemaKvDE14XQLQ" name="altitude" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ury7Us18EemaKvDE14XQLQ" name="airspeed" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ury7U818EemaKvDE14XQLQ" name="roll" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ury7VM18EemaKvDE14XQLQ" name="pitch" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ury7Vc18EemaKvDE14XQLQ" name="heading" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ury7Vs18EemaKvDE14XQLQ" name="power" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ury7V818EemaKvDE14XQLQ" name="pStatus" visibility="private" type="_Urzix818EemaKvDE14XQLQ"/>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ury7WM18EemaKvDE14XQLQ" name="Turns" submachineState="_Ury7vs18EemaKvDE14XQLQ _Ury7kc18EemaKvDE14XQLQ _Ury7yc18EemaKvDE14XQLQ _Ury7ws18EemaKvDE14XQLQ">
+      <region xmi:id="_Ury7Wc18EemaKvDE14XQLQ" name="Region1">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ury7Ws18EemaKvDE14XQLQ"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7W818EemaKvDE14XQLQ" name="Turning">
+          <region xmi:id="_Ury7XM18EemaKvDE14XQLQ" name="Region1">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ury7Xc18EemaKvDE14XQLQ" kind="shallowHistory"/>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7Xs18EemaKvDE14XQLQ" name="TurningLeft"/>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7X818EemaKvDE14XQLQ" name="TurningRight"/>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7YM18EemaKvDE14XQLQ" name="Straight"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ury7Yc18EemaKvDE14XQLQ" kind="fork"/>
+            <transition xmi:id="_Ury7Ys18EemaKvDE14XQLQ" source="_Ury7Xs18EemaKvDE14XQLQ" target="_Ury7YM18EemaKvDE14XQLQ" guard="_Ury7Y818EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7Y818EemaKvDE14XQLQ" constrainedElement="_Ury7Ys18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7ZM18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle=0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7Zc18EemaKvDE14XQLQ" name="" event="_UrzisM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7Zs18EemaKvDE14XQLQ" source="_Ury7X818EemaKvDE14XQLQ" target="_Ury7YM18EemaKvDE14XQLQ" guard="_Ury7Z818EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7Z818EemaKvDE14XQLQ" constrainedElement="_Ury7Zs18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7aM18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle=0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7ac18EemaKvDE14XQLQ" name="" event="_Urziss18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7as18EemaKvDE14XQLQ" source="_Ury7YM18EemaKvDE14XQLQ" target="_Ury7Xs18EemaKvDE14XQLQ" guard="_Ury7a818EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7a818EemaKvDE14XQLQ" constrainedElement="_Ury7as18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7bM18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle>=-90 and Angle&lt;0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7bc18EemaKvDE14XQLQ" name="" event="_Urziss18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7bs18EemaKvDE14XQLQ" source="_Ury7YM18EemaKvDE14XQLQ" target="_Ury7X818EemaKvDE14XQLQ" guard="_Ury7b818EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7b818EemaKvDE14XQLQ" constrainedElement="_Ury7bs18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7cM18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle>0 and Angle&lt;=90</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7cc18EemaKvDE14XQLQ" name="" event="_UrzisM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7cs18EemaKvDE14XQLQ" source="_Ury7Yc18EemaKvDE14XQLQ" target="_Ury7Xs18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7c818EemaKvDE14XQLQ" source="_Ury7Yc18EemaKvDE14XQLQ" target="_Ury7X818EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7dM18EemaKvDE14XQLQ" source="_Ury7Yc18EemaKvDE14XQLQ" target="_Ury7YM18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7dc18EemaKvDE14XQLQ" source="_Ury7YM18EemaKvDE14XQLQ" target="_Ury7ic18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7ds18EemaKvDE14XQLQ" source="_Ury7Xs18EemaKvDE14XQLQ" target="_Ury7ic18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7d818EemaKvDE14XQLQ" source="_Ury7X818EemaKvDE14XQLQ" target="_Ury7ic18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7eM18EemaKvDE14XQLQ" source="_Ury7X818EemaKvDE14XQLQ" target="_Ury7X818EemaKvDE14XQLQ" guard="_Ury7ec18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7ec18EemaKvDE14XQLQ" constrainedElement="_Ury7eM18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7es18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle>0 and Angle&lt;=90</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7e818EemaKvDE14XQLQ" name="" event="_UrzisM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7fM18EemaKvDE14XQLQ" source="_Ury7Xs18EemaKvDE14XQLQ" target="_Ury7Xs18EemaKvDE14XQLQ" guard="_Ury7fc18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7fc18EemaKvDE14XQLQ" constrainedElement="_Ury7fM18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7fs18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle>=-90 and Angle&lt;0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7f818EemaKvDE14XQLQ" name="" event="_UrzisM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7gM18EemaKvDE14XQLQ" source="_Ury7X818EemaKvDE14XQLQ" target="_Ury7Xs18EemaKvDE14XQLQ" guard="_Ury7gc18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7gc18EemaKvDE14XQLQ" constrainedElement="_Ury7gM18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7gs18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle>=-90 and Angle&lt;0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7g818EemaKvDE14XQLQ" name="" event="_Urziss18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7hM18EemaKvDE14XQLQ" source="_Ury7Xs18EemaKvDE14XQLQ" target="_Ury7X818EemaKvDE14XQLQ" guard="_Ury7hc18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7hc18EemaKvDE14XQLQ" constrainedElement="_Ury7hM18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7hs18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Angle>0 and Angle&lt;=90</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7h818EemaKvDE14XQLQ" name="" event="_UrzisM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7iM18EemaKvDE14XQLQ" name="Transition" kind="internal" source="_Ury7W818EemaKvDE14XQLQ" target="_Ury7W818EemaKvDE14XQLQ"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_Ury7ic18EemaKvDE14XQLQ"/>
+        <transition xmi:id="_Ury7is18EemaKvDE14XQLQ" source="_Ury7Ws18EemaKvDE14XQLQ" target="_Ury7Yc18EemaKvDE14XQLQ"/>
+      </region>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ury7i818EemaKvDE14XQLQ" name="FlightSM">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ury7jM18EemaKvDE14XQLQ" name="StateMachine1">
+        <region xmi:id="_Ury7jc18EemaKvDE14XQLQ" name="Region1"/>
+      </ownedBehavior>
+      <region xmi:id="_Ury7js18EemaKvDE14XQLQ" name="Region1">
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7j818EemaKvDE14XQLQ" name="Taxiing">
+          <region xmi:id="_Ury7kM18EemaKvDE14XQLQ" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7kc18EemaKvDE14XQLQ" name="State" submachine="_Ury7WM18EemaKvDE14XQLQ"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ury7ks18EemaKvDE14XQLQ"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7k818EemaKvDE14XQLQ" name="Standing">
+          <region xmi:id="_Ury7lM18EemaKvDE14XQLQ" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7lc18EemaKvDE14XQLQ" name="Idle"/>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7ls18EemaKvDE14XQLQ" name="Running"/>
+            <transition xmi:id="_Ury7l818EemaKvDE14XQLQ" source="_Ury7lc18EemaKvDE14XQLQ" target="_Ury7rc18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7mM18EemaKvDE14XQLQ" source="_Ury7lc18EemaKvDE14XQLQ" target="_Ury7ls18EemaKvDE14XQLQ">
+              <trigger xmi:id="_Ury7mc18EemaKvDE14XQLQ" name="" event="_Urzins18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7ms18EemaKvDE14XQLQ" name="" event="_Urzin818EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7m818EemaKvDE14XQLQ" name="" event="_Urzios18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7nM18EemaKvDE14XQLQ" source="_Ury7ls18EemaKvDE14XQLQ" target="_Ury7rs18EemaKvDE14XQLQ">
+              <trigger xmi:id="_Ury7nc18EemaKvDE14XQLQ" name="" event="_Urzips18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7ns18EemaKvDE14XQLQ" name="" event="_Urzin818EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7n818EemaKvDE14XQLQ" name="" event="_Urzioc18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7oM18EemaKvDE14XQLQ" name="" event="_Urziqs18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7oc18EemaKvDE14XQLQ" source="_Ury7ls18EemaKvDE14XQLQ" target="_Ury7lc18EemaKvDE14XQLQ">
+              <trigger xmi:id="_Ury7os18EemaKvDE14XQLQ" name="" event="_Urzixc18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7o818EemaKvDE14XQLQ" source="_Ury7ls18EemaKvDE14XQLQ" target="_Ury7j818EemaKvDE14XQLQ" guard="_Ury7pM18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7pM18EemaKvDE14XQLQ" constrainedElement="_Ury7o818EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7pc18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed>0 and Airspeed&lt;=10</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7ps18EemaKvDE14XQLQ" name="" event="_UrzioM18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7p818EemaKvDE14XQLQ" name="" event="_Urzioc18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7qM18EemaKvDE14XQLQ" name="" event="_Urzio818EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7qc18EemaKvDE14XQLQ" name="" event="_UrzipM18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7qs18EemaKvDE14XQLQ" name="" event="_Urzipc18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7q818EemaKvDE14XQLQ" name="" event="_Urzips18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7rM18EemaKvDE14XQLQ" name="" event="_Urzip818EemaKvDE14XQLQ"/>
+            </transition>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_Ury7rc18EemaKvDE14XQLQ"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7rs18EemaKvDE14XQLQ" name="Pushback"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7r818EemaKvDE14XQLQ" name="Landing"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7sM18EemaKvDE14XQLQ" name="Flying">
+          <region xmi:id="_Ury7sc18EemaKvDE14XQLQ" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7ss18EemaKvDE14XQLQ" name="Autopilot"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ury7s818EemaKvDE14XQLQ"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_Ury7tM18EemaKvDE14XQLQ"/>
+            <transition xmi:id="_Ury7tc18EemaKvDE14XQLQ" source="_Ury7s818EemaKvDE14XQLQ" target="_Ury7ss18EemaKvDE14XQLQ" guard="_Ury7ts18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7ts18EemaKvDE14XQLQ" constrainedElement="_Ury7tc18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7t818EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Altitude>=1000</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7uM18EemaKvDE14XQLQ" name="" event="_Urzivc18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury7uc18EemaKvDE14XQLQ" source="_Ury7ss18EemaKvDE14XQLQ" target="_Ury7tM18EemaKvDE14XQLQ">
+              <trigger xmi:id="_Ury7us18EemaKvDE14XQLQ" name="" event="_Urzixs18EemaKvDE14XQLQ"/>
+            </transition>
+          </region>
+          <region xmi:id="_Ury7u818EemaKvDE14XQLQ" name="Region2">
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7vM18EemaKvDE14XQLQ" name="Descent">
+              <region xmi:id="_Ury7vc18EemaKvDE14XQLQ" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_Ury7vs18EemaKvDE14XQLQ" name="State" submachine="_Ury7WM18EemaKvDE14XQLQ"/>
+                <transition xmi:id="_Ury7v818EemaKvDE14XQLQ" name="Transition" kind="internal" source="_Ury7vM18EemaKvDE14XQLQ" target="_Ury7vM18EemaKvDE14XQLQ"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7wM18EemaKvDE14XQLQ" name="Cruise">
+              <region xmi:id="_Ury7wc18EemaKvDE14XQLQ" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_Ury7ws18EemaKvDE14XQLQ" name="State" submachine="_Ury7WM18EemaKvDE14XQLQ"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7w818EemaKvDE14XQLQ" name="StraightAndLevel">
+              <region xmi:id="_Ury7xM18EemaKvDE14XQLQ" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_Ury7xc18EemaKvDE14XQLQ" name="State" submachine="_Urziw818EemaKvDE14XQLQ"/>
+                <transition xmi:id="_Ury7xs18EemaKvDE14XQLQ" name="Transition" kind="internal" source="_Ury7xc18EemaKvDE14XQLQ" target="_Ury7xc18EemaKvDE14XQLQ"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_Ury7x818EemaKvDE14XQLQ" name="Climb">
+              <region xmi:id="_Ury7yM18EemaKvDE14XQLQ" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_Ury7yc18EemaKvDE14XQLQ" name="State" submachine="_Ury7WM18EemaKvDE14XQLQ"/>
+              </region>
+            </subvertex>
+            <transition xmi:id="_Ury7ys18EemaKvDE14XQLQ" source="_Ury7vM18EemaKvDE14XQLQ" target="_Ury7-c18EemaKvDE14XQLQ" guard="_Ury7y818EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury7y818EemaKvDE14XQLQ" constrainedElement="_Ury7ys18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7zM18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>FlapsDegree&lt;=20 and Airspeed&lt;=60</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury7zc18EemaKvDE14XQLQ" name="" event="_Urzitc18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7zs18EemaKvDE14XQLQ" name="" event="_Urzits18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury7z818EemaKvDE14XQLQ" name="" event="_Urzit818EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury70M18EemaKvDE14XQLQ" name="" event="_UrziuM18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury70c18EemaKvDE14XQLQ" name="" event="_UrziqM18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury70s18EemaKvDE14XQLQ" name="" event="_Urzirs18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury70818EemaKvDE14XQLQ" name="" event="_Urziuc18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury71M18EemaKvDE14XQLQ" source="_Ury7wM18EemaKvDE14XQLQ" target="_Ury7vM18EemaKvDE14XQLQ" guard="_Ury71c18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury71c18EemaKvDE14XQLQ" constrainedElement="_Ury71M18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury71s18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed>=60 and Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury71818EemaKvDE14XQLQ" name="" event="_Urzirs18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury72M18EemaKvDE14XQLQ" name="" event="_Urzir818EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury72c18EemaKvDE14XQLQ" source="_Ury7w818EemaKvDE14XQLQ" target="_Ury7x818EemaKvDE14XQLQ" guard="_Ury72s18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury72s18EemaKvDE14XQLQ" constrainedElement="_Ury72c18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury72818EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed>=60 and Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury73M18EemaKvDE14XQLQ" name="" event="_UrzirM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury73c18EemaKvDE14XQLQ" source="_Ury7w818EemaKvDE14XQLQ" target="_Ury7vM18EemaKvDE14XQLQ" guard="_Ury73s18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury73s18EemaKvDE14XQLQ" constrainedElement="_Ury73c18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury73818EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed>=60 and Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury74M18EemaKvDE14XQLQ" name="" event="_Urzirs18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury74c18EemaKvDE14XQLQ" name="" event="_Urzir818EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury74s18EemaKvDE14XQLQ" source="_Ury7x818EemaKvDE14XQLQ" target="_Ury7wM18EemaKvDE14XQLQ" guard="_Ury74818EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury74818EemaKvDE14XQLQ" constrainedElement="_Ury74s18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury75M18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed>=60 and Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury75c18EemaKvDE14XQLQ" name="" event="_Urzirs18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury75s18EemaKvDE14XQLQ" name="" event="_Urzir818EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury75818EemaKvDE14XQLQ" source="_Ury7vM18EemaKvDE14XQLQ" target="_Ury7x818EemaKvDE14XQLQ" guard="_Ury76M18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury76M18EemaKvDE14XQLQ" constrainedElement="_Ury75818EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury76c18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed>=60 and Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury76s18EemaKvDE14XQLQ" name="" event="_UrzirM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury76818EemaKvDE14XQLQ" source="_Ury7wM18EemaKvDE14XQLQ" target="_Ury7w818EemaKvDE14XQLQ" guard="_Ury77M18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury77M18EemaKvDE14XQLQ" constrainedElement="_Ury76818EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury77c18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury77s18EemaKvDE14XQLQ" name="" event="_Urzivs18EemaKvDE14XQLQ"/>
+              <trigger xmi:id="_Ury77818EemaKvDE14XQLQ" name="" event="_Urziv818EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury78M18EemaKvDE14XQLQ" source="_Ury7x818EemaKvDE14XQLQ" target="_Ury7x818EemaKvDE14XQLQ" guard="_Ury78c18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury78c18EemaKvDE14XQLQ" constrainedElement="_Ury78M18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury78s18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Altitude&lt;MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury78818EemaKvDE14XQLQ" name="" event="_UrzirM18EemaKvDE14XQLQ"/>
+            </transition>
+            <transition xmi:id="_Ury79M18EemaKvDE14XQLQ" source="_Ury7vM18EemaKvDE14XQLQ" target="_Ury7vM18EemaKvDE14XQLQ" guard="_Ury79c18EemaKvDE14XQLQ">
+              <ownedRule xmi:id="_Ury79c18EemaKvDE14XQLQ" constrainedElement="_Ury79M18EemaKvDE14XQLQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury79s18EemaKvDE14XQLQ">
+                  <language></language>
+                  <body>Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_Ury79818EemaKvDE14XQLQ" name="" event="_Urzirs18EemaKvDE14XQLQ"/>
+            </transition>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7-M18EemaKvDE14XQLQ" name="TakeOff"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Ury7-c18EemaKvDE14XQLQ" name="Approach"/>
+        <transition xmi:id="_Ury7-s18EemaKvDE14XQLQ" source="_Ury7ks18EemaKvDE14XQLQ" target="_Ury7lc18EemaKvDE14XQLQ"/>
+        <transition xmi:id="_Ury7-818EemaKvDE14XQLQ" source="_Ury7j818EemaKvDE14XQLQ" target="_Ury7-M18EemaKvDE14XQLQ" guard="_Ury7_M18EemaKvDE14XQLQ">
+          <ownedRule xmi:id="_Ury7_M18EemaKvDE14XQLQ" constrainedElement="_Ury7-818EemaKvDE14XQLQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_Ury7_c18EemaKvDE14XQLQ">
+              <language></language>
+              <body>Airspeed>=10 and Airspeed&lt;=40</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_Ury7_s18EemaKvDE14XQLQ" name="" event="_UrzirM18EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_Ury7_818EemaKvDE14XQLQ" name="" event="_Urzirc18EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_Ury8AM18EemaKvDE14XQLQ" name="" event="_UrzitM18EemaKvDE14XQLQ"/>
+        </transition>
+        <transition xmi:id="_Ury8Ac18EemaKvDE14XQLQ" source="_Ury7j818EemaKvDE14XQLQ" target="_Ury7ls18EemaKvDE14XQLQ" guard="_UrziYM18EemaKvDE14XQLQ">
+          <ownedRule xmi:id="_UrziYM18EemaKvDE14XQLQ" constrainedElement="_Ury8Ac18EemaKvDE14XQLQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_UrziYc18EemaKvDE14XQLQ">
+              <language></language>
+              <body>FlapsDegree=0 and Airspeed&lt;40</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_UrziYs18EemaKvDE14XQLQ" name="" event="_UrziqM18EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_UrziY818EemaKvDE14XQLQ" name="" event="_Urziqc18EemaKvDE14XQLQ"/>
+        </transition>
+        <transition xmi:id="_UrziZM18EemaKvDE14XQLQ" source="_Ury7rs18EemaKvDE14XQLQ" target="_Ury7ls18EemaKvDE14XQLQ">
+          <trigger xmi:id="_UrziZc18EemaKvDE14XQLQ" name="" event="_Urziq818EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_UrziZs18EemaKvDE14XQLQ" name="" event="_Urziqc18EemaKvDE14XQLQ"/>
+        </transition>
+        <transition xmi:id="_UrziZ818EemaKvDE14XQLQ" source="_Ury7r818EemaKvDE14XQLQ" target="_Ury7j818EemaKvDE14XQLQ" guard="_UrziaM18EemaKvDE14XQLQ">
+          <ownedRule xmi:id="_UrziaM18EemaKvDE14XQLQ" constrainedElement="_UrziZ818EemaKvDE14XQLQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_Urziac18EemaKvDE14XQLQ">
+              <language></language>
+              <body>FlapsDegree=0 </body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_Urzias18EemaKvDE14XQLQ" name="" event="_Urziu818EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_Urzia818EemaKvDE14XQLQ" name="" event="_UrziwM18EemaKvDE14XQLQ"/>
+        </transition>
+        <transition xmi:id="_UrzibM18EemaKvDE14XQLQ" source="_Ury7-M18EemaKvDE14XQLQ" target="_Ury7x818EemaKvDE14XQLQ" guard="_Urzibc18EemaKvDE14XQLQ">
+          <ownedRule xmi:id="_Urzibc18EemaKvDE14XQLQ" constrainedElement="_UrzibM18EemaKvDE14XQLQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_Urzibs18EemaKvDE14XQLQ">
+              <language></language>
+              <body>FlapsDegree=10 and Airpeed>40</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_Urzib818EemaKvDE14XQLQ" name="" event="_UrzirM18EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_UrzicM18EemaKvDE14XQLQ" name="" event="_Urzirc18EemaKvDE14XQLQ"/>
+        </transition>
+        <transition xmi:id="_Urzicc18EemaKvDE14XQLQ" source="_Ury7-c18EemaKvDE14XQLQ" target="_Ury7r818EemaKvDE14XQLQ" guard="_Urzics18EemaKvDE14XQLQ">
+          <ownedRule xmi:id="_Urzics18EemaKvDE14XQLQ" constrainedElement="_Urzicc18EemaKvDE14XQLQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_Urzic818EemaKvDE14XQLQ">
+              <language></language>
+              <body>Airpeed>40</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_UrzidM18EemaKvDE14XQLQ" name="" event="_Urzitc18EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_Urzidc18EemaKvDE14XQLQ" name="" event="_Urzirs18EemaKvDE14XQLQ"/>
+          <trigger xmi:id="_Urzids18EemaKvDE14XQLQ" name="" event="_UrziqM18EemaKvDE14XQLQ"/>
+        </transition>
+      </region>
+    </ownedBehavior>
+    <ownedOperation xmi:id="_Urzid818EemaKvDE14XQLQ" name="ExternalPowerOn"/>
+    <ownedOperation xmi:id="_UrzieM18EemaKvDE14XQLQ" name="ApuGenBatteryOn"/>
+    <ownedOperation xmi:id="_Urziec18EemaKvDE14XQLQ" name="SetMaxAirspeedAltitudeHeading"/>
+    <ownedOperation xmi:id="_Urzies18EemaKvDE14XQLQ" name="ParkingBrakeOff"/>
+    <ownedOperation xmi:id="_Urzie818EemaKvDE14XQLQ" name="StartEngine"/>
+    <ownedOperation xmi:id="_UrzifM18EemaKvDE14XQLQ" name="SetHydrolicsAuto"/>
+    <ownedOperation xmi:id="_Urzifc18EemaKvDE14XQLQ" name="SetFlapsDegree"/>
+    <ownedOperation xmi:id="_Urzifs18EemaKvDE14XQLQ" name="IncreaseThrottle"/>
+    <ownedOperation xmi:id="_Urzif818EemaKvDE14XQLQ" name="ExternalPowerOff"/>
+    <ownedOperation xmi:id="_UrzigM18EemaKvDE14XQLQ" name="ApuGenMasterSwitchOff"/>
+    <ownedOperation xmi:id="_Urzigc18EemaKvDE14XQLQ" name="DecreaseThrottle"/>
+    <ownedOperation xmi:id="_Urzigs18EemaKvDE14XQLQ" name="ParkingBrakeOn"/>
+    <ownedOperation xmi:id="_Urzig818EemaKvDE14XQLQ" name="EnablePushback"/>
+    <ownedOperation xmi:id="_UrzihM18EemaKvDE14XQLQ" name="DisablePushback"/>
+    <ownedOperation xmi:id="_Urzihc18EemaKvDE14XQLQ" name="IncreaseElevation"/>
+    <ownedOperation xmi:id="_Urzihs18EemaKvDE14XQLQ" name="IncreaseVerticalSpeed"/>
+    <ownedOperation xmi:id="_Urzih818EemaKvDE14XQLQ" name="DecreaseElevation"/>
+    <ownedOperation xmi:id="_UrziiM18EemaKvDE14XQLQ" name="DecreaseVerticalSpeed"/>
+    <ownedOperation xmi:id="_Urziic18EemaKvDE14XQLQ" name="TurnRight"/>
+    <ownedOperation xmi:id="_Urziis18EemaKvDE14XQLQ" name="YokeStraight"/>
+    <ownedOperation xmi:id="_Urzii818EemaKvDE14XQLQ" name="TurnLeft"/>
+    <ownedOperation xmi:id="_UrzijM18EemaKvDE14XQLQ" name="MoveYoke"/>
+    <ownedOperation xmi:id="_Urzijc18EemaKvDE14XQLQ" name="CloseLandingGear"/>
+    <ownedOperation xmi:id="_Urzijs18EemaKvDE14XQLQ" name="DecreaseAirspeed"/>
+    <ownedOperation xmi:id="_Urzij818EemaKvDE14XQLQ" name="TurnApproachBtnOn"/>
+    <ownedOperation xmi:id="_UrzikM18EemaKvDE14XQLQ" name="TurnLocalizerOn"/>
+    <ownedOperation xmi:id="_Urzikc18EemaKvDE14XQLQ" name="ReduceFlaps"/>
+    <ownedOperation xmi:id="_Urziks18EemaKvDE14XQLQ" name="DecreaseAltitude"/>
+    <ownedOperation xmi:id="_Urzik818EemaKvDE14XQLQ" name="SpeedBrakeOn"/>
+    <ownedOperation xmi:id="_UrzilM18EemaKvDE14XQLQ" name="OpenLandingGear"/>
+    <ownedOperation xmi:id="_Urzilc18EemaKvDE14XQLQ" name="SeatBeltOn"/>
+    <ownedOperation xmi:id="_Urzils18EemaKvDE14XQLQ" name="SetAPModeOn"/>
+    <ownedOperation xmi:id="_Urzil818EemaKvDE14XQLQ" name="LevelElevation"/>
+    <ownedOperation xmi:id="_UrzimM18EemaKvDE14XQLQ" name="AltitudeHold"/>
+    <ownedOperation xmi:id="_Urzimc18EemaKvDE14XQLQ" name="ResetFlaps"/>
+    <ownedOperation xmi:id="_Urzims18EemaKvDE14XQLQ" name="ActivateMCAS"/>
+    <ownedOperation xmi:id="_Urzim818EemaKvDE14XQLQ" name="DeactivateMCAS"/>
+    <ownedOperation xmi:id="_UrzinM18EemaKvDE14XQLQ" name="EngineOff"/>
+    <ownedOperation xmi:id="_Urzinc18EemaKvDE14XQLQ" name="APModeOff"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzins18EemaKvDE14XQLQ" name="" operation="_Urzid818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzin818EemaKvDE14XQLQ" name="" operation="_UrzieM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrzioM18EemaKvDE14XQLQ" name="" operation="_Urziec18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzioc18EemaKvDE14XQLQ" name="" operation="_Urzies18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzios18EemaKvDE14XQLQ" name="" operation="_Urzie818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzio818EemaKvDE14XQLQ" name="" operation="_UrzifM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrzipM18EemaKvDE14XQLQ" name="" operation="_Urzifc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzipc18EemaKvDE14XQLQ" name="" operation="_Urzifs18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzips18EemaKvDE14XQLQ" name="" operation="_Urzif818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzip818EemaKvDE14XQLQ" name="" operation="_UrzigM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrziqM18EemaKvDE14XQLQ" name="" operation="_Urzigc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziqc18EemaKvDE14XQLQ" name="" operation="_Urzigs18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziqs18EemaKvDE14XQLQ" name="" operation="_Urzig818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziq818EemaKvDE14XQLQ" name="" operation="_UrzihM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrzirM18EemaKvDE14XQLQ" name="" operation="_Urzihc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzirc18EemaKvDE14XQLQ" name="" operation="_Urzihs18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzirs18EemaKvDE14XQLQ" name="" operation="_Urzih818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzir818EemaKvDE14XQLQ" name="" operation="_UrziiM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrzisM18EemaKvDE14XQLQ" name="" operation="_Urziic18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzisc18EemaKvDE14XQLQ" name="" operation="_Urziis18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziss18EemaKvDE14XQLQ" name="" operation="_Urzii818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzis818EemaKvDE14XQLQ" name="" operation="_UrzijM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrzitM18EemaKvDE14XQLQ" name="" operation="_Urzijc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzitc18EemaKvDE14XQLQ" name="" operation="_Urzijs18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzits18EemaKvDE14XQLQ" name="" operation="_Urzij818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzit818EemaKvDE14XQLQ" name="" operation="_UrzikM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrziuM18EemaKvDE14XQLQ" name="" operation="_Urzikc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziuc18EemaKvDE14XQLQ" name="" operation="_Urziks18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzius18EemaKvDE14XQLQ" name="" operation="_Urzik818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziu818EemaKvDE14XQLQ" name="" operation="_UrzilM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrzivM18EemaKvDE14XQLQ" name="" operation="_Urzilc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzivc18EemaKvDE14XQLQ" name="" operation="_Urzils18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzivs18EemaKvDE14XQLQ" name="" operation="_Urzil818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziv818EemaKvDE14XQLQ" name="" operation="_UrzimM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_UrziwM18EemaKvDE14XQLQ" name="" operation="_Urzimc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziwc18EemaKvDE14XQLQ" name="" operation="_Urzims18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urziws18EemaKvDE14XQLQ" name="" operation="_Urzim818EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_Urziw818EemaKvDE14XQLQ" name="Turns" submachineState="_Ury7xc18EemaKvDE14XQLQ">
+    <region xmi:id="_UrzixM18EemaKvDE14XQLQ" name="Region1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzixc18EemaKvDE14XQLQ" name="" operation="_UrzinM18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_Urzixs18EemaKvDE14XQLQ" name="" operation="_Urzinc18EemaKvDE14XQLQ"/>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_Urzix818EemaKvDE14XQLQ" name="Status">
+    <ownedLiteral xmi:id="_UrziyM18EemaKvDE14XQLQ" name="Ok" classifier="_Urzix818EemaKvDE14XQLQ"/>
+    <ownedLiteral xmi:id="_Urziyc18EemaKvDE14XQLQ" name="NotOk" classifier="_Urzix818EemaKvDE14XQLQ"/>
+    <ownedLiteral xmi:id="_Urziys18EemaKvDE14XQLQ" name="Undefined" classifier="_Urzix818EemaKvDE14XQLQ"/>
+  </packagedElement>
+  <profileApplication xmi:id="_Urziy818EemaKvDE14XQLQ">
+    <eAnnotations xmi:id="_UrzizM18EemaKvDE14XQLQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

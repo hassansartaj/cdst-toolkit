@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="421.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cdst.application.AppController">
+	<children>
+		<Button fx:id="browseBtn" layoutX="335.0" layoutY="97.0" mnemonicParsing="false" text="Browse Destination" />
+		<Button fx:id="captureBtn" layoutX="269.0" layoutY="385.0" mnemonicParsing="false" text="Record Screen" />
+      <TextField fx:id="browseTF" layoutX="21.0" layoutY="97.0" prefHeight="25.0" prefWidth="283.0" promptText="Images Destination" />
+      <TextField fx:id="totalDurationTF" layoutX="158.0" layoutY="136.0" prefHeight="25.0" prefWidth="147.0" />
+      <Label layoutX="22.0" layoutY="140.0" text="Total Duration" />
+      <Label layoutX="162.0" layoutY="17.0" text="Cockpit Display Recorder">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="totalTimeCB" layoutX="353.0" layoutY="136.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="captureDurationTF" layoutX="158.0" layoutY="175.0" prefHeight="25.0" prefWidth="147.0" />
+      <Label layoutX="22.0" layoutY="179.0" text="Capture Duration" />
+      <ComboBox fx:id="captureTimeCB" layoutX="353.0" layoutY="175.0" prefHeight="25.0" prefWidth="118.0" />
+      <Button fx:id="camRecBtn" layoutX="125.0" layoutY="385.0" mnemonicParsing="false" text="Record Camera" />
+      <Button fx:id="browseModelBtn" layoutX="22.0" layoutY="51.0" mnemonicParsing="false" text="Browse Model" />
+      <TextField fx:id="mpathTF" layoutX="149.0" layoutY="51.0" prefHeight="25.0" prefWidth="249.0" promptText="uml model path" />
+      <Button fx:id="loadBtn" layoutX="412.0" layoutY="51.0" mnemonicParsing="false" text="Load" />
+      <TableView fx:id="statesTable" layoutX="22.0" layoutY="222.0" prefHeight="143.0" prefWidth="452.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="151.0" text="Aircraft State" />
+          <TableColumn fx:id="duration" minWidth="0.0" prefWidth="158.0" text="Simulation Duration" />
+            <TableColumn fx:id="unit" prefWidth="142.0" text="Time Unit" />
+        </columns>
+      </TableView>
+	</children>
+</AnchorPane>
