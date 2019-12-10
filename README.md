@@ -70,4 +70,4 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
    * Run 'RecorderMain' as Java application
 
 ## Dataset
-* pfd-ds-275: This dataset contains simulation data (images) recorded for 275 minutes (used for ICST paper)
+* pfd-ds-icst: This dataset contains simulation data (images) recorded for 275 minutes (used for ICST paper)

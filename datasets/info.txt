@@ -1,1 +1,1 @@
-The dataset is distributed in compressed directories according to aircraft flight states.
+The dataset inside "pfd-ds-icst" is distributed in compressed directories according to aircraft flight states.
