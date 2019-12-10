@@ -5,17 +5,17 @@ the process of testing CDS i.e., test generation, execution, and evaluation.
 ## Architecture
 The toolkit consists of four major modules. 
 
-###(i) CDST Core
+**(i) CDST Core** 
 The main purpose of the Core module is to prepare the test evaluation environment, perform test evaluation, and report results. This module contains three sub-modules 
 (i) CDS Model Generator, (ii) Comparator, and (iii) Reporting Module.
 
-###(ii) CDS Constraint Specifier
+**(ii) CDS Constraint Specifier** 
 The tool presents interactive UI to write OCL constraints used for test evaluation.
 
-###(iii) Test Path & Script Generator
+**(iii) Test Path & Script Generator** 
 The tool takes flattened state machine (aircraft behavioral model), applies N+ test strategy, and generates transition tree. This module contains sub-module 'Test Execution Module'.
 
-###(iv) Cockpit Display Recorder
+**(iv) Cockpit Display Recorder** 
 The tool supports two methods to record cockpit display, one is to use an external camera to record the cockpit display during hardware-in-the-loop simulation, and the second way is to record the screenshots of the computer screen on which the (software-in-the-loop) simulation is running. Moreover, the tool allows to record images after a specified time interval and according to aircraft flight states.
 
 # Research Paper for Citation
