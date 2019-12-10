@@ -1,0 +1,140 @@
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+Climb 	 0.783
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+Climb 	 0.783
+Taxiing 	 0.728
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+Climb 	 0.783
+Taxiing 	 0.728
+Standing 	 0.715
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+Climb 	 0.783
+Taxiing 	 0.728
+Standing 	 0.715
+Landing 	 0.533
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+Climb 	 0.783
+Taxiing 	 0.728
+Standing 	 0.715
+Landing 	 0.533
+TakeOff 	 0.638
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 3.144
+Cruise 	 0.996
+Climb 	 0.783
+Taxiing 	 0.728
+Standing 	 0.715
+Landing 	 0.533
+TakeOff 	 0.638
+Descent 	 0.506
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+Climb 	 1.006
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+Climb 	 1.006
+Taxiing 	 0.439
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+Climb 	 1.006
+Taxiing 	 0.439
+Standing 	 0.769
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+Climb 	 1.006
+Taxiing 	 0.439
+Standing 	 0.769
+Landing 	 0.663
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+Climb 	 1.006
+Taxiing 	 0.439
+Standing 	 0.769
+Landing 	 0.663
+TakeOff 	 0.696
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+StraightAndLevel 	 4.395
+Cruise 	 0.958
+Climb 	 1.006
+Taxiing 	 0.439
+Standing 	 0.769
+Landing 	 0.663
+TakeOff 	 0.696
+Descent 	 0.641
+------------------------------------Results for [tessdata/tessdata_old[Cruise]]----------------------------------
+Cruise 	 3.667
+------------------------------------Results for [tessdata/tessdata_old[Climb]]----------------------------------
+Climb 	 0.825
+------------------------------------Results for [tessdata/tessdata_old[Descent]]----------------------------------
+Descent 	 0.733
+------------------------------------Results for [tessdata/tessdata_old[Cruise]]----------------------------------
+Cruise 	 5.075
+------------------------------------Results for [tessdata/tessdata_old[Climb]]----------------------------------
+Climb 	 0.796
+------------------------------------Results for [tessdata/tessdata_old[Descent]]----------------------------------
+Descent 	 1.071
+------------------------------------Results for [tessdata/tessdata_old[StraightAndLevel]]----------------------------------
+StraightAndLevel 	 3.406
+------------------------------------New Results----------------------------------
+Standing 	 3.958
+------------------------------------New Results----------------------------------
+StraightAndLevel 	 2.398
+Cruise 	 0.377
+Climb 	 0.319
+Taxiing 	 0.338
+Standing 	 0.22
+Landing 	 0.235
+TakeOff 	 0.0
+Descent 	 0.242
+------------------------------------New Results----------------------------------
+StraightAndLevel 	 2.405
+Cruise 	 0.343
+Climb 	 0.307
+Taxiing 	 0.328
+Standing 	 0.238
+Landing 	 0.224
+TakeOff 	 0.0
+Descent 	 0.233
+------------------------------------New Results----------------------------------
+StraightAndLevel 	 2.402
+Cruise 	 0.386
+Climb 	 0.298
+Taxiing 	 0.314
+Standing 	 0.237
+Landing 	 0.219
+TakeOff 	 0.0
+Descent 	 0.228
+------------------------------------New Results----------------------------------
+StraightAndLevel 	 2.306
+Cruise 	 0.403
+Climb 	 0.288
+Taxiing 	 0.307
+Standing 	 0.229
+Landing 	 0.219
+TakeOff 	 0.0
+Descent 	 0.219

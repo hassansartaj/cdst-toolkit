@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_QXn8gBcfEeqOE_3JNVvbKA" name="CDSPackage">
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXojkBcfEeqOE_3JNVvbKA" name="Aircraft">
+    <ownedAttribute xmi:id="_QXojkRcfEeqOE_3JNVvbKA" name="airspeedtape" type="_QXojnRcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXpKpRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojkhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojkxcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojlBcfEeqOE_3JNVvbKA" name="altitudetape" type="_QXpKuxcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXpxvxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojlRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojlhcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojlxcfEeqOE_3JNVvbKA" name="attitudeindicator" type="_QXpxzhcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXqYzRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojmBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojmRcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojmhcfEeqOE_3JNVvbKA" name="headingindicator" type="_QXqY3BcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXq_2xcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojmxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojnBcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXojnRcfEeqOE_3JNVvbKA" name="AirspeedTape">
+    <ownedAttribute xmi:id="_QXojnhcfEeqOE_3JNVvbKA" name="airspeed" type="_QXpKqRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojnxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojoBcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojoRcfEeqOE_3JNVvbKA" name="IsVisible" type="_QXpKqhcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojohcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojoxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXojpBcfEeqOE_3JNVvbKA" type="_QXpKqxcfEeqOE_3JNVvbKA" value="true"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojpRcfEeqOE_3JNVvbKA" name="Type" type="_QXpKrBcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojphcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojpxcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojqBcfEeqOE_3JNVvbKA" name="SizeX" type="_QXpKsxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojqRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojqhcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXojqxcfEeqOE_3JNVvbKA" type="_QXpKtBcfEeqOE_3JNVvbKA" value="111"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojrBcfEeqOE_3JNVvbKA" name="SizeY" type="_QXpKtRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojrRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojrhcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXojrxcfEeqOE_3JNVvbKA" type="_QXpKthcfEeqOE_3JNVvbKA" value="26"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojsBcfEeqOE_3JNVvbKA" name="PosX" type="_QXpKtxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojsRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojshcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKoBcfEeqOE_3JNVvbKA" type="_QXpKuBcfEeqOE_3JNVvbKA" value="392"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpKoRcfEeqOE_3JNVvbKA" name="PosY" type="_QXpKuRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKohcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKoxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKpBcfEeqOE_3JNVvbKA" type="_QXpKuhcfEeqOE_3JNVvbKA" value="377"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXpKpRcfEeqOE_3JNVvbKA" memberEnd="_QXojkRcfEeqOE_3JNVvbKA _QXpKphcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXpKphcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXpKpRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKpxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKqBcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKqRcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKqhcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKqxcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_QXpKrBcfEeqOE_3JNVvbKA" name="WidgetType">
+    <ownedLiteral xmi:id="_QXpKrRcfEeqOE_3JNVvbKA" name="Container"/>
+    <ownedLiteral xmi:id="_QXpKrhcfEeqOE_3JNVvbKA" name="Graphical"/>
+    <ownedLiteral xmi:id="_QXpKrxcfEeqOE_3JNVvbKA" name="TextString"/>
+    <ownedLiteral xmi:id="_QXpKsBcfEeqOE_3JNVvbKA" name="Interactive"/>
+    <ownedLiteral xmi:id="_QXpKsRcfEeqOE_3JNVvbKA" name="MapManagement"/>
+    <ownedLiteral xmi:id="_QXpKshcfEeqOE_3JNVvbKA" name="DynamicMotion"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKsxcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKtBcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKtRcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKthcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKtxcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKuBcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKuRcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpKuhcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXpKuxcfEeqOE_3JNVvbKA" name="AltitudeTape">
+    <ownedAttribute xmi:id="_QXpKvBcfEeqOE_3JNVvbKA" name="altitude" type="_QXpxwxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKvRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKvhcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpKvxcfEeqOE_3JNVvbKA" name="IsVisible" type="_QXpxxBcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKwBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKwRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXpKwhcfEeqOE_3JNVvbKA" type="_QXpxxRcfEeqOE_3JNVvbKA" value="true"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpKwxcfEeqOE_3JNVvbKA" name="SizeX" type="_QXpxxhcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxsBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxsRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxshcfEeqOE_3JNVvbKA" type="_QXpxxxcfEeqOE_3JNVvbKA" value="102"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpxsxcfEeqOE_3JNVvbKA" name="SizeY" type="_QXpxyBcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxtBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxtRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxthcfEeqOE_3JNVvbKA" type="_QXpxyRcfEeqOE_3JNVvbKA" value="27"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpxtxcfEeqOE_3JNVvbKA" name="PosX" type="_QXpxyhcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxuBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxuRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxuhcfEeqOE_3JNVvbKA" type="_QXpxyxcfEeqOE_3JNVvbKA" value="954"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpxuxcfEeqOE_3JNVvbKA" name="PosY" type="_QXpxzBcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxvBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxvRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxvhcfEeqOE_3JNVvbKA" type="_QXpxzRcfEeqOE_3JNVvbKA" value="374"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXpxvxcfEeqOE_3JNVvbKA" memberEnd="_QXojlBcfEeqOE_3JNVvbKA _QXpxwBcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXpxwBcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXpxvxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxwRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxwhcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxwxcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxxBcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxxRcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxxhcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxxxcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxyBcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxyRcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxyhcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxyxcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxzBcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXpxzRcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXpxzhcfEeqOE_3JNVvbKA" name="AttitudeIndicator">
+    <ownedAttribute xmi:id="_QXpxzxcfEeqOE_3JNVvbKA" name="roll" type="_QXqY0RcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpx0BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpx0RcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpx0hcfEeqOE_3JNVvbKA" name="IsVisible" type="_QXqY0hcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpx0xcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpx1BcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXpx1RcfEeqOE_3JNVvbKA" type="_QXqY0xcfEeqOE_3JNVvbKA" value="true"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpx1hcfEeqOE_3JNVvbKA" name="SizeX" type="_QXqY1BcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpx1xcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpx2BcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYwBcfEeqOE_3JNVvbKA" type="_QXqY1RcfEeqOE_3JNVvbKA" value="108"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqYwRcfEeqOE_3JNVvbKA" name="SizeY" type="_QXqY1hcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYwhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqYwxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYxBcfEeqOE_3JNVvbKA" type="_QXqY1xcfEeqOE_3JNVvbKA" value="31"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqYxRcfEeqOE_3JNVvbKA" name="PosX" type="_QXqY2BcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYxhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqYxxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYyBcfEeqOE_3JNVvbKA" type="_QXqY2RcfEeqOE_3JNVvbKA" value="837"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqYyRcfEeqOE_3JNVvbKA" name="PosY" type="_QXqY2hcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYyhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqYyxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYzBcfEeqOE_3JNVvbKA" type="_QXqY2xcfEeqOE_3JNVvbKA" value="174"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXqYzRcfEeqOE_3JNVvbKA" memberEnd="_QXojlxcfEeqOE_3JNVvbKA _QXqYzhcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXqYzhcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXqYzRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYzxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY0BcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY0RcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY0hcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY0xcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY1BcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY1RcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY1hcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY1xcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY2BcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY2RcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY2hcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXqY2xcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXqY3BcfEeqOE_3JNVvbKA" name="HeadingIndicator">
+    <ownedAttribute xmi:id="_QXqY3RcfEeqOE_3JNVvbKA" name="heading" type="_QXq_3xcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY3hcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY3xcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqY4BcfEeqOE_3JNVvbKA" name="IsVisible" type="_QXq_4BcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY4RcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY4hcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXqY4xcfEeqOE_3JNVvbKA" type="_QXq_4RcfEeqOE_3JNVvbKA" value="true"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqY5BcfEeqOE_3JNVvbKA" name="SizeX" type="_QXq_4hcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY5RcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY5hcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY5xcfEeqOE_3JNVvbKA" type="_QXq_4xcfEeqOE_3JNVvbKA" value="100"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqY6BcfEeqOE_3JNVvbKA" name="SizeY" type="_QXq_5BcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_0BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_0RcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_0hcfEeqOE_3JNVvbKA" type="_QXq_5RcfEeqOE_3JNVvbKA" value="30"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXq_0xcfEeqOE_3JNVvbKA" name="PosX" type="_QXq_5hcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_1BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_1RcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_1hcfEeqOE_3JNVvbKA" type="_QXq_5xcfEeqOE_3JNVvbKA" value="598"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXq_1xcfEeqOE_3JNVvbKA" name="PosY" type="_QXq_6BcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_2BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_2RcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_2hcfEeqOE_3JNVvbKA" type="_QXq_6RcfEeqOE_3JNVvbKA" value="604"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXq_2xcfEeqOE_3JNVvbKA" memberEnd="_QXojmhcfEeqOE_3JNVvbKA _QXq_3BcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXq_3BcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXq_2xcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_3RcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_3hcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_3xcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_4BcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_4RcfEeqOE_3JNVvbKA" name="Boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_4hcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_4xcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_5BcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_5RcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_5hcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_5xcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_6BcfEeqOE_3JNVvbKA" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QXq_6RcfEeqOE_3JNVvbKA" name="Integer"/>
+</uml:Package>

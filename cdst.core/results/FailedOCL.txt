@@ -1,0 +1,69 @@
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+[Landing] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+[Landing] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+[Landing] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Descent] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=45) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-45)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+[Landing] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+[Landing] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------Results for [tessdata/tessdata_old]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+[Landing] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+[Descent] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=45) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-45)
+------------------------------------Results for [tessdata/tessdata_old[Cruise]]----------------------------------
+------------------------------------Results for [tessdata/tessdata_old[Climb]]----------------------------------
+------------------------------------Results for [tessdata/tessdata_old[Descent]]----------------------------------
+[Descent] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=45) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-45)
+------------------------------------Results for [tessdata/tessdata_old[Cruise]]----------------------------------
+------------------------------------Results for [tessdata/tessdata_old[Climb]]----------------------------------
+------------------------------------Results for [tessdata/tessdata_old[Descent]]----------------------------------
+[Descent] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=45) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-45)
+------------------------------------Results for [tessdata/tessdata_old[StraightAndLevel]]----------------------------------
+[StraightAndLevel] context Aircraft inv: (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+------------------------------------New Results----------------------------------
+------------------------------------New Results----------------------------------
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------New Results----------------------------------
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------New Results----------------------------------
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+------------------------------------New Results----------------------------------
+[Taxiing] context Aircraft inv: self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60

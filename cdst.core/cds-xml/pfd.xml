@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object_implementation impl_name="PFD" class="A661_CDS">
+	<built_object_implementation>
+		<object name="AirspeedTape" class="TapeCircular" guid="9f2b84d0-1fb5-4f9a-b9d1-ac36a83391ba">
+		  <model>
+			<prop name="IsVisible">TRUE</prop>
+			<xyprop name="Position" x="392" y="377"/>
+			<prop name="Value">0</prop>
+			<prop name="ValuePerRevolution">10000</prop>
+			<structprop name="DisplayArea">
+			  <field name="Left">-2300</field>
+			  <field name="Bottom">-5000</field>
+			  <field name="Right">2300</field>
+			  <field name="Top">6500</field>
+			</structprop>
+			<xyprop name="Motion" x="0" y="128571"/>
+			<xyprop name="Size" x="111" y="26"/>
+		  </model>         
+		</object>
+
+		<object name="AltitudeTape" class="TapeCircular" guid="9f2b84d0-1fb5-4f9a-b9d1-ac36a83391ba">
+		  <model>
+			<prop name="IsVisible">TRUE</prop>
+			<xyprop name="Position" x="954" y="374"/>
+			<prop name="Value">0</prop>
+			<prop name="ValuePerRevolution">10000</prop>
+			<structprop name="DisplayArea">
+			  <field name="Left">-2300</field>
+			  <field name="Bottom">-5000</field>
+			  <field name="Right">2300</field>
+			  <field name="Top">6500</field>
+			</structprop>
+			<xyprop name="Motion" x="0" y="128571"/>
+			<xyprop name="Size" x="102" y="27"/>
+		  </model>         
+		</object>
+
+		<object name="AttitudeIndicator" class="Polygon" guid="9ea2e10f-4dd1-4329-8d4b-efe893b1fba4">
+		  <model>
+			<prop name="IsVisible">TRUE</prop>
+			<prop name="IsOpen">FALSE</prop>
+			<prop name="IsHaloed">FALSE</prop>
+			<prop name="IsOutlined">FALSE</prop>
+			<prop name="IsFilled">TRUE</prop>
+			<prop name="IsAntialiased">TRUE</prop>
+			<prop name="HaloColor">stdBlack</prop>
+			<prop name="HaloLineWidth">1</prop>
+			<prop name="FillAttributes">Local</prop>
+			<prop name="FillStyle">SolidColor</prop>
+			<prop name="FillColor">stdBlue</prop>
+			<prop name="FillGradient">vxtDoNotUse</prop>
+			<prop name="Pattern">stdSolid</prop>
+			<prop name="FillOpacity">stdOpaque</prop>
+			<prop name="PenAttributes">Local</prop>
+			<prop name="PenColor">stdWhite</prop>
+			<prop name="LineStyle">stdLine1</prop>
+			<prop name="PenOpacity">stdOpaque</prop>
+			<xyprop name="Position" x="837" y="174"/>
+			<xyprop name="Size" x="108" y="31"/>
+			<arrayprop name="PtsArray" capacity="4" size="4">
+			  <xyentry x="-508" y="0"/>
+			  <xyentry x="0" y="254"/>
+			  <xyentry x="2540" y="0"/>
+			  <xyentry x="0" y="-254"/>
+			</arrayprop>
+			<arrayprop name="IntersectPtsArray" capacity="0" size="0"/>
+			<arrayprop name="Mesh" capacity="1" size="0">
+			  <structentry>
+				<arrayfield name="Indices" capacity="4"/>
+			  </structentry>
+			</arrayprop>
+		  </model>
+		</object>
+
+		<object name="BarometerIndication" class="Text" guid="1c492030-93cc-4d47-bc59-676a54b239fb">
+		  <model>
+			<prop name="IsVisible">TRUE</prop>
+			<prop name="PenAttributes">Local</prop>
+			<prop name="IsOutlined">FALSE</prop>
+			<prop name="PenColor">stdWhite</prop>
+			<prop name="FillAttributes">Local</prop>
+			<prop name="IsFilled">TRUE</prop>
+			<prop name="FillColor">stdWhite</prop>
+			<xyprop name="Position" x="430.53" y="503"/>
+			<xyprop name="Size" x="104" y="30"/>
+			<prop name="DataString" capacity="11">E</prop>
+			<prop name="FontId">ArialRasterSmall</prop>
+			<prop name="IsBold">TRUE</prop>
+			<prop name="IsItalic">FALSE</prop>
+			<prop name="IsAntialiased">TRUE</prop>
+			<prop name="IsStrikethrough">FALSE</prop>
+			<prop name="IsUnderlined">FALSE</prop>
+			<prop name="Alignment">LEFT</prop>
+			<prop name="PointSize">12</prop>
+			<prop name="Thickness">2</prop>
+		  </model>
+		</object>
+
+		<object name="HeadingIndicator" class="Circle" guid="50225027-7fb5-4fec-bbd8-c074ece4b9fc">
+		  <model>
+			<prop name="IsVisible">TRUE</prop>
+			<prop name="IsHaloed">FALSE</prop>
+			<prop name="IsOutlined">TRUE</prop>
+			<prop name="IsFilled">FALSE</prop>
+			<prop name="IsAntialiased">TRUE</prop>
+			<prop name="HaloColor">stdBlack</prop>
+			<prop name="HaloLineWidth">1</prop>
+			<prop name="FillAttributes">Local</prop>
+			<prop name="FillStyle">SolidColor</prop>
+			<prop name="FillColor">stdWhite</prop>
+			<prop name="FillGradient">vxtDoNotUse</prop>
+			<prop name="Pattern">stdSolid</prop>
+			<prop name="FillOpacity">stdOpaque</prop>
+			<prop name="PenAttributes">Local</prop>
+			<prop name="PenColor">stdWhite</prop>
+			<prop name="LineStyle">stdLine2</prop>
+			<prop name="PenOpacity">stdOpaque</prop>
+			<xyprop name="Center" x="0" y="0"/>
+			<xyprop name="Position" x="598" y="604"/>
+			<prop name="Radius">2400</prop>
+			<xyprop name="Size" x="100" y="30"/>
+		  </model>
+		  <object name="TrackTriangle" class="Polygon" guid="9ea2e10f-4dd1-4329-8d4b-efe893b1fba4">
+			  <model>
+				<prop name="IsVisible">TRUE</prop>
+				<prop name="IsOpen">FALSE</prop>
+				<prop name="IsHaloed">FALSE</prop>
+				<prop name="IsOutlined">FALSE</prop>
+				<prop name="IsFilled">TRUE</prop>
+				<prop name="IsAntialiased">TRUE</prop>
+				<prop name="HaloColor">stdBlack</prop>
+				<prop name="HaloLineWidth">1</prop>
+				<prop name="FillAttributes">Local</prop>
+				<prop name="FillStyle">SolidColor</prop>
+				<prop name="FillColor">stdBlue</prop>
+				<prop name="FillGradient">vxtDoNotUse</prop>
+				<prop name="Pattern">stdSolid</prop>
+				<prop name="FillOpacity">stdOpaque</prop>
+				<prop name="PenAttributes">Local</prop>
+				<prop name="PenColor">stdWhite</prop>
+				<prop name="LineStyle">stdLine1</prop>
+				<prop name="PenOpacity">stdOpaque</prop>
+				<xyprop name="Size" x="34" y="25"/>
+				<arrayprop name="PtsArray" capacity="4" size="4">
+				  <xyentry x="272" y="499"/>
+				  <xyentry x="260" y="481"/>
+				  <xyentry x="284" y="481"/>
+				</arrayprop>
+				<arrayprop name="IntersectPtsArray" capacity="0" size="0"/>
+				<arrayprop name="Mesh" capacity="1" size="0">
+				  <structentry>
+					<arrayfield name="Indices" capacity="4"/>
+				  </structentry>
+				</arrayprop>
+			  </model>
+			</object>
+		</object>
+
+	 </built_object_implementation>
+</object_implementation>

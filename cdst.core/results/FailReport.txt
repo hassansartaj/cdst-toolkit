@@ -1,0 +1,168 @@
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	1	0	0	1	0
+TakeOff	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	1	0	0	1	0
+TakeOff	0	0	0	0	0
+Descent	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	1	0	0	1	0
+TakeOff	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	1	0	0	1	0
+TakeOff	0	0	0	0	0
+Descent	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old[Cruise] - FPC[0]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Cruise	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old[Climb] - FPC[1]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Climb	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old[Descent] - FPC[0]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Descent	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old[Cruise] - FPC[0]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Cruise	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old[Climb] - FPC[1]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Climb	0	0	0	0	0
+---------------------------------Faults Table for [tessdata/tessdata_old[Descent] - FPC[0]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Descent	1	0	0	1	0
+---------------------------------Faults Table for [tessdata/tessdata_old[StraightAndLevel] - FPC[0]]---------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	1	0	0	1	0
+----------------------------------Faults Table------------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+Standing	0	0	0	0	0
+----------------------------------Faults Table------------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	0	0	0	0	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	0	0	0	0	0
+TakeOff	0	0	0	0	0
+Descent	0	0	0	0	0
+----------------------------------Faults Table------------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	0	0	0	0	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	0	0	0	0	0
+TakeOff	0	0	0	0	0
+Descent	0	0	0	0	0
+----------------------------------Faults Table------------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	0	0	0	0	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	0	0	0	0	0
+TakeOff	0	0	0	0	0
+Descent	0	0	0	0	0
+----------------------------------Faults Table------------------------------------
+State	TotalFaults	airspeed	altitude	roll	heading
+StraightAndLevel	0	0	0	0	0
+Cruise	0	0	0	0	0
+Climb	0	0	0	0	0
+Taxiing	1	1	0	0	0
+Standing	0	0	0	0	0
+Landing	0	0	0	0	0
+TakeOff	0	0	0	0	0
+Descent	0	0	0	0	0

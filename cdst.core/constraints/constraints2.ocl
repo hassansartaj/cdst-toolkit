@@ -1,0 +1,23 @@
+--Standing
+context Aircraft inv: self.oclIsInState(Standing) and self.airspeedtape.airspeed>=0 and self.airspeedtape.airspeed<=10
+
+--Taxiing
+context Aircraft inv: self.oclIsInState(Taxiing) and self.airspeedtape.airspeed>=10 and self.airspeedtape.airspeed<=60
+
+--TakeOff
+context Aircraft inv: self.oclIsInState(TakeOff) and self.airspeedtape.airspeed>=40 and self.airspeedtape.airspeed<=200
+
+--Climb
+context Aircraft inv: self.oclIsInState(Climb) and self.airspeedtape.airspeed>=60 and self.airspeedtape.airspeed<=200
+
+--Cruise
+context Aircraft inv: self.oclIsInState(Cruise) and self.airspeedtape.airspeed>=60 and self.airspeedtape.airspeed<=200
+	
+--Descent
+context Aircraft inv: self.oclIsInState(Descent) and self.airspeedtape.airspeed>=60 and self.airspeedtape.airspeed<=200
+
+--StraightAndLevel
+context Aircraft inv: self.oclIsInState(StraightAndLevel) and self.airspeedtape.airspeed>=60 and self.airspeedtape.airspeed<=200
+
+--Landing
+context Aircraft inv: self.oclIsInState(Landing) and self.airspeedtape.airspeed>=40 and self.airspeedtape.airspeed<200

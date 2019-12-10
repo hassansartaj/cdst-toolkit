@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_RIvPd-j3EemyBp2cE1iMYg" name="CDSProfile" metamodelReference="_RIvPzuj3EemyBp2cE1iMYg">
+  <eAnnotations xmi:id="_RIvPeOj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_RIvPeej3EemyBp2cE1iMYg" name="CDSProfile" nsURI="http:///schemas/CDSProfile/_PnA9IOj3EemyBp2cE1iMYg/12" nsPrefix="CDSProfile">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPeuj3EemyBp2cE1iMYg" name="Widget">
+        <eAnnotations xmi:id="_RIvPe-j3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIvP0ej3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPfOj3EemyBp2cE1iMYg" name="IsVisible" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPfuj3EemyBp2cE1iMYg" name="Type" ordered="false" lowerBound="1" eType="_RIvPiuj3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPgOj3EemyBp2cE1iMYg" name="SizeX" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPguj3EemyBp2cE1iMYg" name="SizeY" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPhOj3EemyBp2cE1iMYg" name="PosX" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPhuj3EemyBp2cE1iMYg" name="PosY" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_RIvPiOj3EemyBp2cE1iMYg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_RIvPiuj3EemyBp2cE1iMYg" name="WidgetType">
+        <eAnnotations xmi:id="_RIvPi-j3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIvP6ej3EemyBp2cE1iMYg"/>
+        <eLiterals xmi:id="_RIvPjOj3EemyBp2cE1iMYg" name="Container"/>
+        <eLiterals xmi:id="_RIvPjej3EemyBp2cE1iMYg" name="Graphical" value="1"/>
+        <eLiterals xmi:id="_RIvPjuj3EemyBp2cE1iMYg" name="TextString" value="2"/>
+        <eLiterals xmi:id="_RIvPj-j3EemyBp2cE1iMYg" name="Interactive" value="3"/>
+        <eLiterals xmi:id="_RIvPkOj3EemyBp2cE1iMYg" name="MapManagement" value="4"/>
+        <eLiterals xmi:id="_RIvPkej3EemyBp2cE1iMYg" name="DynamicMotion" value="5"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPkuj3EemyBp2cE1iMYg" name="Altimeter" eSuperTypes="_RIvPeuj3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPk-j3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1rOj3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPlOj3EemyBp2cE1iMYg" name="altitude" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPl-j3EemyBp2cE1iMYg" name="AirspeedIndicator" eSuperTypes="_RIvPeuj3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPmOj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1tej3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPmej3EemyBp2cE1iMYg" name="airspeed" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPnOj3EemyBp2cE1iMYg" name="Compass" eSuperTypes="_RIvPeuj3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPnej3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1vuj3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPnuj3EemyBp2cE1iMYg" name="heading" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPoej3EemyBp2cE1iMYg" name="AttitudeIndicator" eSuperTypes="_RIvPeuj3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPouj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1x-j3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPo-j3EemyBp2cE1iMYg" name="roll" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_RIvPpuj3EemyBp2cE1iMYg" name="CDSProfile" nsURI="http:///schemas/CDSProfile/_Sk4tQOWmEemRE-Vs4p4Udg/11" nsPrefix="CDSProfile">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPp-j3EemyBp2cE1iMYg" name="Widget">
+        <eAnnotations xmi:id="_RIvPqOj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIvP0ej3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPqej3EemyBp2cE1iMYg" name="IsVisible" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPq-j3EemyBp2cE1iMYg" name="Type" ordered="false" lowerBound="1" eType="_RIvPt-j3EemyBp2cE1iMYg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPrej3EemyBp2cE1iMYg" name="SizeX" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPr-j3EemyBp2cE1iMYg" name="SizeY" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPsej3EemyBp2cE1iMYg" name="PosX" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_RIvPs-j3EemyBp2cE1iMYg" name="PosY" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_RIvPtej3EemyBp2cE1iMYg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_RIvPt-j3EemyBp2cE1iMYg" name="WidgetType">
+        <eAnnotations xmi:id="_RIvPuOj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIvP6ej3EemyBp2cE1iMYg"/>
+        <eLiterals xmi:id="_RIvPuej3EemyBp2cE1iMYg" name="Container"/>
+        <eLiterals xmi:id="_RIvPuuj3EemyBp2cE1iMYg" name="Graphical" value="1"/>
+        <eLiterals xmi:id="_RIvPu-j3EemyBp2cE1iMYg" name="TextString" value="2"/>
+        <eLiterals xmi:id="_RIvPvOj3EemyBp2cE1iMYg" name="Interactive" value="3"/>
+        <eLiterals xmi:id="_RIvPvej3EemyBp2cE1iMYg" name="MapManagement" value="4"/>
+        <eLiterals xmi:id="_RIvPvuj3EemyBp2cE1iMYg" name="DynamicMotion" value="5"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPv-j3EemyBp2cE1iMYg" name="Altimeter" eSuperTypes="_RIvPp-j3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPwOj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1rOj3EemyBp2cE1iMYg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPwuj3EemyBp2cE1iMYg" name="AirspeedIndicator" eSuperTypes="_RIvPp-j3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPw-j3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1tej3EemyBp2cE1iMYg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPxej3EemyBp2cE1iMYg" name="Compass" eSuperTypes="_RIvPp-j3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPxuj3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1vuj3EemyBp2cE1iMYg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_RIvPyOj3EemyBp2cE1iMYg" name="AttitudeIndicator" eSuperTypes="_RIvPp-j3EemyBp2cE1iMYg">
+        <eAnnotations xmi:id="_RIvPyej3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RIv1x-j3EemyBp2cE1iMYg"/>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:id="_RIvPy-j3EemyBp2cE1iMYg">
+    <eAnnotations xmi:id="_RIvPzOj3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIvPzej3EemyBp2cE1iMYg" key="addedInVersion" value="1"/>
+    </eAnnotations>
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_RIvPzuj3EemyBp2cE1iMYg">
+    <eAnnotations xmi:id="_RIvPz-j3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIvP0Oj3EemyBp2cE1iMYg" key="addedInVersion" value="1"/>
+    </eAnnotations>
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_RIvP0ej3EemyBp2cE1iMYg" name="Widget">
+    <eAnnotations xmi:id="_RIvP0uj3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIvP0-j3EemyBp2cE1iMYg" key="addedInVersion" value="3"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_RIvP1Oj3EemyBp2cE1iMYg" name="IsVisible" visibility="public">
+      <eAnnotations xmi:id="_RIvP1ej3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP1uj3EemyBp2cE1iMYg" key="addedInVersion" value="3"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RIvP1-j3EemyBp2cE1iMYg" name="Type" visibility="public" type="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIvP2Oj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP2ej3EemyBp2cE1iMYg" key="addedInVersion" value="6"/>
+      </eAnnotations>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RIvP2uj3EemyBp2cE1iMYg" name="SizeX" visibility="public">
+      <eAnnotations xmi:id="_RIvP2-j3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP3Oj3EemyBp2cE1iMYg" key="addedInVersion" value="6"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RIvP3ej3EemyBp2cE1iMYg" name="SizeY" visibility="public">
+      <eAnnotations xmi:id="_RIvP3uj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP3-j3EemyBp2cE1iMYg" key="addedInVersion" value="6"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RIvP4Oj3EemyBp2cE1iMYg" name="PosX" visibility="public">
+      <eAnnotations xmi:id="_RIvP4ej3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP4uj3EemyBp2cE1iMYg" key="addedInVersion" value="6"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RIvP4-j3EemyBp2cE1iMYg" name="PosY" visibility="public">
+      <eAnnotations xmi:id="_RIvP5Oj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP5ej3EemyBp2cE1iMYg" key="addedInVersion" value="6"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RIvP5uj3EemyBp2cE1iMYg" name="base_Class" association="_RIv1puj3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIvP5-j3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP6Oj3EemyBp2cE1iMYg" key="addedInVersion" value="7"/>
+      </eAnnotations>
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_RIvP6ej3EemyBp2cE1iMYg" name="WidgetType">
+    <eAnnotations xmi:id="_RIvP6uj3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIvP6-j3EemyBp2cE1iMYg" key="addedInVersion" value="4"/>
+    </eAnnotations>
+    <ownedLiteral xmi:id="_RIvP7Oj3EemyBp2cE1iMYg" name="Container" classifier="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIvP7ej3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP7uj3EemyBp2cE1iMYg" key="addedInVersion" value="5"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_RIvP7-j3EemyBp2cE1iMYg" name="Graphical" classifier="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIvP8Oj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP8ej3EemyBp2cE1iMYg" key="addedInVersion" value="5"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_RIvP8uj3EemyBp2cE1iMYg" name="TextString" classifier="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIvP8-j3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP9Oj3EemyBp2cE1iMYg" key="addedInVersion" value="5"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_RIvP9ej3EemyBp2cE1iMYg" name="Interactive" classifier="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIvP9uj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIvP9-j3EemyBp2cE1iMYg" key="addedInVersion" value="5"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_RIv1oOj3EemyBp2cE1iMYg" name="MapManagement" classifier="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1oej3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1ouj3EemyBp2cE1iMYg" key="addedInVersion" value="5"/>
+      </eAnnotations>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="_RIv1o-j3EemyBp2cE1iMYg" name="DynamicMotion" classifier="_RIvP6ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1pOj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1pej3EemyBp2cE1iMYg" key="addedInVersion" value="5"/>
+      </eAnnotations>
+    </ownedLiteral>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_RIv1puj3EemyBp2cE1iMYg" name="Class_Widget" memberEnd="_RIv1qej3EemyBp2cE1iMYg _RIvP5uj3EemyBp2cE1iMYg">
+    <eAnnotations xmi:id="_RIv1p-j3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIv1qOj3EemyBp2cE1iMYg" key="addedInVersion" value="7"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_RIv1qej3EemyBp2cE1iMYg" name="extension_Widget" type="_RIvP0ej3EemyBp2cE1iMYg" aggregation="composite" association="_RIv1puj3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1quj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1q-j3EemyBp2cE1iMYg" key="addedInVersion" value="7"/>
+      </eAnnotations>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_RIv1rOj3EemyBp2cE1iMYg" name="Altimeter">
+    <eAnnotations xmi:id="_RIv1rej3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIv1ruj3EemyBp2cE1iMYg" key="addedInVersion" value="8"/>
+    </eAnnotations>
+    <generalization xmi:id="_RIv1r-j3EemyBp2cE1iMYg" general="_RIvP0ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1sOj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1sej3EemyBp2cE1iMYg" key="addedInVersion" value="10"/>
+      </eAnnotations>
+    </generalization>
+    <ownedAttribute xmi:id="_RIv1suj3EemyBp2cE1iMYg" name="altitude" visibility="public">
+      <eAnnotations xmi:id="_RIv1s-j3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1tOj3EemyBp2cE1iMYg" key="addedInVersion" value="12"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_RIv1tej3EemyBp2cE1iMYg" name="AirspeedIndicator">
+    <eAnnotations xmi:id="_RIv1tuj3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIv1t-j3EemyBp2cE1iMYg" key="addedInVersion" value="8"/>
+    </eAnnotations>
+    <generalization xmi:id="_RIv1uOj3EemyBp2cE1iMYg" general="_RIvP0ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1uej3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1uuj3EemyBp2cE1iMYg" key="addedInVersion" value="10"/>
+      </eAnnotations>
+    </generalization>
+    <ownedAttribute xmi:id="_RIv1u-j3EemyBp2cE1iMYg" name="airspeed" visibility="public">
+      <eAnnotations xmi:id="_RIv1vOj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1vej3EemyBp2cE1iMYg" key="addedInVersion" value="12"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_RIv1vuj3EemyBp2cE1iMYg" name="Compass">
+    <eAnnotations xmi:id="_RIv1v-j3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIv1wOj3EemyBp2cE1iMYg" key="addedInVersion" value="8"/>
+    </eAnnotations>
+    <generalization xmi:id="_RIv1wej3EemyBp2cE1iMYg" general="_RIvP0ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1wuj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1w-j3EemyBp2cE1iMYg" key="addedInVersion" value="10"/>
+      </eAnnotations>
+    </generalization>
+    <ownedAttribute xmi:id="_RIv1xOj3EemyBp2cE1iMYg" name="heading" visibility="public">
+      <eAnnotations xmi:id="_RIv1xej3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1xuj3EemyBp2cE1iMYg" key="addedInVersion" value="12"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_RIv1x-j3EemyBp2cE1iMYg" name="AttitudeIndicator">
+    <eAnnotations xmi:id="_RIv1yOj3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIv1yej3EemyBp2cE1iMYg" key="addedInVersion" value="8"/>
+    </eAnnotations>
+    <generalization xmi:id="_RIv1yuj3EemyBp2cE1iMYg" general="_RIvP0ej3EemyBp2cE1iMYg">
+      <eAnnotations xmi:id="_RIv1y-j3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1zOj3EemyBp2cE1iMYg" key="addedInVersion" value="10"/>
+      </eAnnotations>
+    </generalization>
+    <ownedAttribute xmi:id="_RIv1zej3EemyBp2cE1iMYg" name="roll" visibility="public">
+      <eAnnotations xmi:id="_RIv1zuj3EemyBp2cE1iMYg" source="uml2.extensions">
+        <details xmi:id="_RIv1z-j3EemyBp2cE1iMYg" key="addedInVersion" value="12"/>
+      </eAnnotations>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <profileApplication xmi:id="_RIv10Oj3EemyBp2cE1iMYg">
+    <eAnnotations xmi:id="_RIv10ej3EemyBp2cE1iMYg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="ProfileBase.profile.uml#_RIsL0uj3EemyBp2cE1iMYg"/>
+    </eAnnotations>
+    <eAnnotations xmi:id="_RIv10uj3EemyBp2cE1iMYg" source="uml2.extensions">
+      <details xmi:id="_RIv10-j3EemyBp2cE1iMYg" key="addedInVersion" value="1"/>
+    </eAnnotations>
+    <appliedProfile href="ProfileBase.profile.uml#_RIsL0Oj3EemyBp2cE1iMYg"/>
+  </profileApplication>
+</uml:Profile>

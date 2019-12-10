@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_D_634DEQEemUlZ8Y70Neuw" name="SamplePackage">
+  <packagedElement xmi:type="uml:Class" xmi:id="_D_634TEQEemUlZ8Y70Neuw" name="Aircraft">
+    <ownedAttribute xmi:id="_D_634jEQEemUlZ8Y70Neuw" name="airSpeed" type="_D_637jEQEemUlZ8Y70Neuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D_634zEQEemUlZ8Y70Neuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D_635DEQEemUlZ8Y70Neuw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_D_635TEQEemUlZ8Y70Neuw" name="altitude" type="_D_637zEQEemUlZ8Y70Neuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D_635jEQEemUlZ8Y70Neuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D_635zEQEemUlZ8Y70Neuw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_D_636DEQEemUlZ8Y70Neuw" name="heading" type="_D_638DEQEemUlZ8Y70Neuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D_636TEQEemUlZ8Y70Neuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D_636jEQEemUlZ8Y70Neuw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_D_636zEQEemUlZ8Y70Neuw" name="roll" type="_D_638TEQEemUlZ8Y70Neuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D_637DEQEemUlZ8Y70Neuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D_637TEQEemUlZ8Y70Neuw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_D_637jEQEemUlZ8Y70Neuw" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_D_637zEQEemUlZ8Y70Neuw" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_D_638DEQEemUlZ8Y70Neuw" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_D_638TEQEemUlZ8Y70Neuw" name="Integer"/>
+</uml:Package>

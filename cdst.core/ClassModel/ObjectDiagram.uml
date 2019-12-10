@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_QdIHkBcfEeqOE_3JNVvbKA" name="Object Diagram">
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXojkBcfEeqOE_3JNVvbKA" name="Aircraft:Aircraft1">
+    <ownedAttribute xmi:id="_QXojkRcfEeqOE_3JNVvbKA" name="airspeedtape" type="_QXojnRcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXpKpRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojkhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojkxcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojlBcfEeqOE_3JNVvbKA" name="altitudetape" type="_QXpKuxcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXpxvxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojlRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojlhcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojlxcfEeqOE_3JNVvbKA" name="attitudeindicator" type="_QXpxzhcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXqYzRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojmBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojmRcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojmhcfEeqOE_3JNVvbKA" name="headingindicator" type="_QXqY3BcfEeqOE_3JNVvbKA" aggregation="composite" association="_QXq_2xcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojmxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojnBcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXojnRcfEeqOE_3JNVvbKA" name="AirspeedTape:AirspeedTape1">
+    <ownedAttribute xmi:id="_QXojnhcfEeqOE_3JNVvbKA" name="airspeed">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKqRcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojnxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojoBcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojoRcfEeqOE_3JNVvbKA" name="IsVisible">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKqhcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojohcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojoxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXojpBcfEeqOE_3JNVvbKA" value="true">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKqxcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojpRcfEeqOE_3JNVvbKA" name="Type">
+      <type xmi:type="uml:Enumeration" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKrBcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojphcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojpxcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojqBcfEeqOE_3JNVvbKA" name="SizeX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKsxcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojqRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojqhcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXojqxcfEeqOE_3JNVvbKA" value="111">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKtBcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojrBcfEeqOE_3JNVvbKA" name="SizeY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKtRcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojrRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojrhcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXojrxcfEeqOE_3JNVvbKA" value="26">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKthcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXojsBcfEeqOE_3JNVvbKA" name="PosX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKtxcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXojsRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXojshcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKoBcfEeqOE_3JNVvbKA" value="392">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKuBcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpKoRcfEeqOE_3JNVvbKA" name="PosY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKuRcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKohcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKoxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKpBcfEeqOE_3JNVvbKA" value="377">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpKuhcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXpKuxcfEeqOE_3JNVvbKA" name="AltitudeTape:AltitudeTape1">
+    <ownedAttribute xmi:id="_QXpKvBcfEeqOE_3JNVvbKA" name="altitude">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxwxcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKvRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKvhcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpKvxcfEeqOE_3JNVvbKA" name="IsVisible">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxxBcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKwBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKwRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXpKwhcfEeqOE_3JNVvbKA" value="true">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxxRcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpKwxcfEeqOE_3JNVvbKA" name="SizeX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxxhcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxsBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxsRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxshcfEeqOE_3JNVvbKA" value="102">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxxxcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpxsxcfEeqOE_3JNVvbKA" name="SizeY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxyBcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxtBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxtRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxthcfEeqOE_3JNVvbKA" value="27">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxyRcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpxtxcfEeqOE_3JNVvbKA" name="PosX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxyhcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxuBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxuRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxuhcfEeqOE_3JNVvbKA" value="954">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxyxcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpxuxcfEeqOE_3JNVvbKA" name="PosY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxzBcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxvBcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxvRcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxvhcfEeqOE_3JNVvbKA" value="374">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXpxzRcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXpxzhcfEeqOE_3JNVvbKA" name="AttitudeIndicator:AttitudeIndicator1">
+    <ownedAttribute xmi:id="_QXpxzxcfEeqOE_3JNVvbKA" name="roll">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY0RcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpx0BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpx0RcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpx0hcfEeqOE_3JNVvbKA" name="IsVisible">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY0hcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpx0xcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpx1BcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXpx1RcfEeqOE_3JNVvbKA" value="true">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY0xcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXpx1hcfEeqOE_3JNVvbKA" name="SizeX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY1BcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpx1xcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpx2BcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYwBcfEeqOE_3JNVvbKA" value="108">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY1RcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqYwRcfEeqOE_3JNVvbKA" name="SizeY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY1hcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYwhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqYwxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYxBcfEeqOE_3JNVvbKA" value="31">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY1xcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqYxRcfEeqOE_3JNVvbKA" name="PosX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY2BcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYxhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqYxxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYyBcfEeqOE_3JNVvbKA" value="837">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY2RcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqYyRcfEeqOE_3JNVvbKA" name="PosY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY2hcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYyhcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqYyxcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYzBcfEeqOE_3JNVvbKA" value="174">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXqY2xcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QXqY3BcfEeqOE_3JNVvbKA" name="HeadingIndicator:HeadingIndicator1">
+    <ownedAttribute xmi:id="_QXqY3RcfEeqOE_3JNVvbKA" name="heading">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_3xcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY3hcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY3xcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqY4BcfEeqOE_3JNVvbKA" name="IsVisible">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_4BcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY4RcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY4hcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_QXqY4xcfEeqOE_3JNVvbKA" value="true">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_4RcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqY5BcfEeqOE_3JNVvbKA" name="SizeX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_4hcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY5RcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY5hcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXqY5xcfEeqOE_3JNVvbKA" value="100">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_4xcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXqY6BcfEeqOE_3JNVvbKA" name="SizeY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_5BcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_0BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_0RcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_0hcfEeqOE_3JNVvbKA" value="30">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_5RcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXq_0xcfEeqOE_3JNVvbKA" name="PosX">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_5hcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_1BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_1RcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_1hcfEeqOE_3JNVvbKA" value="598">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_5xcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QXq_1xcfEeqOE_3JNVvbKA" name="PosY">
+      <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_6BcfEeqOE_3JNVvbKA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_2BcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_2RcfEeqOE_3JNVvbKA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_2hcfEeqOE_3JNVvbKA" value="604">
+        <type xmi:type="uml:PrimitiveType" href="file:/D:/QUEST%20Lab/Eclipse%20Workspaces/CDST-New/cdst.core/model/CDSModel.uml#_QXq_6RcfEeqOE_3JNVvbKA"/>
+      </defaultValue>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXpKpRcfEeqOE_3JNVvbKA" memberEnd="_QXojkRcfEeqOE_3JNVvbKA _QXpKphcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXpKphcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXpKpRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpKpxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpKqBcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXpxvxcfEeqOE_3JNVvbKA" memberEnd="_QXojlBcfEeqOE_3JNVvbKA _QXpxwBcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXpxwBcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXpxvxcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXpxwRcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXpxwhcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXqYzRcfEeqOE_3JNVvbKA" memberEnd="_QXojlxcfEeqOE_3JNVvbKA _QXqYzhcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXqYzhcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXqYzRcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXqYzxcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXqY0BcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QXq_2xcfEeqOE_3JNVvbKA" memberEnd="_QXojmhcfEeqOE_3JNVvbKA _QXq_3BcfEeqOE_3JNVvbKA">
+    <ownedEnd xmi:id="_QXq_3BcfEeqOE_3JNVvbKA" name="aircraft" type="_QXojkBcfEeqOE_3JNVvbKA" association="_QXq_2xcfEeqOE_3JNVvbKA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXq_3RcfEeqOE_3JNVvbKA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXq_3hcfEeqOE_3JNVvbKA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
