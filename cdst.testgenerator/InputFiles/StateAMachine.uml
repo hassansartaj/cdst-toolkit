@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Profile="http:///schemas/Profile/_P7Ra8MpXEeiMbK8OBy7Y6Q/44" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Profile/_P7Ra8MpXEeiMbK8OBy7Y6Q/44 PFDProfile.profile.uml#_hLPeC8q9Eei6YNx_HzyoHw">
+  <uml:Package xmi:id="_hLbEMMq9Eei6YNx_HzyoHw" name="StateAMachine">
+    <packageImport xmi:id="_hLbEMcq9Eei6YNx_HzyoHw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_hLbEMsq9Eei6YNx_HzyoHw" name="StateMachine1">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_hLbEM8q9Eei6YNx_HzyoHw" name="StateMachine1">
+        <region xmi:id="_hLbENMq9Eei6YNx_HzyoHw" name="Region1"/>
+      </ownedBehavior>
+      <region xmi:id="_hLbENcq9Eei6YNx_HzyoHw" name="Region1">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_hLbENsq9Eei6YNx_HzyoHw"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbEN8q9Eei6YNx_HzyoHw" name="Standing">
+          <region xmi:id="_hLbEOMq9Eei6YNx_HzyoHw" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_hLbEOcq9Eei6YNx_HzyoHw" name="Engine StartUp"/>
+            <subvertex xmi:type="uml:State" xmi:id="_hLbEOsq9Eei6YNx_HzyoHw" name="Engine Shutdown"/>
+            <transition xmi:id="_hLbEO8q9Eei6YNx_HzyoHw" name="StopEngine()" source="_hLbEOcq9Eei6YNx_HzyoHw" target="_hLbEOsq9Eei6YNx_HzyoHw"/>
+            <transition xmi:id="_hLbEPMq9Eei6YNx_HzyoHw" name="DisengageParkingBreak()" source="_hLbEOcq9Eei6YNx_HzyoHw" target="_hLbEP8q9Eei6YNx_HzyoHw"/>
+            <transition xmi:id="_hLbEPcq9Eei6YNx_HzyoHw" name="StartEngine()" source="_hLbEOsq9Eei6YNx_HzyoHw" target="_hLbEOcq9Eei6YNx_HzyoHw"/>
+            <transition xmi:id="_hLbEPsq9Eei6YNx_HzyoHw" source="_hLbEOsq9Eei6YNx_HzyoHw" target="_hLbEUsq9Eei6YNx_HzyoHw"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbEP8q9Eei6YNx_HzyoHw" name="Taxiing">
+          <region xmi:id="_hLbEQMq9Eei6YNx_HzyoHw" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_hLbEQcq9Eei6YNx_HzyoHw" name="TaxiToRunway"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_hLbEQsq9Eei6YNx_HzyoHw"/>
+            <subvertex xmi:type="uml:State" xmi:id="_hLbEQ8q9Eei6YNx_HzyoHw" name="TaxiToTakeoffPosition"/>
+            <transition xmi:id="_hLbERMq9Eei6YNx_HzyoHw" name="IncreaseThrottlePower()" source="_hLbEQcq9Eei6YNx_HzyoHw" target="_hLbEQ8q9Eei6YNx_HzyoHw" guard="_hLbERcq9Eei6YNx_HzyoHw">
+              <ownedRule xmi:id="_hLbERcq9Eei6YNx_HzyoHw" constrainedElement="_hLbERMq9Eei6YNx_HzyoHw">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_hLbERsq9Eei6YNx_HzyoHw">
+                  <language></language>
+                  <body>Power==max</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:id="_hLbER8q9Eei6YNx_HzyoHw" name="IncreaseElevation()" source="_hLbEQ8q9Eei6YNx_HzyoHw" target="_hLbESsq9Eei6YNx_HzyoHw">
+              <effect xmi:type="uml:OpaqueBehavior" xmi:id="_hLbESMq9Eei6YNx_HzyoHw" name="Start Takeoff">
+                <language></language>
+                <body>NoseLiftUp</body>
+              </effect>
+            </transition>
+            <transition xmi:id="_hLbEScq9Eei6YNx_HzyoHw" name="IncreaseThrottle()" source="_hLbEQsq9Eei6YNx_HzyoHw" target="_hLbEQcq9Eei6YNx_HzyoHw"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbESsq9Eei6YNx_HzyoHw" name="TakeOff"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbES8q9Eei6YNx_HzyoHw" name="Climb"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbETMq9Eei6YNx_HzyoHw" name="Cruise"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbETcq9Eei6YNx_HzyoHw" name="Landing"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbETsq9Eei6YNx_HzyoHw" name="TaxiFromRunway"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbET8q9Eei6YNx_HzyoHw" name="Approach"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbEUMq9Eei6YNx_HzyoHw" name="Descent"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hLbEUcq9Eei6YNx_HzyoHw" name="PartialDescent"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_hLbEUsq9Eei6YNx_HzyoHw"/>
+        <transition xmi:id="_hLbEU8q9Eei6YNx_HzyoHw" name="IncreaseAltitude()" source="_hLbESsq9Eei6YNx_HzyoHw" target="_hLbES8q9Eei6YNx_HzyoHw" guard="_hLbEVMq9Eei6YNx_HzyoHw">
+          <ownedRule xmi:id="_hLbEVMq9Eei6YNx_HzyoHw" constrainedElement="_hLbEU8q9Eei6YNx_HzyoHw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_hLbEVcq9Eei6YNx_HzyoHw">
+              <language></language>
+              <body>Altitude==1000</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_hLbEVsq9Eei6YNx_HzyoHw" name="IncreaseAirSpeed()" source="_hLbES8q9Eei6YNx_HzyoHw" target="_hLbETMq9Eei6YNx_HzyoHw" guard="_hLbEV8q9Eei6YNx_HzyoHw">
+          <ownedRule xmi:id="_hLbEV8q9Eei6YNx_HzyoHw" constrainedElement="_hLbEVsq9Eei6YNx_HzyoHw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_hLbEWMq9Eei6YNx_HzyoHw">
+              <language></language>
+              <body>airspeed==500</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_hLbEWcq9Eei6YNx_HzyoHw" name="DecreaseThrottlePower()" source="_hLbETsq9Eei6YNx_HzyoHw" target="_hLbEOsq9Eei6YNx_HzyoHw" guard="_hLbEWsq9Eei6YNx_HzyoHw">
+          <ownedRule xmi:id="_hLbEWsq9Eei6YNx_HzyoHw" constrainedElement="_hLbEWcq9Eei6YNx_HzyoHw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_hLbEW8q9Eei6YNx_HzyoHw">
+              <language></language>
+              <body>Power==0</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_hLbEXMq9Eei6YNx_HzyoHw" name="EngineStopped">
+            <language></language>
+            <body>ThrottlePowerDecreases</body>
+            <body>ThrottlePowerDecreases</body>
+          </effect>
+        </transition>
+        <transition xmi:id="_hLbEXcq9Eei6YNx_HzyoHw" name="DecreaseThrottle()" source="_hLbETcq9Eei6YNx_HzyoHw" target="_hLbETsq9Eei6YNx_HzyoHw">
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_hLbEXsq9Eei6YNx_HzyoHw" name="Start Taxi">
+            <language></language>
+            <body>NoseWheelTouchesGround</body>
+          </effect>
+        </transition>
+        <transition xmi:id="_hLbEX8q9Eei6YNx_HzyoHw" name="RetractFlaps()" source="_hLbET8q9Eei6YNx_HzyoHw" target="_hLbETcq9Eei6YNx_HzyoHw" guard="_hLbEYMq9Eei6YNx_HzyoHw">
+          <ownedRule xmi:id="_hLbEYMq9Eei6YNx_HzyoHw" constrainedElement="_hLbEX8q9Eei6YNx_HzyoHw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_hLbEYcq9Eei6YNx_HzyoHw">
+              <language></language>
+              <body>flaplevel==3</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_hLbEYsq9Eei6YNx_HzyoHw" name="Start Landing">
+            <language></language>
+            <body>SpeedReduces</body>
+          </effect>
+        </transition>
+        <transition xmi:id="_hLbEY8q9Eei6YNx_HzyoHw" source="_hLbENsq9Eei6YNx_HzyoHw" target="_hLbEOsq9Eei6YNx_HzyoHw"/>
+        <transition xmi:id="_hLbEZMq9Eei6YNx_HzyoHw" name="DecreaseAltitude()" source="_hLbEUMq9Eei6YNx_HzyoHw" target="_hLbET8q9Eei6YNx_HzyoHw" guard="_hLbEZcq9Eei6YNx_HzyoHw">
+          <ownedRule xmi:id="_hLbEZcq9Eei6YNx_HzyoHw" constrainedElement="_hLbEZMq9Eei6YNx_HzyoHw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_hLbEZsq9Eei6YNx_HzyoHw">
+              <language></language>
+              <body>Altitude==500</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:id="_hLbEZ8q9Eei6YNx_HzyoHw" name="StartDescent" source="_hLbETMq9Eei6YNx_HzyoHw" target="_hLbEUMq9Eei6YNx_HzyoHw">
+          <trigger xmi:id="_hLbEaMq9Eei6YNx_HzyoHw" name="" visibility="public" event="_hLbEbsq9Eei6YNx_HzyoHw"/>
+        </transition>
+        <transition xmi:id="_hLbEacq9Eei6YNx_HzyoHw" name="EngageParkingBreak()" source="_hLbEP8q9Eei6YNx_HzyoHw" target="_hLbEN8q9Eei6YNx_HzyoHw"/>
+        <transition xmi:id="_hLbEasq9Eei6YNx_HzyoHw" name="DecreaseAltitude()" source="_hLbETMq9Eei6YNx_HzyoHw" target="_hLbEUcq9Eei6YNx_HzyoHw"/>
+        <transition xmi:id="_hLbEa8q9Eei6YNx_HzyoHw" name="IncreaseAltitude()" source="_hLbEUcq9Eei6YNx_HzyoHw" target="_hLbES8q9Eei6YNx_HzyoHw"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:TimeEvent" xmi:id="_hLbEbMq9Eei6YNx_HzyoHw" name="TimeEvent1">
+      <when xmi:id="_hLbEbcq9Eei6YNx_HzyoHw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:TimeEvent" xmi:id="_hLbEbsq9Eei6YNx_HzyoHw" name="TimeEvent2">
+      <when xmi:id="_hLbEb8q9Eei6YNx_HzyoHw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEcMq9Eei6YNx_HzyoHw" name="VerticalSpeedTape"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEccq9Eei6YNx_HzyoHw" name="AirSpeedTape">
+      <ownedAttribute xmi:id="_hLbEcsq9Eei6YNx_HzyoHw" name="groundSpeed" visibility="private" type="_hLbEhcq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEqsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEc8q9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEdMq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEdcq9Eei6YNx_HzyoHw" name="managedSpeed" visibility="private" type="_hLbEpsq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbErsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEdsq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEd8q9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEeMq9Eei6YNx_HzyoHw" name="selectedSpeed" visibility="private" type="_hLbEp8q9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEssq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEecq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEesq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEe8q9Eei6YNx_HzyoHw" name="sSpeed" visibility="private" type="_hLbEqcq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEtsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEfMq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEfcq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEfsq9Eei6YNx_HzyoHw" name="speedTrendArrow" visibility="private" type="_hLbEqMq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEusq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEf8q9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEgMq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEgcq9Eei6YNx_HzyoHw" name="AttitudeIndicatorDisplay">
+      <ownedAttribute xmi:id="_hLbEgsq9Eei6YNx_HzyoHw" name="altimeter" visibility="private" type="_hLbEz8q9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE0Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEg8q9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEhMq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEhcq9Eei6YNx_HzyoHw" name="GroundSpeed"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEhsq9Eei6YNx_HzyoHw" name="LandingElevationLine"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEh8q9Eei6YNx_HzyoHw" name="BaroreferenceIndication"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEiMq9Eei6YNx_HzyoHw" name="TargetAltitude"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEicq9Eei6YNx_HzyoHw" name="AltitudeTape">
+      <ownedAttribute xmi:id="_hLbEisq9Eei6YNx_HzyoHw" name="targetAltitude" visibility="private" type="_hLbEiMq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEvsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEi8q9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEjMq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEjcq9Eei6YNx_HzyoHw" name="baroreferenceIndication" visibility="private" type="_hLbEh8q9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEwsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEjsq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEj8q9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEkMq9Eei6YNx_HzyoHw" name="landingElevationLine" visibility="private" type="_hLbEhsq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbExsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEkcq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEksq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEk8q9Eei6YNx_HzyoHw" name="groundReferenceRibbon" visibility="private" type="_hLbEysq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbEy8q9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbElMq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbElcq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbElsq9Eei6YNx_HzyoHw" name="PrimaryFlightDisplay">
+      <ownedAttribute xmi:id="_hLbEl8q9Eei6YNx_HzyoHw" name="altitudeTape" visibility="private" type="_hLbEicq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE1Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEmMq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEmcq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEmsq9Eei6YNx_HzyoHw" name="airSpeedTape" visibility="private" type="_hLbEccq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE2Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEm8q9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEnMq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEncq9Eei6YNx_HzyoHw" name="verticalSpeedTape" visibility="private" type="_hLbEcMq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE3Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEnsq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEn8q9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEoMq9Eei6YNx_HzyoHw" name="compass" visibility="private" type="_hLbE4Mq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE5cq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEocq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEosq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hLbEo8q9Eei6YNx_HzyoHw" name="attitudeIndicatorDisplay" visibility="private" type="_hLbEgcq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE6cq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEpMq9Eei6YNx_HzyoHw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEpcq9Eei6YNx_HzyoHw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEpsq9Eei6YNx_HzyoHw" name="ManagedSpeed"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEp8q9Eei6YNx_HzyoHw" name="SelectedSpeed"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEqMq9Eei6YNx_HzyoHw" name="SpeedTrendArrow"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEqcq9Eei6YNx_HzyoHw" name="SSpeed"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEqsq9Eei6YNx_HzyoHw" memberEnd="_hLbEcsq9Eei6YNx_HzyoHw _hLbEq8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEq8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEccq9Eei6YNx_HzyoHw" association="_hLbEqsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbErMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbErcq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbErsq9Eei6YNx_HzyoHw" memberEnd="_hLbEdcq9Eei6YNx_HzyoHw _hLbEr8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEr8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEccq9Eei6YNx_HzyoHw" association="_hLbErsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEsMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEscq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEssq9Eei6YNx_HzyoHw" memberEnd="_hLbEeMq9Eei6YNx_HzyoHw _hLbEs8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEs8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEccq9Eei6YNx_HzyoHw" association="_hLbEssq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEtMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEtcq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEtsq9Eei6YNx_HzyoHw" memberEnd="_hLbEe8q9Eei6YNx_HzyoHw _hLbEt8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEt8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEccq9Eei6YNx_HzyoHw" association="_hLbEtsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEuMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEucq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEusq9Eei6YNx_HzyoHw" memberEnd="_hLbEfsq9Eei6YNx_HzyoHw _hLbEu8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEu8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEccq9Eei6YNx_HzyoHw" association="_hLbEusq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEvMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEvcq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEvsq9Eei6YNx_HzyoHw" memberEnd="_hLbEisq9Eei6YNx_HzyoHw _hLbEv8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEv8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEicq9Eei6YNx_HzyoHw" association="_hLbEvsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEwMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEwcq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEwsq9Eei6YNx_HzyoHw" memberEnd="_hLbEjcq9Eei6YNx_HzyoHw _hLbEw8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEw8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEicq9Eei6YNx_HzyoHw" association="_hLbEwsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbExMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbExcq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbExsq9Eei6YNx_HzyoHw" memberEnd="_hLbEkMq9Eei6YNx_HzyoHw _hLbEx8q9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEx8q9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEicq9Eei6YNx_HzyoHw" association="_hLbExsq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEyMq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEycq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEysq9Eei6YNx_HzyoHw" name="GroundReferenceRibbon"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbEy8q9Eei6YNx_HzyoHw" memberEnd="_hLbEk8q9Eei6YNx_HzyoHw _hLbEzMq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbEzMq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEicq9Eei6YNx_HzyoHw" association="_hLbEy8q9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbEzcq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbEzsq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbEz8q9Eei6YNx_HzyoHw" name="RadioAltimeter"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE0Mq9Eei6YNx_HzyoHw" memberEnd="_hLbEgsq9Eei6YNx_HzyoHw _hLbE0cq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE0cq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbEgcq9Eei6YNx_HzyoHw" association="_hLbE0Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE0sq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE08q9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE1Mq9Eei6YNx_HzyoHw" memberEnd="_hLbEl8q9Eei6YNx_HzyoHw _hLbE1cq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE1cq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbElsq9Eei6YNx_HzyoHw" association="_hLbE1Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE1sq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE18q9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE2Mq9Eei6YNx_HzyoHw" memberEnd="_hLbEmsq9Eei6YNx_HzyoHw _hLbE2cq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE2cq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbElsq9Eei6YNx_HzyoHw" association="_hLbE2Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE2sq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE28q9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE3Mq9Eei6YNx_HzyoHw" memberEnd="_hLbEncq9Eei6YNx_HzyoHw _hLbE3cq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE3cq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbElsq9Eei6YNx_HzyoHw" association="_hLbE3Mq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE3sq9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE38q9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbE4Mq9Eei6YNx_HzyoHw" name="HeadingIndicatorTape"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hLbE4cq9Eei6YNx_HzyoHw" name="TrackDiamond">
+      <ownedAttribute xmi:id="_hLbE4sq9Eei6YNx_HzyoHw" name="headingIndicatorTape" visibility="private" type="_hLbE4Mq9Eei6YNx_HzyoHw" aggregation="composite" association="_hLbE7cq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE48q9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE5Mq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE5cq9Eei6YNx_HzyoHw" memberEnd="_hLbEoMq9Eei6YNx_HzyoHw _hLbE5sq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE5sq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbElsq9Eei6YNx_HzyoHw" association="_hLbE5cq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE58q9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE6Mq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE6cq9Eei6YNx_HzyoHw" memberEnd="_hLbEo8q9Eei6YNx_HzyoHw _hLbE6sq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE6sq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbElsq9Eei6YNx_HzyoHw" association="_hLbE6cq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE68q9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE7Mq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hLbE7cq9Eei6YNx_HzyoHw" memberEnd="_hLbE4sq9Eei6YNx_HzyoHw _hLbE7sq9Eei6YNx_HzyoHw">
+      <ownedEnd xmi:id="_hLbE7sq9Eei6YNx_HzyoHw" name="" visibility="private" type="_hLbE4cq9Eei6YNx_HzyoHw" association="_hLbE7cq9Eei6YNx_HzyoHw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hLbE78q9Eei6YNx_HzyoHw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hLbE8Mq9Eei6YNx_HzyoHw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_hLbE8cq9Eei6YNx_HzyoHw">
+      <eAnnotations xmi:id="_hLbE8sq9Eei6YNx_HzyoHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_hLbE88q9Eei6YNx_HzyoHw">
+      <eAnnotations xmi:id="_hLbE9Mq9Eei6YNx_HzyoHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_hLcSO8q9Eei6YNx_HzyoHw"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_hLcSOcq9Eei6YNx_HzyoHw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_hLbE9cq9Eei6YNx_HzyoHw">
+      <eAnnotations xmi:id="_hLbE9sq9Eei6YNx_HzyoHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_hLZP0cq9Eei6YNx_HzyoHw"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_hLZPz8q9Eei6YNx_HzyoHw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_hLbE98q9Eei6YNx_HzyoHw">
+      <eAnnotations xmi:id="_hLbE-Mq9Eei6YNx_HzyoHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="PFDProfile.profile.uml#_hLPeC8q9Eei6YNx_HzyoHw"/>
+      </eAnnotations>
+      <appliedProfile href="PFDProfile.profile.uml#_hLPeCcq9Eei6YNx_HzyoHw"/>
+    </profileApplication>
+  </uml:Package>
+  <Profile:AirspeedIndicator xmi:id="_hLbE-cq9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbEccq9Eei6YNx_HzyoHw" Airspeed="40" Alignment="Left"/>
+  <Profile:AttitudeIndicatorDisplay xmi:id="_hLbE-sq9Eei6YNx_HzyoHw" IsVisible="true" base_Class="_hLbEgcq9Eei6YNx_HzyoHw" Alignment="Center"/>
+  <Profile:Label xmi:id="_hLbE-8q9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEz8q9Eei6YNx_HzyoHw" ColorIndex="Yellow"/>
+  <Profile:Label xmi:id="_hLbE_Mq9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEqcq9Eei6YNx_HzyoHw" Alignment="Left" ColorIndex="Yellow"/>
+  <Profile:GPArrow xmi:id="_hLbE_cq9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbEqMq9Eei6YNx_HzyoHw" ColorIndex="Yellow" Value="250"/>
+  <Profile:Label xmi:id="_hLbE_sq9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEp8q9Eei6YNx_HzyoHw" LabelString="100" MaxStringLength="10" Alignment="Left" ColorIndex="Green"/>
+  <Profile:Label xmi:id="_hLbE_8q9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEhcq9Eei6YNx_HzyoHw" LabelString="0" MaxStringLength="10" Alignment="Bottom left" ColorIndex="Green"/>
+  <Profile:Label xmi:id="_hLbFAMq9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEpsq9Eei6YNx_HzyoHw" LabelString="20" MaxStringLength="10" Alignment="Left" ColorIndex="Yellow"/>
+  <Profile:GPLine xmi:id="_hLbFAcq9Eei6YNx_HzyoHw" IsVisible="true" base_Class="_hLbEysq9Eei6YNx_HzyoHw"/>
+  <Profile:GPLine xmi:id="_hLbFAsq9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbEhsq9Eei6YNx_HzyoHw" ColorIndex="Yellow"/>
+  <Profile:Label xmi:id="_hLbFA8q9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEh8q9Eei6YNx_HzyoHw" LabelString="29.29" MaxStringLength="10" Alignment="Bottom left"/>
+  <Profile:Label xmi:id="_hLbFBMq9Eei6YNx_HzyoHw" type="TextString" IsVisible="true" base_Class="_hLbEiMq9Eei6YNx_HzyoHw" LabelString="17000" MaxStringLength="5" Alignment="Right" ColorIndex="Green"/>
+  <Profile:Altimeter xmi:id="_hLbFBcq9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbEicq9Eei6YNx_HzyoHw" AltitudeValue="10" Alignment="Right"/>
+  <Profile:Compass xmi:id="_hLbFBsq9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbE4Mq9Eei6YNx_HzyoHw" Heading="90"/>
+  <Profile:GPDiamond xmi:id="_hLbFB8q9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbE4cq9Eei6YNx_HzyoHw" ColorIndex="Yellow" Filled="true"/>
+  <Profile:Variometer xmi:id="_hLbFCMq9Eei6YNx_HzyoHw" type="GraphicalRepresentation" IsVisible="true" base_Class="_hLbEcMq9Eei6YNx_HzyoHw" Alignment="Right"/>
+  <Profile:BasicContainer xmi:id="_hLbFCcq9Eei6YNx_HzyoHw" SizeX="50" SizeY="50" PosX="100" PosY="100" base_Class="_hLbElsq9Eei6YNx_HzyoHw"/>
+</xmi:XMI>

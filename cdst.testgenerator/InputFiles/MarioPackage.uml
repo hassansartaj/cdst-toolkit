@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:platformprofile="http:///schemas/platformprofile/_Ow538MbiEeSbYpcsKyygzQ/67" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/platformprofile/_Ow538MbiEeSbYpcsKyygzQ/67 Profile.profile.uml#_LqbUNNH3EeS1NpPWivEKNQ">
+  <uml:Model xmi:id="_LqGkWNH3EeS1NpPWivEKNQ" name="MarioPackage">
+    <packageImport xmi:id="_LqGkWdH3EeS1NpPWivEKNQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LqGkWtH3EeS1NpPWivEKNQ" name="Mario">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_LqGkW9H3EeS1NpPWivEKNQ" name="MarioStateMachine">
+        <region xmi:id="_LqGkXNH3EeS1NpPWivEKNQ" name="Region1">
+          <subvertex xmi:type="uml:State" xmi:id="_LqGkXdH3EeS1NpPWivEKNQ" name="Idle"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqGkXtH3EeS1NpPWivEKNQ"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LqGkX9H3EeS1NpPWivEKNQ" name="Dead"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LqGkYNH3EeS1NpPWivEKNQ" name="Ghost Visible"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LqGkYdH3EeS1NpPWivEKNQ" name="Get Hit"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqGkYtH3EeS1NpPWivEKNQ" kind="choice"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LqGkY9H3EeS1NpPWivEKNQ" name="Kill Ghost"/>
+          <subvertex xmi:type="uml:State" xmi:id="_LqGkZNH3EeS1NpPWivEKNQ" name="Run Forward">
+            <region xmi:id="_LqGkZdH3EeS1NpPWivEKNQ" name="Region1">
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkZtH3EeS1NpPWivEKNQ" name="Edge Not Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkZ9H3EeS1NpPWivEKNQ" name="Edge Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkaNH3EeS1NpPWivEKNQ" name="Climb Edge"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqGkadH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGkatH3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqGkZtH3EeS1NpPWivEKNQ" target="_LqGkZ9H3EeS1NpPWivEKNQ" guard="_LqGka9H3EeS1NpPWivEKNQ">
+                <ownedRule xmi:id="_LqGka9H3EeS1NpPWivEKNQ" constrainedElement="_LqGkatH3EeS1NpPWivEKNQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqGkbNH3EeS1NpPWivEKNQ">
+                    <language>OCL</language>
+                    <body>obstacle.oclIsTypeOf(edge)</body>
+                  </specification>
+                </ownedRule>
+                <trigger xmi:id="_LqGkbdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg1NH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkbtH3EeS1NpPWivEKNQ" name="jump" source="_LqGkZ9H3EeS1NpPWivEKNQ" target="_LqGkaNH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqGkb9H3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5xNH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkcNH3EeS1NpPWivEKNQ" source="_LqGkZ9H3EeS1NpPWivEKNQ">
+                <target xmi:type="uml:Pseudostate" href="Blank%20Package.uml#_Lqx5-tH3EeS1NpPWivEKNQ"/>
+                <trigger xmi:id="_LqGkcdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_LqygdtH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkctH3EeS1NpPWivEKNQ" source="_LqGkaNH3EeS1NpPWivEKNQ" target="_LqGkZtH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGkc9H3EeS1NpPWivEKNQ" source="_LqGkZ9H3EeS1NpPWivEKNQ" target="_LqGkYtH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqGkdNH3EeS1NpPWivEKNQ" name=""/>
+              </transition>
+              <transition xmi:id="_LqGkddH3EeS1NpPWivEKNQ" source="_LqGkadH3EeS1NpPWivEKNQ" target="_LqGkZtH3EeS1NpPWivEKNQ"/>
+            </region>
+            <region xmi:id="_LqGkdtH3EeS1NpPWivEKNQ" name="Region2">
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkd9H3EeS1NpPWivEKNQ" name="Cliff Not Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkeNH3EeS1NpPWivEKNQ" name="Cliff Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkedH3EeS1NpPWivEKNQ" name="Climb Cliff"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqGketH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGke9H3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqGkd9H3EeS1NpPWivEKNQ" target="_LqGkeNH3EeS1NpPWivEKNQ" guard="_LqGkfNH3EeS1NpPWivEKNQ">
+                <ownedRule xmi:id="_LqGkfNH3EeS1NpPWivEKNQ" constrainedElement="_LqGke9H3EeS1NpPWivEKNQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqGkfdH3EeS1NpPWivEKNQ">
+                    <language>OCL</language>
+                    <body>obstacle.oclIsTypeOf(cliff)</body>
+                  </specification>
+                </ownedRule>
+                <trigger xmi:id="_LqGkftH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg0tH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkf9H3EeS1NpPWivEKNQ" name="jump" source="_LqGkeNH3EeS1NpPWivEKNQ" target="_LqGkedH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqGkgNH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:ChangeEvent" href="Blank%20Package.uml#_Lqx5bNH3EeS1NpPWivEKNQ"/>
+                </trigger>
+                <trigger xmi:id="_LqGkgdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_LqygztH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkgtH3EeS1NpPWivEKNQ" name="" source="_LqGkeNH3EeS1NpPWivEKNQ">
+                <target xmi:type="uml:State" href="Blank%20Package.uml#_Lqx5ytH3EeS1NpPWivEKNQ"/>
+                <trigger xmi:id="_LqGkg9H3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:ChangeEvent" href="Blank%20Package.uml#_Lqx5atH3EeS1NpPWivEKNQ"/>
+                </trigger>
+                <trigger xmi:id="_LqGkhNH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_LqygzdH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkhdH3EeS1NpPWivEKNQ" source="_LqGkedH3EeS1NpPWivEKNQ" target="_LqGkd9H3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGkhtH3EeS1NpPWivEKNQ" source="_LqGkeNH3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGkh9H3EeS1NpPWivEKNQ" source="_LqGketH3EeS1NpPWivEKNQ" target="_LqGkd9H3EeS1NpPWivEKNQ"/>
+            </region>
+            <region xmi:id="_LqGkiNH3EeS1NpPWivEKNQ" name="Region3">
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkidH3EeS1NpPWivEKNQ" name="Ghost Not Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkitH3EeS1NpPWivEKNQ" name="Kill Ghost"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGki9H3EeS1NpPWivEKNQ" name="Get Hit"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqGkjNH3EeS1NpPWivEKNQ" name="Ghost Visible"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqGkjdH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGkjtH3EeS1NpPWivEKNQ" name="jump" source="_LqGkjNH3EeS1NpPWivEKNQ" target="_LqGkitH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqGkj9H3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5xdH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkkNH3EeS1NpPWivEKNQ" name="enemyhit" source="_LqGkjNH3EeS1NpPWivEKNQ" target="_LqGki9H3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqGkkdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5itH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqGkktH3EeS1NpPWivEKNQ" source="_LqGkitH3EeS1NpPWivEKNQ" target="_LqGkidH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqGkk9H3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqGkidH3EeS1NpPWivEKNQ" target="_LqGkjNH3EeS1NpPWivEKNQ" guard="_LqHLANH3EeS1NpPWivEKNQ">
+                <ownedRule xmi:id="_LqHLANH3EeS1NpPWivEKNQ" constrainedElement="_LqGkk9H3EeS1NpPWivEKNQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLAdH3EeS1NpPWivEKNQ">
+                    <language></language>
+                    <body>obstacle.oclIsTypeOf(ghost)</body>
+                  </specification>
+                </ownedRule>
+                <trigger xmi:id="_LqHLAtH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg09H3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLA9H3EeS1NpPWivEKNQ" source="_LqGki9H3EeS1NpPWivEKNQ">
+                <target xmi:type="uml:Pseudostate" href="Blank%20Package.uml#_Lqx5-tH3EeS1NpPWivEKNQ"/>
+                <trigger xmi:id="_LqHLBNH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg2NH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLBdH3EeS1NpPWivEKNQ" name="updatelifecount" source="_LqGki9H3EeS1NpPWivEKNQ" target="_LqGkYtH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLBtH3EeS1NpPWivEKNQ" name="" event="_LqHLcdH3EeS1NpPWivEKNQ"/>
+              </transition>
+              <transition xmi:id="_LqHLB9H3EeS1NpPWivEKNQ" source="_LqGkjdH3EeS1NpPWivEKNQ" target="_LqGkidH3EeS1NpPWivEKNQ"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_LqHLCNH3EeS1NpPWivEKNQ" name="Run Backward">
+            <region xmi:id="_LqHLCdH3EeS1NpPWivEKNQ" name="Region1">
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLCtH3EeS1NpPWivEKNQ" name="Edge Not Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLC9H3EeS1NpPWivEKNQ" name="Edge Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLDNH3EeS1NpPWivEKNQ" name="Climb Edge"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqHLDdH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLDtH3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqHLCtH3EeS1NpPWivEKNQ" target="_LqHLC9H3EeS1NpPWivEKNQ" guard="_LqHLD9H3EeS1NpPWivEKNQ">
+                <ownedRule xmi:id="_LqHLD9H3EeS1NpPWivEKNQ" constrainedElement="_LqHLDtH3EeS1NpPWivEKNQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLENH3EeS1NpPWivEKNQ">
+                    <language>OCL</language>
+                    <body>obstacle.oclIsTypeOf(edge)</body>
+                  </specification>
+                </ownedRule>
+                <trigger xmi:id="_LqHLEdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg1NH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLEtH3EeS1NpPWivEKNQ" name="jump" source="_LqHLC9H3EeS1NpPWivEKNQ" target="_LqHLDNH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLE9H3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5xNH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLFNH3EeS1NpPWivEKNQ" source="_LqHLC9H3EeS1NpPWivEKNQ">
+                <target xmi:type="uml:Pseudostate" href="Blank%20Package.uml#_Lqygr9H3EeS1NpPWivEKNQ"/>
+                <trigger xmi:id="_LqHLFdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_LqygdtH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLFtH3EeS1NpPWivEKNQ" source="_LqHLDNH3EeS1NpPWivEKNQ" target="_LqHLCtH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLF9H3EeS1NpPWivEKNQ" source="_LqHLC9H3EeS1NpPWivEKNQ" target="_LqGkYtH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLGNH3EeS1NpPWivEKNQ" name=""/>
+              </transition>
+              <transition xmi:id="_LqHLGdH3EeS1NpPWivEKNQ" source="_LqHLDdH3EeS1NpPWivEKNQ" target="_LqHLCtH3EeS1NpPWivEKNQ"/>
+            </region>
+            <region xmi:id="_LqHLGtH3EeS1NpPWivEKNQ" name="Region2">
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLG9H3EeS1NpPWivEKNQ" name="Cliff Not Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLHNH3EeS1NpPWivEKNQ" name="Cliff Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLHdH3EeS1NpPWivEKNQ" name="Climb Cliff"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqHLHtH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLH9H3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqHLG9H3EeS1NpPWivEKNQ" target="_LqHLHNH3EeS1NpPWivEKNQ" guard="_LqHLINH3EeS1NpPWivEKNQ">
+                <ownedRule xmi:id="_LqHLINH3EeS1NpPWivEKNQ" constrainedElement="_LqHLH9H3EeS1NpPWivEKNQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLIdH3EeS1NpPWivEKNQ">
+                    <language>OCL</language>
+                    <body>obstacle.oclIsTypeOf(cliff)</body>
+                  </specification>
+                </ownedRule>
+                <trigger xmi:id="_LqHLItH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg1NH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLI9H3EeS1NpPWivEKNQ" name="jump" source="_LqHLHNH3EeS1NpPWivEKNQ" target="_LqHLHdH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLJNH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:ChangeEvent" href="Blank%20Package.uml#_Lqx5bNH3EeS1NpPWivEKNQ"/>
+                </trigger>
+                <trigger xmi:id="_LqHLJdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_LqygztH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLJtH3EeS1NpPWivEKNQ" name="" source="_LqHLHNH3EeS1NpPWivEKNQ">
+                <target xmi:type="uml:State" href="Blank%20Package.uml#_Lqygf9H3EeS1NpPWivEKNQ"/>
+                <trigger xmi:id="_LqHLJ9H3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:ChangeEvent" href="Blank%20Package.uml#_Lqx5atH3EeS1NpPWivEKNQ"/>
+                </trigger>
+                <trigger xmi:id="_LqHLKNH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_LqygzdH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLKdH3EeS1NpPWivEKNQ" source="_LqHLHdH3EeS1NpPWivEKNQ" target="_LqHLG9H3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLKtH3EeS1NpPWivEKNQ" source="_LqHLHNH3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLK9H3EeS1NpPWivEKNQ" source="_LqHLHtH3EeS1NpPWivEKNQ" target="_LqHLG9H3EeS1NpPWivEKNQ"/>
+            </region>
+            <region xmi:id="_LqHLLNH3EeS1NpPWivEKNQ" name="Region3">
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLLdH3EeS1NpPWivEKNQ" name="Ghost Not Visible"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLLtH3EeS1NpPWivEKNQ" name="Kill Ghost"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLL9H3EeS1NpPWivEKNQ" name="Get Hit"/>
+              <subvertex xmi:type="uml:State" xmi:id="_LqHLMNH3EeS1NpPWivEKNQ" name="Ghost Visible"/>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_LqHLMdH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLMtH3EeS1NpPWivEKNQ" name="jump" source="_LqHLMNH3EeS1NpPWivEKNQ" target="_LqHLLtH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLM9H3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5xdH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLNNH3EeS1NpPWivEKNQ" name="enemyhit" source="_LqHLMNH3EeS1NpPWivEKNQ" target="_LqHLL9H3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLNdH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5itH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLNtH3EeS1NpPWivEKNQ" source="_LqHLLtH3EeS1NpPWivEKNQ" target="_LqHLLdH3EeS1NpPWivEKNQ"/>
+              <transition xmi:id="_LqHLN9H3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqHLLdH3EeS1NpPWivEKNQ" target="_LqHLMNH3EeS1NpPWivEKNQ" guard="_LqHLONH3EeS1NpPWivEKNQ">
+                <ownedRule xmi:id="_LqHLONH3EeS1NpPWivEKNQ" constrainedElement="_LqHLN9H3EeS1NpPWivEKNQ">
+                  <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLOdH3EeS1NpPWivEKNQ">
+                    <language></language>
+                    <body>obstacle.oclIsTypeOf(ghost)</body>
+                  </specification>
+                </ownedRule>
+                <trigger xmi:id="_LqHLOtH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg1NH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLO9H3EeS1NpPWivEKNQ" source="_LqHLL9H3EeS1NpPWivEKNQ">
+                <target xmi:type="uml:Pseudostate" href="Blank%20Package.uml#_Lqygr9H3EeS1NpPWivEKNQ"/>
+                <trigger xmi:id="_LqHLPNH3EeS1NpPWivEKNQ" name="">
+                  <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg2NH3EeS1NpPWivEKNQ"/>
+                </trigger>
+              </transition>
+              <transition xmi:id="_LqHLPdH3EeS1NpPWivEKNQ" name="updatelifecount" source="_LqHLL9H3EeS1NpPWivEKNQ" target="_LqGkYtH3EeS1NpPWivEKNQ">
+                <trigger xmi:id="_LqHLPtH3EeS1NpPWivEKNQ" name="" event="_LqHLcdH3EeS1NpPWivEKNQ"/>
+              </transition>
+              <transition xmi:id="_LqHLP9H3EeS1NpPWivEKNQ" source="_LqHLMdH3EeS1NpPWivEKNQ" target="_LqHLLdH3EeS1NpPWivEKNQ"/>
+            </region>
+          </subvertex>
+          <transition xmi:id="_LqHLQNH3EeS1NpPWivEKNQ" source="_LqGkXtH3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ"/>
+          <transition xmi:id="_LqHLQdH3EeS1NpPWivEKNQ" name="runforward" source="_LqGkXdH3EeS1NpPWivEKNQ" target="_LqGkZNH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLQtH3EeS1NpPWivEKNQ" name="" event="_LqHLadH3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLQ9H3EeS1NpPWivEKNQ" name="runbackward" source="_LqGkZNH3EeS1NpPWivEKNQ" target="_LqHLCNH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLRNH3EeS1NpPWivEKNQ" name="" event="_LqHLbtH3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLRdH3EeS1NpPWivEKNQ" name="runforward" source="_LqHLCNH3EeS1NpPWivEKNQ" target="_LqGkZNH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLRtH3EeS1NpPWivEKNQ" name="" event="_LqHLadH3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLR9H3EeS1NpPWivEKNQ" name="runbackward" source="_LqGkXdH3EeS1NpPWivEKNQ" target="_LqHLCNH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLSNH3EeS1NpPWivEKNQ" name="" event="_LqHLbtH3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLSdH3EeS1NpPWivEKNQ" name="after100seconds" source="_LqGkXdH3EeS1NpPWivEKNQ" target="_LqGkX9H3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLStH3EeS1NpPWivEKNQ" name="">
+              <event xmi:type="uml:TimeEvent" href="Blank%20Package.uml#_LqygctH3EeS1NpPWivEKNQ"/>
+            </trigger>
+          </transition>
+          <transition xmi:id="_LqHLS9H3EeS1NpPWivEKNQ" name="runbackward" source="_LqHLCNH3EeS1NpPWivEKNQ" target="_LqHLCNH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLTNH3EeS1NpPWivEKNQ" name="" event="_LqHLbtH3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLTdH3EeS1NpPWivEKNQ" name="coinscollected" source="_LqGkZNH3EeS1NpPWivEKNQ" target="_LqGkZNH3EeS1NpPWivEKNQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_LqHLTtH3EeS1NpPWivEKNQ" name="coins=coins+1"/>
+          </transition>
+          <transition xmi:id="_LqHLT9H3EeS1NpPWivEKNQ" name="coinscollected" source="_LqHLCNH3EeS1NpPWivEKNQ" target="_LqHLCNH3EeS1NpPWivEKNQ">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_LqHLUNH3EeS1NpPWivEKNQ" name="coins=coins+1"/>
+          </transition>
+          <transition xmi:id="_LqHLUdH3EeS1NpPWivEKNQ" name="stopping" source="_LqGkZNH3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLUtH3EeS1NpPWivEKNQ" name="forwardkeyreleasedtrigger" event="_LqHLbdH3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLU9H3EeS1NpPWivEKNQ" name="stopping" source="_LqHLCNH3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLVNH3EeS1NpPWivEKNQ" name="" event="_LqHLb9H3EeS1NpPWivEKNQ"/>
+          </transition>
+          <transition xmi:id="_LqHLVdH3EeS1NpPWivEKNQ" name="obstacleahead" source="_LqGkXdH3EeS1NpPWivEKNQ" target="_LqGkYNH3EeS1NpPWivEKNQ" guard="_LqHLVtH3EeS1NpPWivEKNQ">
+            <ownedRule xmi:id="_LqHLVtH3EeS1NpPWivEKNQ" constrainedElement="_LqHLVdH3EeS1NpPWivEKNQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLV9H3EeS1NpPWivEKNQ">
+                <language></language>
+                <body>obstacle.oclIsTypeOf(ghost)</body>
+              </specification>
+            </ownedRule>
+            <trigger xmi:id="_LqHLWNH3EeS1NpPWivEKNQ" name="">
+              <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg2dH3EeS1NpPWivEKNQ"/>
+            </trigger>
+          </transition>
+          <transition xmi:id="_LqHLWdH3EeS1NpPWivEKNQ" name="enemyhit" source="_LqGkYNH3EeS1NpPWivEKNQ" target="_LqGkYdH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLWtH3EeS1NpPWivEKNQ" name="">
+              <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx5idH3EeS1NpPWivEKNQ"/>
+            </trigger>
+          </transition>
+          <transition xmi:id="_LqHLW9H3EeS1NpPWivEKNQ" name="updatelifecount" source="_LqGkYdH3EeS1NpPWivEKNQ" target="_LqGkYtH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLXNH3EeS1NpPWivEKNQ" name="">
+              <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqyg19H3EeS1NpPWivEKNQ"/>
+            </trigger>
+          </transition>
+          <transition xmi:id="_LqHLXdH3EeS1NpPWivEKNQ" name="checkupdatedlifecount" source="_LqGkYtH3EeS1NpPWivEKNQ" target="_LqGkX9H3EeS1NpPWivEKNQ" guard="_LqHLXtH3EeS1NpPWivEKNQ">
+            <ownedRule xmi:id="_LqHLXtH3EeS1NpPWivEKNQ" constrainedElement="_LqHLXdH3EeS1NpPWivEKNQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLX9H3EeS1NpPWivEKNQ">
+                <language>OCL</language>
+                <body>lifecount==0</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_LqHLYNH3EeS1NpPWivEKNQ" name="checkupdatedlifecount" source="_LqGkYtH3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ" guard="_LqHLYdH3EeS1NpPWivEKNQ">
+            <ownedRule xmi:id="_LqHLYdH3EeS1NpPWivEKNQ" constrainedElement="_LqHLYNH3EeS1NpPWivEKNQ">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_LqHLYtH3EeS1NpPWivEKNQ">
+                <language>OCL</language>
+                <body>lifecount&lt;0 and lifecount&lt;5</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_LqHLY9H3EeS1NpPWivEKNQ" name="jump" source="_LqGkYNH3EeS1NpPWivEKNQ" target="_LqGkY9H3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLZNH3EeS1NpPWivEKNQ" name="">
+              <event xmi:type="uml:SignalEvent" href="Blank%20Package.uml#_Lqx6MNH3EeS1NpPWivEKNQ"/>
+            </trigger>
+          </transition>
+          <transition xmi:id="_LqHLZdH3EeS1NpPWivEKNQ" source="_LqGkY9H3EeS1NpPWivEKNQ" target="_LqGkXdH3EeS1NpPWivEKNQ"/>
+          <transition xmi:id="_LqHLZtH3EeS1NpPWivEKNQ" name="runforward" source="_LqGkZNH3EeS1NpPWivEKNQ" target="_LqGkZNH3EeS1NpPWivEKNQ">
+            <trigger xmi:id="_LqHLZ9H3EeS1NpPWivEKNQ" name="" event="_LqHLadH3EeS1NpPWivEKNQ"/>
+          </transition>
+        </region>
+      </ownedBehavior>
+      <nestedClassifier xmi:type="uml:Signal" xmi:id="_LqHLaNH3EeS1NpPWivEKNQ" name="forwardkeypressed"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_LqHLadH3EeS1NpPWivEKNQ" name="" signal="_LqHLaNH3EeS1NpPWivEKNQ"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_LqHLatH3EeS1NpPWivEKNQ" name="forwardkeyreleased"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_LqHLa9H3EeS1NpPWivEKNQ" name="backwardkeypressed"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_LqHLbNH3EeS1NpPWivEKNQ" name="backwardkeyreleased"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_LqHLbdH3EeS1NpPWivEKNQ" name="" signal="_LqHLatH3EeS1NpPWivEKNQ"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_LqHLbtH3EeS1NpPWivEKNQ" name="" signal="_LqHLa9H3EeS1NpPWivEKNQ"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_LqHLb9H3EeS1NpPWivEKNQ" name="" signal="_LqHLbNH3EeS1NpPWivEKNQ"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_LqHLcNH3EeS1NpPWivEKNQ" name="updatelifecount"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_LqHLcdH3EeS1NpPWivEKNQ" name="" signal="_LqHLcNH3EeS1NpPWivEKNQ"/>
+    <profileApplication xmi:id="_LqHLctH3EeS1NpPWivEKNQ">
+      <eAnnotations xmi:id="_LqHLc9H3EeS1NpPWivEKNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_LqHLdNH3EeS1NpPWivEKNQ">
+      <eAnnotations xmi:id="_LqHLddH3EeS1NpPWivEKNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_LqrzCNH3EeS1NpPWivEKNQ"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_LqrzBtH3EeS1NpPWivEKNQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_LqHLdtH3EeS1NpPWivEKNQ">
+      <eAnnotations xmi:id="_LqHLd9H3EeS1NpPWivEKNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Deployment.profile.uml#_LqJAndH3EeS1NpPWivEKNQ"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_LqJAm9H3EeS1NpPWivEKNQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_LqHLeNH3EeS1NpPWivEKNQ">
+      <eAnnotations xmi:id="_LqHLedH3EeS1NpPWivEKNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Profile.profile.uml#_LqbUNNH3EeS1NpPWivEKNQ"/>
+      </eAnnotations>
+      <appliedProfile href="Profile.profile.uml#_LqbUMtH3EeS1NpPWivEKNQ"/>
+    </profileApplication>
+  </uml:Model>
+  <platformprofile:Avatar xmi:id="_LqHLetH3EeS1NpPWivEKNQ" base_Class="_LqGkWtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Stationary xmi:id="_LqHLe9H3EeS1NpPWivEKNQ" base_State="_LqGkXdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Loose xmi:id="_LqHLfNH3EeS1NpPWivEKNQ" base_State="_LqGkX9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLfdH3EeS1NpPWivEKNQ" base_State="_LqGkYNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Dead xmi:id="_LqHLftH3EeS1NpPWivEKNQ" base_State="_LqGkYdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLf9H3EeS1NpPWivEKNQ" base_State="_LqGkY9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLgNH3EeS1NpPWivEKNQ" base_Transition="_LqHLQdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLgdH3EeS1NpPWivEKNQ" base_Transition="_LqHLQ9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLgtH3EeS1NpPWivEKNQ" base_Transition="_LqHLRdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLg9H3EeS1NpPWivEKNQ" base_Transition="_LqHLR9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLhNH3EeS1NpPWivEKNQ" base_Transition="_LqHLSdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLhdH3EeS1NpPWivEKNQ" base_Transition="_LqHLS9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLhtH3EeS1NpPWivEKNQ" base_Transition="_LqHLTdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLh9H3EeS1NpPWivEKNQ" base_Transition="_LqHLT9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLiNH3EeS1NpPWivEKNQ" base_Transition="_LqHLUdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLidH3EeS1NpPWivEKNQ" base_Transition="_LqHLU9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLitH3EeS1NpPWivEKNQ" base_Transition="_LqHLVdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLi9H3EeS1NpPWivEKNQ" base_Transition="_LqHLWdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLjNH3EeS1NpPWivEKNQ" base_Transition="_LqHLW9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLjdH3EeS1NpPWivEKNQ" base_Transition="_LqHLY9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:Running xmi:id="_LqHLjtH3EeS1NpPWivEKNQ" base_State="_LqGkZNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLj9H3EeS1NpPWivEKNQ" base_State="_LqGkZ9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLkNH3EeS1NpPWivEKNQ" base_State="_LqGkaNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLkdH3EeS1NpPWivEKNQ" base_Transition="_LqGkatH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLktH3EeS1NpPWivEKNQ" base_Transition="_LqGkbtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLk9H3EeS1NpPWivEKNQ" base_Transition="_LqGkcNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLlNH3EeS1NpPWivEKNQ" base_State="_LqGkeNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLldH3EeS1NpPWivEKNQ" base_State="_LqGkedH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLltH3EeS1NpPWivEKNQ" base_Transition="_LqGke9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLl9H3EeS1NpPWivEKNQ" base_Transition="_LqGkf9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLmNH3EeS1NpPWivEKNQ" base_Transition="_LqGkgtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLmdH3EeS1NpPWivEKNQ" base_State="_LqGkitH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Dead xmi:id="_LqHLmtH3EeS1NpPWivEKNQ" base_State="_LqGki9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLm9H3EeS1NpPWivEKNQ" base_State="_LqGkjNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLnNH3EeS1NpPWivEKNQ" base_Transition="_LqGkjtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLndH3EeS1NpPWivEKNQ" base_Transition="_LqGkkNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLntH3EeS1NpPWivEKNQ" base_Transition="_LqGkk9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLn9H3EeS1NpPWivEKNQ" base_Transition="_LqHLA9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:Running xmi:id="_LqHLoNH3EeS1NpPWivEKNQ" base_State="_LqHLCNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLodH3EeS1NpPWivEKNQ" base_State="_LqHLC9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLotH3EeS1NpPWivEKNQ" base_State="_LqHLDNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLo9H3EeS1NpPWivEKNQ" base_Transition="_LqHLDtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLpNH3EeS1NpPWivEKNQ" base_Transition="_LqHLEtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLpdH3EeS1NpPWivEKNQ" base_Transition="_LqHLFNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLptH3EeS1NpPWivEKNQ" base_State="_LqHLHNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLp9H3EeS1NpPWivEKNQ" base_State="_LqHLHdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLqNH3EeS1NpPWivEKNQ" base_Transition="_LqHLH9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLqdH3EeS1NpPWivEKNQ" base_Transition="_LqHLI9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLqtH3EeS1NpPWivEKNQ" base_Transition="_LqHLJtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Jump xmi:id="_LqHLq9H3EeS1NpPWivEKNQ" base_State="_LqHLLtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:Dead xmi:id="_LqHLrNH3EeS1NpPWivEKNQ" base_State="_LqHLL9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:SeeObstacle xmi:id="_LqHLrdH3EeS1NpPWivEKNQ" base_State="_LqHLMNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLrtH3EeS1NpPWivEKNQ" base_Transition="_LqHLMtH3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLr9H3EeS1NpPWivEKNQ" base_Transition="_LqHLNNH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLsNH3EeS1NpPWivEKNQ" base_Transition="_LqHLN9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLsdH3EeS1NpPWivEKNQ" base_Transition="_LqHLO9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLstH3EeS1NpPWivEKNQ" base_Transition="_LqGkc9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:SystemGenerated xmi:id="_LqHLs9H3EeS1NpPWivEKNQ" base_Transition="_LqHLF9H3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLtNH3EeS1NpPWivEKNQ" base_Transition="_LqHLPdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:GameQueryEvent xmi:id="_LqHLtdH3EeS1NpPWivEKNQ" base_Transition="_LqHLBdH3EeS1NpPWivEKNQ"/>
+  <platformprofile:UserGenerated xmi:id="_LqHLttH3EeS1NpPWivEKNQ" base_Transition="_LqHLZtH3EeS1NpPWivEKNQ"/>
+</xmi:XMI>

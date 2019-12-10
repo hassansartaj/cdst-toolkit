@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CDSProfile="http:///schemas/CDSProfile/_Sk4tQOWmEemRE-Vs4p4Udg/11" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/CDSProfile/_Sk4tQOWmEemRE-Vs4p4Udg/11 CDSProfile.profile.uml#_pGYJG-WnEem0AaKDyhyQ7A">
+  <uml:Package xmi:id="_pGYID-WnEem0AaKDyhyQ7A" name="PFDModel">
+    <packageImport xmi:id="_pGYIEOWnEem0AaKDyhyQ7A">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pGYIEeWnEem0AaKDyhyQ7A" name="Aircraft">
+      <ownedAttribute xmi:id="_pGYIEuWnEem0AaKDyhyQ7A" name="Airspeed" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIE-WnEem0AaKDyhyQ7A" name="Altitude" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIFOWnEem0AaKDyhyQ7A" name="Airpressure" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIFeWnEem0AaKDyhyQ7A" name="Groundspeed" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIFuWnEem0AaKDyhyQ7A" name="Pitch" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIF-WnEem0AaKDyhyQ7A" name="Roll" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIGOWnEem0AaKDyhyQ7A" name="pfd" visibility="private" type="_pGYIG-WnEem0AaKDyhyQ7A" association="_pGYIguWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIGeWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIGuWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pGYIG-WnEem0AaKDyhyQ7A" name="PFD">
+      <ownedAttribute xmi:id="_pGYIHOWnEem0AaKDyhyQ7A" name="IsVisible" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIHeWnEem0AaKDyhyQ7A" name="PosX" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIHuWnEem0AaKDyhyQ7A" name="PosY" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIH-WnEem0AaKDyhyQ7A" name="SizeX" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIIOWnEem0AaKDyhyQ7A" name="SizeY" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIIeWnEem0AaKDyhyQ7A" name="Type" visibility="private" type="_pGYIMeWnEem0AaKDyhyQ7A"/>
+      <ownedAttribute xmi:id="_pGYIIuWnEem0AaKDyhyQ7A" name="altitudeTape" visibility="private" type="_pGYIK-WnEem0AaKDyhyQ7A" aggregation="composite" association="_pGYIhuWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYII-WnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIJOWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIJeWnEem0AaKDyhyQ7A" name="airspeedTape" visibility="private" type="_pGYIYOWnEem0AaKDyhyQ7A" aggregation="composite" association="_pGYIiuWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIJuWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIJ-WnEem0AaKDyhyQ7A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIKOWnEem0AaKDyhyQ7A" name="headingIndicator" visibility="private" type="_pGYIZuWnEem0AaKDyhyQ7A" aggregation="composite" association="_pGYIjuWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIKeWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIKuWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pGYIK-WnEem0AaKDyhyQ7A" name="AltitudeTape">
+      <ownedAttribute xmi:id="_pGYILOWnEem0AaKDyhyQ7A" name="IsVisible" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYILeWnEem0AaKDyhyQ7A" name="PosX" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYILuWnEem0AaKDyhyQ7A" name="PosY" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIL-WnEem0AaKDyhyQ7A" name="AltitudeValue" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIMOWnEem0AaKDyhyQ7A" name="Type" visibility="private" type="_pGYIMeWnEem0AaKDyhyQ7A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_pGYIMeWnEem0AaKDyhyQ7A" name="WidgetType">
+      <eAnnotations xmi:id="_pGYIMuWnEem0AaKDyhyQ7A" source="uml2.extensions">
+        <details xmi:id="_pGYIM-WnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+      </eAnnotations>
+      <ownedLiteral xmi:id="_pGYINOWnEem0AaKDyhyQ7A" name="Container" classifier="_pGYIMeWnEem0AaKDyhyQ7A">
+        <eAnnotations xmi:id="_pGYINeWnEem0AaKDyhyQ7A" source="uml2.extensions">
+          <details xmi:id="_pGYINuWnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+        </eAnnotations>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_pGYIN-WnEem0AaKDyhyQ7A" name="GraphicalRepresentation" classifier="_pGYIMeWnEem0AaKDyhyQ7A">
+        <eAnnotations xmi:id="_pGYIOOWnEem0AaKDyhyQ7A" source="uml2.extensions">
+          <details xmi:id="_pGYIOeWnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+        </eAnnotations>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_pGYIOuWnEem0AaKDyhyQ7A" name="TextString" classifier="_pGYIMeWnEem0AaKDyhyQ7A">
+        <eAnnotations xmi:id="_pGYIO-WnEem0AaKDyhyQ7A" source="uml2.extensions">
+          <details xmi:id="_pGYIPOWnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+        </eAnnotations>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_pGYIPeWnEem0AaKDyhyQ7A" name="Interactive" classifier="_pGYIMeWnEem0AaKDyhyQ7A">
+        <eAnnotations xmi:id="_pGYIPuWnEem0AaKDyhyQ7A" source="uml2.extensions">
+          <details xmi:id="_pGYIP-WnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+        </eAnnotations>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_pGYIQOWnEem0AaKDyhyQ7A" name="MapManagement" classifier="_pGYIMeWnEem0AaKDyhyQ7A">
+        <eAnnotations xmi:id="_pGYIQeWnEem0AaKDyhyQ7A" source="uml2.extensions">
+          <details xmi:id="_pGYIQuWnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+        </eAnnotations>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_pGYIQ-WnEem0AaKDyhyQ7A" name="DynamicMotion" classifier="_pGYIMeWnEem0AaKDyhyQ7A">
+        <eAnnotations xmi:id="_pGYIROWnEem0AaKDyhyQ7A" source="uml2.extensions">
+          <details xmi:id="_pGYIReWnEem0AaKDyhyQ7A" key="addedInVersion" value="2"/>
+        </eAnnotations>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_pGYIRuWnEem0AaKDyhyQ7A" name="AT" classifier="_pGYIK-WnEem0AaKDyhyQ7A">
+      <slot xmi:id="_pGYIR-WnEem0AaKDyhyQ7A" definingFeature="_pGYILOWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralBoolean" xmi:id="_pGYISOWnEem0AaKDyhyQ7A" value="true"/>
+      </slot>
+      <slot xmi:id="_pGYISeWnEem0AaKDyhyQ7A" definingFeature="_pGYILeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYISuWnEem0AaKDyhyQ7A" value="131"/>
+      </slot>
+      <slot xmi:id="_pGYIS-WnEem0AaKDyhyQ7A" definingFeature="_pGYILuWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYITOWnEem0AaKDyhyQ7A" value="-751"/>
+      </slot>
+      <slot xmi:id="_pGYITeWnEem0AaKDyhyQ7A" definingFeature="_pGYIL-WnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYITuWnEem0AaKDyhyQ7A" value="2183"/>
+      </slot>
+      <slot xmi:id="_pGYIT-WnEem0AaKDyhyQ7A" definingFeature="_pGYIMOWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIUOWnEem0AaKDyhyQ7A" instance="_pGYIQ-WnEem0AaKDyhyQ7A"/>
+      </slot>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_pGYIUeWnEem0AaKDyhyQ7A" name="PFDInstance" classifier="_pGYIG-WnEem0AaKDyhyQ7A">
+      <slot xmi:id="_pGYIUuWnEem0AaKDyhyQ7A" definingFeature="_pGYIHOWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralBoolean" xmi:id="_pGYIU-WnEem0AaKDyhyQ7A" value="true"/>
+      </slot>
+      <slot xmi:id="_pGYIVOWnEem0AaKDyhyQ7A" definingFeature="_pGYIHeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIVeWnEem0AaKDyhyQ7A" value="34393"/>
+      </slot>
+      <slot xmi:id="_pGYIVuWnEem0AaKDyhyQ7A" definingFeature="_pGYIIeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIV-WnEem0AaKDyhyQ7A" instance="_pGYINOWnEem0AaKDyhyQ7A"/>
+      </slot>
+      <slot xmi:id="_pGYIWOWnEem0AaKDyhyQ7A" definingFeature="_pGYIHuWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIWeWnEem0AaKDyhyQ7A" value="-13343"/>
+      </slot>
+      <slot xmi:id="_pGYIWuWnEem0AaKDyhyQ7A" definingFeature="_pGYIIuWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIW-WnEem0AaKDyhyQ7A" instance="_pGYIRuWnEem0AaKDyhyQ7A"/>
+      </slot>
+      <slot xmi:id="_pGYIXOWnEem0AaKDyhyQ7A" definingFeature="_pGYIJeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIXeWnEem0AaKDyhyQ7A" instance="_pGYIbOWnEem0AaKDyhyQ7A"/>
+      </slot>
+      <slot xmi:id="_pGYIXuWnEem0AaKDyhyQ7A" definingFeature="_pGYIKOWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIX-WnEem0AaKDyhyQ7A" instance="_pGYId-WnEem0AaKDyhyQ7A"/>
+      </slot>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pGYIYOWnEem0AaKDyhyQ7A" name="AirspeedTape">
+      <ownedAttribute xmi:id="_pGYIYeWnEem0AaKDyhyQ7A" name="IsVisible" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIYuWnEem0AaKDyhyQ7A" name="PosX" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIY-WnEem0AaKDyhyQ7A" name="PosY" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIZOWnEem0AaKDyhyQ7A" name="Airspeed" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIZeWnEem0AaKDyhyQ7A" name="type" visibility="private" type="_pGYIMeWnEem0AaKDyhyQ7A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pGYIZuWnEem0AaKDyhyQ7A" name="HeadingIndicator">
+      <ownedAttribute xmi:id="_pGYIZ-WnEem0AaKDyhyQ7A" name="IsVisible" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIaOWnEem0AaKDyhyQ7A" name="PosX" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIaeWnEem0AaKDyhyQ7A" name="PosY" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIauWnEem0AaKDyhyQ7A" name="Heading" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGYIa-WnEem0AaKDyhyQ7A" name="type" visibility="private" type="_pGYIMeWnEem0AaKDyhyQ7A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_pGYIbOWnEem0AaKDyhyQ7A" name="ASI" classifier="_pGYIYOWnEem0AaKDyhyQ7A">
+      <slot xmi:id="_pGYIbeWnEem0AaKDyhyQ7A" definingFeature="_pGYIYeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralBoolean" xmi:id="_pGYIbuWnEem0AaKDyhyQ7A" value="true"/>
+      </slot>
+      <slot xmi:id="_pGYIb-WnEem0AaKDyhyQ7A" definingFeature="_pGYIYuWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIcOWnEem0AaKDyhyQ7A" value="534"/>
+      </slot>
+      <slot xmi:id="_pGYIceWnEem0AaKDyhyQ7A" definingFeature="_pGYIY-WnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIcuWnEem0AaKDyhyQ7A" value="-679"/>
+      </slot>
+      <slot xmi:id="_pGYIc-WnEem0AaKDyhyQ7A" definingFeature="_pGYIZOWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIdOWnEem0AaKDyhyQ7A" value="160"/>
+      </slot>
+      <slot xmi:id="_pGYIdeWnEem0AaKDyhyQ7A" definingFeature="_pGYIZeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIduWnEem0AaKDyhyQ7A" instance="_pGYIQ-WnEem0AaKDyhyQ7A"/>
+      </slot>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_pGYId-WnEem0AaKDyhyQ7A" name="HI" classifier="_pGYIZuWnEem0AaKDyhyQ7A">
+      <slot xmi:id="_pGYIeOWnEem0AaKDyhyQ7A" definingFeature="_pGYIZ-WnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralBoolean" xmi:id="_pGYIeeWnEem0AaKDyhyQ7A" value="true"/>
+      </slot>
+      <slot xmi:id="_pGYIeuWnEem0AaKDyhyQ7A" definingFeature="_pGYIaOWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIe-WnEem0AaKDyhyQ7A" value="15"/>
+      </slot>
+      <slot xmi:id="_pGYIfOWnEem0AaKDyhyQ7A" definingFeature="_pGYIaeWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIfeWnEem0AaKDyhyQ7A" value="-307"/>
+      </slot>
+      <slot xmi:id="_pGYIfuWnEem0AaKDyhyQ7A" definingFeature="_pGYIauWnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_pGYIf-WnEem0AaKDyhyQ7A"/>
+      </slot>
+      <slot xmi:id="_pGYIgOWnEem0AaKDyhyQ7A" definingFeature="_pGYIa-WnEem0AaKDyhyQ7A">
+        <value xmi:type="uml:InstanceValue" xmi:id="_pGYIgeWnEem0AaKDyhyQ7A" instance="_pGYIQ-WnEem0AaKDyhyQ7A"/>
+      </slot>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pGYIguWnEem0AaKDyhyQ7A" memberEnd="_pGYIGOWnEem0AaKDyhyQ7A _pGYIg-WnEem0AaKDyhyQ7A">
+      <ownedEnd xmi:id="_pGYIg-WnEem0AaKDyhyQ7A" name="" visibility="private" type="_pGYIEeWnEem0AaKDyhyQ7A" association="_pGYIguWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIhOWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIheWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pGYIhuWnEem0AaKDyhyQ7A" memberEnd="_pGYIIuWnEem0AaKDyhyQ7A _pGYIh-WnEem0AaKDyhyQ7A">
+      <ownedEnd xmi:id="_pGYIh-WnEem0AaKDyhyQ7A" name="" visibility="private" type="_pGYIG-WnEem0AaKDyhyQ7A" association="_pGYIhuWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIiOWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIieWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pGYIiuWnEem0AaKDyhyQ7A" memberEnd="_pGYIJeWnEem0AaKDyhyQ7A _pGYIi-WnEem0AaKDyhyQ7A">
+      <ownedEnd xmi:id="_pGYIi-WnEem0AaKDyhyQ7A" name="" visibility="private" type="_pGYIG-WnEem0AaKDyhyQ7A" association="_pGYIiuWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIjOWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIjeWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pGYIjuWnEem0AaKDyhyQ7A" memberEnd="_pGYIKOWnEem0AaKDyhyQ7A _pGYIj-WnEem0AaKDyhyQ7A">
+      <ownedEnd xmi:id="_pGYIj-WnEem0AaKDyhyQ7A" name="" visibility="private" type="_pGYIG-WnEem0AaKDyhyQ7A" association="_pGYIjuWnEem0AaKDyhyQ7A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGYIkOWnEem0AaKDyhyQ7A" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGYIkeWnEem0AaKDyhyQ7A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_pGYIkuWnEem0AaKDyhyQ7A">
+      <eAnnotations xmi:id="_pGYIk-WnEem0AaKDyhyQ7A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_pGYIlOWnEem0AaKDyhyQ7A">
+      <eAnnotations xmi:id="_pGYIleWnEem0AaKDyhyQ7A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Default.profile.uml#_pGUd-uWnEem0AaKDyhyQ7A"/>
+      </eAnnotations>
+      <appliedProfile href="Default.profile.uml#_pGUd-OWnEem0AaKDyhyQ7A"/>
+    </profileApplication>
+    <profileApplication xmi:id="_pGYIluWnEem0AaKDyhyQ7A">
+      <eAnnotations xmi:id="_pGYIl-WnEem0AaKDyhyQ7A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile href="Deployment.profile.uml#_pGWTkeWnEem0AaKDyhyQ7A"/>
+    </profileApplication>
+    <profileApplication xmi:id="_pGYImOWnEem0AaKDyhyQ7A">
+      <eAnnotations xmi:id="_pGYImeWnEem0AaKDyhyQ7A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="CDSProfile.profile.uml#_pGYJG-WnEem0AaKDyhyQ7A"/>
+      </eAnnotations>
+      <appliedProfile href="CDSProfile.profile.uml#_pGYJGeWnEem0AaKDyhyQ7A"/>
+    </profileApplication>
+  </uml:Package>
+  <CDSProfile:AirspeedIndicator xmi:id="_pGYImuWnEem0AaKDyhyQ7A" base_Class="_pGYIYOWnEem0AaKDyhyQ7A"/>
+  <CDSProfile:Compass xmi:id="_pGYIm-WnEem0AaKDyhyQ7A" base_Class="_pGYIZuWnEem0AaKDyhyQ7A"/>
+  <CDSProfile:Altimeter xmi:id="_pGYInOWnEem0AaKDyhyQ7A" base_Class="_pGYIK-WnEem0AaKDyhyQ7A"/>
+</xmi:XMI>
