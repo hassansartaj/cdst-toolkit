@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import javafx.scene.control.Button?> -->
+<!-- <?import javafx.scene.control.ComboBox?> -->
+<!-- <?import javafx.scene.control.Label?> -->
+<!-- <?import javafx.scene.control.Menu?> -->
+<!-- <?import javafx.scene.control.MenuBar?> -->
+<!-- <?import javafx.scene.control.MenuItem?> -->
+<!-- <?import javafx.scene.control.RadioButton?> -->
+<!-- <?import javafx.scene.control.SeparatorMenuItem?> -->
+<!-- <?import javafx.scene.control.Spinner?> -->
+<!-- <?import javafx.scene.control.TextArea?> -->
+<!-- <?import javafx.scene.control.TextField?> -->
+<!-- <?import javafx.scene.layout.AnchorPane?> -->
+<!-- <?import javafx.scene.layout.VBox?> -->
+<!-- <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="619.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="application.OCLGenController""> -->
+<!--   <children> -->
+<!--     <MenuBar prefHeight="24.0" prefWidth="947.0" VBox.vgrow="NEVER"> -->
+<!--       <menus> -->
+<!--         <Menu mnemonicParsing="false" text="File"> -->
+<!--           <items> -->
+<!--             <MenuItem mnemonicParsing="false" text="New" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Open…" /> -->
+<!--             <Menu mnemonicParsing="false" text="Open Recent" /> -->
+<!--             <SeparatorMenuItem mnemonicParsing="false" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Close" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Save" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Save As…" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Revert" /> -->
+<!--             <SeparatorMenuItem mnemonicParsing="false" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Preferences…" /> -->
+<!--             <SeparatorMenuItem mnemonicParsing="false" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Quit" /> -->
+<!--           </items> -->
+<!--         </Menu> -->
+<!--         <Menu mnemonicParsing="false" text="Edit"> -->
+<!--           <items> -->
+<!--             <MenuItem mnemonicParsing="false" text="Undo" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Redo" /> -->
+<!--             <SeparatorMenuItem mnemonicParsing="false" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Cut" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Copy" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Paste" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Delete" /> -->
+<!--             <SeparatorMenuItem mnemonicParsing="false" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Select All" /> -->
+<!--             <MenuItem mnemonicParsing="false" text="Unselect All" /> -->
+<!--           </items> -->
+<!--         </Menu> -->
+<!--         <Menu mnemonicParsing="false" text="Help"> -->
+<!--           <items> -->
+<!--             <MenuItem mnemonicParsing="false" text="About MyHelloApp" /> -->
+<!--           </items> -->
+<!--         </Menu> -->
+<!--       </menus> -->
+<!--     </MenuBar> -->
+<!--     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="532.0" prefWidth="619.0" VBox.vgrow="ALWAYS"> -->
+<!--       <children> -->
+<!--             <ComboBox fx:id="propCB" layoutX="435.0" layoutY="43.0" prefHeight="25.0" prefWidth="141.0" promptText="property" /> -->
+<!--             <ComboBox fx:id="relOpCB" layoutX="43.0" layoutY="107.0" prefHeight="25.0" prefWidth="141.0" promptText="relational operator" /> -->
+<!--             <TextField fx:id="valueTF" layoutX="435.0" layoutY="98.0" prefHeight="25.0" prefWidth="141.0" promptText="value" /> -->
+<!--             <TextArea fx:id="oclTA" layoutX="44.0" layoutY="296.0" prefHeight="251.0" prefWidth="533.0" /> -->
+<!--             <ComboBox fx:id="classCB" layoutX="239.0" layoutY="43.0" prefHeight="25.0" prefWidth="141.0" promptText="class" /> -->
+<!--             <ComboBox fx:id="stateCB" layoutX="43.0" layoutY="43.0" prefHeight="25.0" prefWidth="141.0" promptText="state" /> -->
+<!--             <RadioButton fx:id="trueRB" layoutX="435.0" layoutY="139.0" mnemonicParsing="false" text="true" /> -->
+<!--             <RadioButton fx:id="falseRB" layoutX="525.0" layoutY="139.0" mnemonicParsing="false" text="false" /> -->
+<!--             <Spinner fx:id="enumSp" layoutX="433.0" layoutY="167.0" prefHeight="25.0" prefWidth="141.0" /> -->
+<!--             <Label layoutX="278.0" layoutY="139.0" text="Boolean" /> -->
+<!--             <Label layoutX="276.0" layoutY="171.0" text="Enumeration" /> -->
+<!--             <Label layoutX="278.0" layoutY="102.0" text="Integer/Real/String" /> -->
+<!--             <Button fx:id="newBtn" layoutX="334.0" layoutY="236.0" mnemonicParsing="false" text="New Constraint" /> -->
+<!--             <Button fx:id="exportBtn" layoutX="464.0" layoutY="236.0" mnemonicParsing="false" text="Export Constraints" /> -->
+<!--             <ComboBox fx:id="logOpCB" layoutX="43.0" layoutY="167.0" prefHeight="25.0" prefWidth="141.0" promptText="logical operator" /> -->
+<!--             <Button fx:id="buildBtn" layoutX="198.0" layoutY="236.0" mnemonicParsing="false" text="Build Constraint" /> -->
+<!--       </children> -->
+<!--     </AnchorPane> -->
+<!--   </children> -->
+<!-- </VBox> -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="534.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cdst.application.OCLGenController">
+      <children>
+            <ComboBox fx:id="propCB" layoutX="220.0" layoutY="97.0" prefHeight="25.0" prefWidth="141.0" promptText="property" />
+            <ComboBox fx:id="relOpCB" layoutX="23.0" layoutY="146.0" prefHeight="25.0" prefWidth="141.0" promptText="relational operator" />
+            <TextField fx:id="valueTF" layoutX="415.0" layoutY="137.0" prefHeight="25.0" prefWidth="141.0" promptText="value" />
+            <ComboBox fx:id="classCB" layoutX="23.0" layoutY="97.0" prefHeight="25.0" prefWidth="141.0" promptText="class" />
+            <ComboBox fx:id="stateCB" layoutX="415.0" layoutY="97.0" prefHeight="25.0" prefWidth="141.0" promptText="state" />
+            <RadioButton fx:id="trueRB" layoutX="415.0" layoutY="178.0" mnemonicParsing="false" text="true" />
+            <RadioButton fx:id="falseRB" layoutX="505.0" layoutY="178.0" mnemonicParsing="false" text="false" />
+            <!-- <Spinner fx:id="enumSp" layoutX="431.0" layoutY="211.0" prefHeight="25.0" prefWidth="141.0" /> -->
+            <ComboBox fx:id="enumCB" layoutX="414.0" layoutY="209.0" prefHeight="25.0" prefWidth="141.0" promptText="enum literal" />
+            <Label layoutX="258.0" layoutY="178.0" text="Boolean" />
+            <Label layoutX="257.0" layoutY="213.0" text="Enumeration" />
+            <Label layoutX="258.0" layoutY="141.0" text="Integer/Real/String" />
+            <Button fx:id="newBtn" layoutX="171.0" layoutY="256.0" mnemonicParsing="false" text="New Constraint" />
+            <Button fx:id="exportBtn" layoutX="421.0" layoutY="256.0" mnemonicParsing="false" text="Export Constraints" />
+            <ComboBox fx:id="logOpCB" layoutX="24.0" layoutY="209.0" prefHeight="25.0" prefWidth="141.0" promptText="logical operator" />
+            <Button fx:id="buildBtn" layoutX="27.0" layoutY="256.0" mnemonicParsing="false" text="Build Constraint" />
+      <Button fx:id="browseBtn" layoutX="24.0" layoutY="52.0" mnemonicParsing="false" text="Browse Model" />
+      <TextField fx:id="mpathTF" layoutX="148.0" layoutY="52.0" prefHeight="25.0" prefWidth="335.0" promptText="uml model path" />
+      <Button fx:id="loadBtn" layoutX="495.0" layoutY="52.0" mnemonicParsing="false" text="Load" />
+      <!-- <Button fx:id="validateBtn" layoutX="188.0" layoutY="305.0" mnemonicParsing="false" text="Check Syntax" /> -->
+      <Label layoutX="180.0" layoutY="14.0" text="CDS Constraints Specifier in OCL" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <StackPane layoutX="23.0" layoutY="299.0" prefHeight="221.0" prefWidth="533.0" />
+      <Button fx:id="undoBtn" layoutX="311.0" layoutY="256.0" mnemonicParsing="false" text="Undo" />
+      <Button fx:id="redoBtn" layoutX="365.0" layoutY="256.0" mnemonicParsing="false" text="Redo" />
+      </children>
+</AnchorPane>
