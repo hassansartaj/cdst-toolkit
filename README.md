@@ -21,12 +21,13 @@ The tool supports two methods to record cockpit display, one is to use an extern
 # Research Paper for Citation
 
 ```
-@inproceedings{cds19,
-  title = {A Model-based Testing Approach for Cockpit Display Systems of Avionics},
-  author = {Muhammad Zohaib Iqbal, Hassan Sartaj, Muhammad Uzair Khan, Fitash Ul Haq and Ifrah Qaisar},
-  booktitle = {22th International Conference on Model Driven Engineering Languages and Systems (MODELS)},
-  pages = {1--1},
-  year = {2019}
+@inproceedings{iqbal2019model,
+  title={A Model-Based Testing Approach for Cockpit Display Systems of Avionics},
+  author={Iqbal, Muhammad Zohaib and Sartaj, Hassan and Khan, Muhammad Uzair and Haq, Fitash Ul and Qaisar, Ifrah},
+  booktitle={2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems (MODELS)},
+  pages={67--77},
+  year={2019},
+  organization={IEEE}
 }
 ```
 
