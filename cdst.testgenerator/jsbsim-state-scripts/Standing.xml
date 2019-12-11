@@ -1,0 +1,18 @@
+<property> simulation/notify-time-trigger </property>
+<property value="1"> fcs/left-brake-cmd-norm </property>
+<property value="1"> fcs/right-brake-cmd-norm </property>
+<property value="1"> fcs/center-brake-cmd-norm </property>
+
+ <event name="Engine Start">
+  <description>Start the engine</description>
+  <condition> sim-time-sec >= 0.25 </condition>
+  <set name="fcs/throttle-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="fcs/mixture-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="propulsion/magneto_cmd" value="3"/>
+  <set name="propulsion/starter_cmd" value="1"/>
+  <set name="ap/autopilot-roll-on" value="1"/>
+  <set name="ap/roll-attitude-mode" value="0"/>
+  <notify>
+	<property>ap/hdg-roll-err-c1</property>
+  </notify>
+</event>

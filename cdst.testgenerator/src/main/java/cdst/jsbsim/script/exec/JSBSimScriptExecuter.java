@@ -19,7 +19,9 @@ public class JSBSimScriptExecuter {
 			if (listOfFiles[i].isFile()) {
 				String scriptFile=scriptsFolder+"/"+listOfFiles[i].getName();
 				try {
-					Runtime.getRuntime().exec(scriptFile);
+					String jsbSimCmd = "./JSBSim --script="+scriptFile+"--realtime";
+					Runtime.getRuntime().exec(args[0]);
+					Runtime.getRuntime().exec(jsbSimCmd);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

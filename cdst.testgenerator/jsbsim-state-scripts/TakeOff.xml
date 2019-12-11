@@ -1,0 +1,9 @@
+
+<event name="TakeOff">
+  <description>Set Autopilot for 400 ft and rotate at 49 keas. </description>
+  <notify/>
+  <condition> velocities/vc-kts >= 49
+</condition>
+  <set name="ap/altitude_setpoint" value="400.0"/>
+  <set name="ap/altitude_hold" value="1"/>
+</event>

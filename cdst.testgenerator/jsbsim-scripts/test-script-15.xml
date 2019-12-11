@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSimScript.xsl"?>
+<runscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://jsbsim.sf.net/JSBSimScript.xsd"
+     name="C172-01A test - 1">
+    <!--
+	19:: { Standing:Idle }, StartEngine(), { Standing:Running }, ParkingBrakeOff()+IncreaseThrottle(), { Taxiing [Turns]}, IncreaseElevation(), { TakeOff },
+	IncreaseElevation(), {Autopilot:Climb [Turns]}, DecreaseElevation(), {Autopilot:Cruise [Turns]}, DecreaseElevation(), {Autopilot:Descent [Turns]}, DecreaseElevation()+DecreaseThrottle(),
+	{ Landing }, OpenLandingGear(), { Taxiing [Turns]}, DecreaseThrottle()+ParkingBrakeOn(), { Standing:Running }, EngineOff(), { Standing:Idle }
+	-->
+  <description>Testing C172 without turns - Straight</description>
+  <use aircraft="c172x" initialize="reset00"/>
+  <run start="0.0" end="600" dt="0.00833333">
+ 
+
+<property> simulation/notify-time-trigger </property>
+<property value="1"> fcs/left-brake-cmd-norm </property>
+<property value="1"> fcs/right-brake-cmd-norm </property>
+<property value="1"> fcs/center-brake-cmd-norm </property>
+ <event name="Engine Start">
+  <description>Start the engine</description>
+  <condition> sim-time-sec >= 0.25 </condition>
+  <set name="fcs/throttle-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="fcs/mixture-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="propulsion/magneto_cmd" value="3"/>
+  <set name="propulsion/starter_cmd" value="1"/>
+  <set name="ap/autopilot-roll-on" value="1"/>
+  <set name="ap/roll-attitude-mode" value="0"/>
+  <notify>
+	<property>ap/hdg-roll-err-c1</property>
+  </notify>
+</event>
+
+<property> simulation/notify-time-trigger </property>
+<property value="1"> fcs/left-brake-cmd-norm </property>
+<property value="1"> fcs/right-brake-cmd-norm </property>
+<property value="1"> fcs/center-brake-cmd-norm </property>
+ <event name="Engine Start">
+  <description>Start the engine</description>
+  <condition> sim-time-sec >= 0.25 </condition>
+  <set name="fcs/throttle-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="fcs/mixture-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="propulsion/magneto_cmd" value="3"/>
+  <set name="propulsion/starter_cmd" value="1"/>
+  <set name="ap/autopilot-roll-on" value="1"/>
+  <set name="ap/roll-attitude-mode" value="0"/>
+  <notify>
+	<property>ap/hdg-roll-err-c1</property>
+  </notify>
+</event>
+
+<event name="Begin Taxiing">
+  <description>Release brakes and get rolling with flaps at 10 degrees. </description>
+  <condition> sim-time-sec >= 2.0 </condition>
+  <set name="fcs/left-brake-cmd-norm" value="0"/>
+  <set name="fcs/right-brake-cmd-norm" value="0"/>
+  <set name="fcs/center-brake-cmd-norm" value="0"/>
+  <set name="fcs/flap-cmd-norm" value="0.33"/>
+</event>
+
+<event name="TakeOff">
+  <description>Set Autopilot for 400 ft and rotate at 49 keas. </description>
+  <notify/>
+  <condition> velocities/vc-kts >= 49
+</condition>
+  <set name="ap/altitude_setpoint" value="400.0"/>
+  <set name="ap/altitude_hold" value="1"/>
+</event>
+
+<event name="Set autopilot for 1000 ft.">
+  <description>Set Autopilot for 1000 ft after a two second delay. </description>
+  <notify/>
+	<condition logic="AND"> 
+		velocities/vc-kts >= 49
+		sim-time-sec lt 250
+	</condition>
+  <delay>2.0</delay>
+  <set name="ap/altitude_setpoint" value="1000.0"/>
+</event>
+
+<event name="Set autopilot for 800 ft.">
+  <description>Set Autopilot for 800 ft after a two second delay. </description>
+  <notify/>
+  <condition logic="AND"> 
+  <!--velocities/vc-kts lt 42-->
+  sim-time-sec >= 250
+  sim-time-sec le 350
+  </condition>
+  <delay>2.0</delay>
+  <set name="ap/altitude_setpoint" value="800.0"/>
+</event>
+
+<event name="Set autopilot for 500 ft.">
+  <description>Set Autopilot for 500 ft after a two second delay. </description>
+  <notify/>
+  <condition logic="AND">
+  sim-time-sec >= 450
+  sim-time-sec lt 550
+  </condition>
+  <delay>2.0</delay>
+  <set name="ap/altitude_setpoint" value="500.0"/>
+</event>
+
+<event name="Set autopilot for 800 ft.">
+  <description>Set Autopilot for 800 ft after a two second delay. </description>
+  <notify/>
+  <condition logic="AND"> 
+  <!--velocities/vc-kts lt 42-->
+  sim-time-sec >= 250
+  sim-time-sec le 350
+  </condition>
+  <delay>2.0</delay>
+  <set name="ap/altitude_setpoint" value="800.0"/>
+</event>
+
+<event name="Adjust throttle/flaps">
+  <description>Remove flaps at 50 ft and set heading to 100; acquire heading.</description>
+  <notify/>
+  <condition logic="AND">
+	position/h-agl-ft lt 950
+	sim-time-sec >= 950
+  </condition>
+  <set name="fcs/flap-cmd-norm" value="0"/>
+  <set name="guidance/specified-heading-rad" value="1.75"/>
+  <set name="guidance/heading-selector-switch" value="1"/>
+  <set name="ap/roll-attitude-mode" value="1"/>
+</event>
+
+<event name="Begin Taxiing">
+  <description>Release brakes and get rolling with flaps at 10 degrees. </description>
+  <condition> sim-time-sec >= 2.0 </condition>
+  <set name="fcs/left-brake-cmd-norm" value="0"/>
+  <set name="fcs/right-brake-cmd-norm" value="0"/>
+  <set name="fcs/center-brake-cmd-norm" value="0"/>
+  <set name="fcs/flap-cmd-norm" value="0.33"/>
+</event>
+
+<property> simulation/notify-time-trigger </property>
+<property value="1"> fcs/left-brake-cmd-norm </property>
+<property value="1"> fcs/right-brake-cmd-norm </property>
+<property value="1"> fcs/center-brake-cmd-norm </property>
+ <event name="Engine Start">
+  <description>Start the engine</description>
+  <condition> sim-time-sec >= 0.25 </condition>
+  <set name="fcs/throttle-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="fcs/mixture-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="propulsion/magneto_cmd" value="3"/>
+  <set name="propulsion/starter_cmd" value="1"/>
+  <set name="ap/autopilot-roll-on" value="1"/>
+  <set name="ap/roll-attitude-mode" value="0"/>
+  <notify>
+	<property>ap/hdg-roll-err-c1</property>
+  </notify>
+</event>
+
+<property> simulation/notify-time-trigger </property>
+<property value="1"> fcs/left-brake-cmd-norm </property>
+<property value="1"> fcs/right-brake-cmd-norm </property>
+<property value="1"> fcs/center-brake-cmd-norm </property>
+ <event name="Engine Start">
+  <description>Start the engine</description>
+  <condition> sim-time-sec >= 0.25 </condition>
+  <set name="fcs/throttle-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="fcs/mixture-cmd-norm" value="1.00" action="FG_RAMP" tc ="0.5"/>
+  <set name="propulsion/magneto_cmd" value="3"/>
+  <set name="propulsion/starter_cmd" value="1"/>
+  <set name="ap/autopilot-roll-on" value="1"/>
+  <set name="ap/roll-attitude-mode" value="0"/>
+  <notify>
+	<property>ap/hdg-roll-err-c1</property>
+  </notify>
+</event>
+
+    <event name="Terminate">
+      <description>
+        Terminate this simulation after specified time
+      </description>
+      <condition>
+        sim-time-sec >= 600
+      </condition>
+      <set name="simulation/terminate" value="1"/>
+      <notify/>
+    </event>
+  </run>
+</runscript>
+

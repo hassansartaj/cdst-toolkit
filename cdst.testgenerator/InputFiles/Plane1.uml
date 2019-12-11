@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_1gOZ2xBmEeqEDJdEFBl5FA" name="Plane">
+  <packageImport xmi:id="_1gOZ3BBmEeqEDJdEFBl5FA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1gOZ3RBmEeqEDJdEFBl5FA" name="Aircraft">
+    <ownedAttribute xmi:id="_1gOZ3hBmEeqEDJdEFBl5FA" name="altitude" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1gOZ3xBmEeqEDJdEFBl5FA" name="airspeed" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1gOZ4BBmEeqEDJdEFBl5FA" name="roll" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1gOZ4RBmEeqEDJdEFBl5FA" name="pitch" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1gOZ4hBmEeqEDJdEFBl5FA" name="heading" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1gOZ4xBmEeqEDJdEFBl5FA" name="power" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1gOZ5BBmEeqEDJdEFBl5FA" name="pStatus" visibility="private"/>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_1gOZ5RBmEeqEDJdEFBl5FA" name="Turns" submachineState="_1gOaJBBmEeqEDJdEFBl5FA _1gOaLxBmEeqEDJdEFBl5FA _1gOaKBBmEeqEDJdEFBl5FA">
+      <region xmi:id="_1gOZ5hBmEeqEDJdEFBl5FA" name="Region1">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_1gOZ5xBmEeqEDJdEFBl5FA"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOZ6BBmEeqEDJdEFBl5FA" name="Turning">
+          <region xmi:id="_1gOZ6RBmEeqEDJdEFBl5FA" name="Region1">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_1gOZ6hBmEeqEDJdEFBl5FA" kind="shallowHistory"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOZ6xBmEeqEDJdEFBl5FA" name="TurningLeft"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOZ7BBmEeqEDJdEFBl5FA" name="TurningRight"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOZ7RBmEeqEDJdEFBl5FA" name="Straight"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_1gOZ7hBmEeqEDJdEFBl5FA" kind="fork"/>
+            <transition xmi:id="_1gOZ7xBmEeqEDJdEFBl5FA" source="_1gOZ6xBmEeqEDJdEFBl5FA" target="_1gOZ7RBmEeqEDJdEFBl5FA" guard="_1gOZ8BBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOZ8BBmEeqEDJdEFBl5FA" constrainedElement="_1gOZ7xBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOZ8RBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle=0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOZ8hBmEeqEDJdEFBl5FA" name="" event="_1gOayhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOZ8xBmEeqEDJdEFBl5FA" source="_1gOZ7BBmEeqEDJdEFBl5FA" target="_1gOZ7RBmEeqEDJdEFBl5FA" guard="_1gOZ9BBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOZ9BBmEeqEDJdEFBl5FA" constrainedElement="_1gOZ8xBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOZ9RBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle=0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOZ9hBmEeqEDJdEFBl5FA" name="" event="_1gOazBBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOZ9xBmEeqEDJdEFBl5FA" source="_1gOZ7RBmEeqEDJdEFBl5FA" target="_1gOZ6xBmEeqEDJdEFBl5FA" guard="_1gOZ-BBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOZ-BBmEeqEDJdEFBl5FA" constrainedElement="_1gOZ9xBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOZ-RBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle>=-90 and Angle&lt;0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOZ-hBmEeqEDJdEFBl5FA" name="" event="_1gOazBBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOZ-xBmEeqEDJdEFBl5FA" source="_1gOZ7RBmEeqEDJdEFBl5FA" target="_1gOZ7BBmEeqEDJdEFBl5FA" guard="_1gOZ_BBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOZ_BBmEeqEDJdEFBl5FA" constrainedElement="_1gOZ-xBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOZ_RBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle>0 and Angle&lt;=90</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOZ_hBmEeqEDJdEFBl5FA" name="" event="_1gOayhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOZ_xBmEeqEDJdEFBl5FA" source="_1gOZ7hBmEeqEDJdEFBl5FA" target="_1gOZ6xBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaABBmEeqEDJdEFBl5FA" source="_1gOZ7hBmEeqEDJdEFBl5FA" target="_1gOZ7BBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaARBmEeqEDJdEFBl5FA" source="_1gOZ7hBmEeqEDJdEFBl5FA" target="_1gOZ7RBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaAhBmEeqEDJdEFBl5FA" source="_1gOZ7RBmEeqEDJdEFBl5FA" target="_1gOaFhBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaAxBmEeqEDJdEFBl5FA" source="_1gOZ6xBmEeqEDJdEFBl5FA" target="_1gOaFhBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaBBBmEeqEDJdEFBl5FA" source="_1gOZ7BBmEeqEDJdEFBl5FA" target="_1gOaFhBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaBRBmEeqEDJdEFBl5FA" source="_1gOZ7BBmEeqEDJdEFBl5FA" target="_1gOZ7BBmEeqEDJdEFBl5FA" guard="_1gOaBhBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaBhBmEeqEDJdEFBl5FA" constrainedElement="_1gOaBRBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaBxBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle>0 and Angle&lt;=90</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaCBBmEeqEDJdEFBl5FA" name="" event="_1gOayhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaCRBmEeqEDJdEFBl5FA" source="_1gOZ6xBmEeqEDJdEFBl5FA" target="_1gOZ6xBmEeqEDJdEFBl5FA" guard="_1gOaChBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaChBmEeqEDJdEFBl5FA" constrainedElement="_1gOaCRBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaCxBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle>=-90 and Angle&lt;0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaDBBmEeqEDJdEFBl5FA" name="" event="_1gOayhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaDRBmEeqEDJdEFBl5FA" source="_1gOZ7BBmEeqEDJdEFBl5FA" target="_1gOZ6xBmEeqEDJdEFBl5FA" guard="_1gOaDhBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaDhBmEeqEDJdEFBl5FA" constrainedElement="_1gOaDRBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaDxBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle>=-90 and Angle&lt;0</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaEBBmEeqEDJdEFBl5FA" name="" event="_1gOazBBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaERBmEeqEDJdEFBl5FA" source="_1gOZ6xBmEeqEDJdEFBl5FA" target="_1gOZ7BBmEeqEDJdEFBl5FA" guard="_1gOaEhBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaEhBmEeqEDJdEFBl5FA" constrainedElement="_1gOaERBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaExBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Angle>0 and Angle&lt;=90</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaFBBmEeqEDJdEFBl5FA" name="" event="_1gOayhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaFRBmEeqEDJdEFBl5FA" name="Transition" kind="internal" source="_1gOZ6BBmEeqEDJdEFBl5FA" target="_1gOZ6BBmEeqEDJdEFBl5FA"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_1gOaFhBmEeqEDJdEFBl5FA"/>
+        <transition xmi:id="_1gOaFxBmEeqEDJdEFBl5FA" source="_1gOZ5xBmEeqEDJdEFBl5FA" target="_1gOZ7hBmEeqEDJdEFBl5FA"/>
+      </region>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_1gOaGBBmEeqEDJdEFBl5FA" name="UAVPlaneFlightSM">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_1gOaGRBmEeqEDJdEFBl5FA" name="StateMachine1">
+        <region xmi:id="_1gOaGhBmEeqEDJdEFBl5FA" name="Region1"/>
+      </ownedBehavior>
+      <region xmi:id="_1gOaGxBmEeqEDJdEFBl5FA" name="Region1">
+        <subvertex xmi:type="uml:State" xmi:id="_1gOaHBBmEeqEDJdEFBl5FA" name="Taxiing"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_1gOaHRBmEeqEDJdEFBl5FA"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_1gOaHhBmEeqEDJdEFBl5FA"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOaHxBmEeqEDJdEFBl5FA" name="Landing"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOaIBBmEeqEDJdEFBl5FA" name="Flying">
+          <region xmi:id="_1gOaIRBmEeqEDJdEFBl5FA" name="Region2">
+            <subvertex xmi:type="uml:State" xmi:id="_1gOaIhBmEeqEDJdEFBl5FA" name="Descent">
+              <region xmi:id="_1gOaIxBmEeqEDJdEFBl5FA" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_1gOaJBBmEeqEDJdEFBl5FA" name="State" submachine="_1gOZ5RBmEeqEDJdEFBl5FA"/>
+                <transition xmi:id="_1gOaJRBmEeqEDJdEFBl5FA" name="Transition" kind="internal" source="_1gOaIhBmEeqEDJdEFBl5FA" target="_1gOaIhBmEeqEDJdEFBl5FA"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOaJhBmEeqEDJdEFBl5FA" name="Cruise">
+              <region xmi:id="_1gOaJxBmEeqEDJdEFBl5FA" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_1gOaKBBmEeqEDJdEFBl5FA" name="State" submachine="_1gOZ5RBmEeqEDJdEFBl5FA"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOaKRBmEeqEDJdEFBl5FA" name="AltitudeHold">
+              <region xmi:id="_1gOaKhBmEeqEDJdEFBl5FA" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_1gOaKxBmEeqEDJdEFBl5FA" name="State" submachine="_1gOa3RBmEeqEDJdEFBl5FA"/>
+                <transition xmi:id="_1gOaLBBmEeqEDJdEFBl5FA" name="Transition" kind="internal" source="_1gOaKxBmEeqEDJdEFBl5FA" target="_1gOaKxBmEeqEDJdEFBl5FA"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOaLRBmEeqEDJdEFBl5FA" name="Climb">
+              <region xmi:id="_1gOaLhBmEeqEDJdEFBl5FA" name="Region1">
+                <subvertex xmi:type="uml:State" xmi:id="_1gOaLxBmEeqEDJdEFBl5FA" name="State" submachine="_1gOZ5RBmEeqEDJdEFBl5FA"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOaMBBmEeqEDJdEFBl5FA" name="Loiter"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1gOaMRBmEeqEDJdEFBl5FA" name="Circle"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_1gOaMhBmEeqEDJdEFBl5FA" kind="fork"/>
+            <transition xmi:id="_1gOaMxBmEeqEDJdEFBl5FA" name="app" source="_1gOaIhBmEeqEDJdEFBl5FA" target="_1gOaahBmEeqEDJdEFBl5FA" guard="_1gOaNBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaNBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaMxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaNRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=60 and Altitude>MinAGL</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaNhBmEeqEDJdEFBl5FA" name="" event="_1gOa0xBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaNxBmEeqEDJdEFBl5FA" name="ds4" source="_1gOaJhBmEeqEDJdEFBl5FA" target="_1gOaIhBmEeqEDJdEFBl5FA" guard="_1gOaOBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaOBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaNxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaORBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaOhBmEeqEDJdEFBl5FA" name="" event="_1gOa0xBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaOxBmEeqEDJdEFBl5FA" name="cl3" source="_1gOaKRBmEeqEDJdEFBl5FA" target="_1gOaLRBmEeqEDJdEFBl5FA" guard="_1gOaPBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaPBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaOxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaPRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaPhBmEeqEDJdEFBl5FA" name="" event="_1gOaxhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaPxBmEeqEDJdEFBl5FA" name="ds3" source="_1gOaKRBmEeqEDJdEFBl5FA" target="_1gOaIhBmEeqEDJdEFBl5FA" guard="_1gOaQBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaQBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaPxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaQRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaQhBmEeqEDJdEFBl5FA" name="" event="_1gOa0xBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaQxBmEeqEDJdEFBl5FA" name="cr1" source="_1gOaLRBmEeqEDJdEFBl5FA" target="_1gOaJhBmEeqEDJdEFBl5FA" guard="_1gOaRBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaRBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaQxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaRRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaRhBmEeqEDJdEFBl5FA" name="" event="_1gOa0xBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaRxBmEeqEDJdEFBl5FA" name="cl5" source="_1gOaIhBmEeqEDJdEFBl5FA" target="_1gOaLRBmEeqEDJdEFBl5FA" guard="_1gOaSBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaSBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaRxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaSRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaShBmEeqEDJdEFBl5FA" name="" event="_1gOaxhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaSxBmEeqEDJdEFBl5FA" name="ah" source="_1gOaJhBmEeqEDJdEFBl5FA" target="_1gOaKRBmEeqEDJdEFBl5FA" guard="_1gOaTBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaTBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaSxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaTRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Airspeed&lt;=MaxSpd and Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaThBmEeqEDJdEFBl5FA" name="" event="_1gOa2BBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaTxBmEeqEDJdEFBl5FA" name="cl1" source="_1gOaLRBmEeqEDJdEFBl5FA" target="_1gOaLRBmEeqEDJdEFBl5FA" guard="_1gOaUBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaUBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaTxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaURBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Altitude&lt;MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaUhBmEeqEDJdEFBl5FA" name="" event="_1gOaxhBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaUxBmEeqEDJdEFBl5FA" name="ds1" source="_1gOaIhBmEeqEDJdEFBl5FA" target="_1gOaIhBmEeqEDJdEFBl5FA" guard="_1gOaVBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaVBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaUxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaVRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Altitude&lt;=MaxAlt</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaVhBmEeqEDJdEFBl5FA" name="" event="_1gOa0xBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaVxBmEeqEDJdEFBl5FA" name="rtl" source="_1gOaMRBmEeqEDJdEFBl5FA" target="_1gOaHxBmEeqEDJdEFBl5FA" guard="_1gOaWBBmEeqEDJdEFBl5FA">
+              <ownedRule xmi:id="_1gOaWBBmEeqEDJdEFBl5FA" constrainedElement="_1gOaVxBmEeqEDJdEFBl5FA">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaWRBmEeqEDJdEFBl5FA">
+                  <language></language>
+                  <body>Altitude>MinAGL</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:id="_1gOaWhBmEeqEDJdEFBl5FA" name="" event="_1gOa4hBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaWxBmEeqEDJdEFBl5FA" name="fs1" source="_1gOaIhBmEeqEDJdEFBl5FA" target="_1gOaMhBmEeqEDJdEFBl5FA">
+              <trigger xmi:id="_1gOaXBBmEeqEDJdEFBl5FA" name="" event="_1gOa1hBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaXRBmEeqEDJdEFBl5FA" name="ltr" source="_1gOaKRBmEeqEDJdEFBl5FA" target="_1gOaMBBmEeqEDJdEFBl5FA">
+              <trigger xmi:id="_1gOaXhBmEeqEDJdEFBl5FA" name="" event="_1gOa4xBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaXxBmEeqEDJdEFBl5FA" name="fs2" source="_1gOaJhBmEeqEDJdEFBl5FA" target="_1gOaMhBmEeqEDJdEFBl5FA">
+              <trigger xmi:id="_1gOaYBBmEeqEDJdEFBl5FA" name="" event="_1gOa1hBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaYRBmEeqEDJdEFBl5FA" name="fs3" source="_1gOaLRBmEeqEDJdEFBl5FA" target="_1gOaMhBmEeqEDJdEFBl5FA">
+              <trigger xmi:id="_1gOaYhBmEeqEDJdEFBl5FA" name="" event="_1gOa1hBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaYxBmEeqEDJdEFBl5FA" name="ds2" source="_1gOaMBBmEeqEDJdEFBl5FA" target="_1gOaIhBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaZBBmEeqEDJdEFBl5FA" name="ahold" source="_1gOaMBBmEeqEDJdEFBl5FA" target="_1gOaKRBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaZRBmEeqEDJdEFBl5FA" source="_1gOaMhBmEeqEDJdEFBl5FA" target="_1gOaMRBmEeqEDJdEFBl5FA"/>
+            <transition xmi:id="_1gOaZhBmEeqEDJdEFBl5FA" name="fs4" source="_1gOaKRBmEeqEDJdEFBl5FA" target="_1gOaMhBmEeqEDJdEFBl5FA">
+              <trigger xmi:id="_1gOaZxBmEeqEDJdEFBl5FA" name="" event="_1gOa1hBmEeqEDJdEFBl5FA"/>
+            </transition>
+            <transition xmi:id="_1gOaaBBmEeqEDJdEFBl5FA" name="cl2" source="_1gOaMBBmEeqEDJdEFBl5FA" target="_1gOaLRBmEeqEDJdEFBl5FA"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOaaRBmEeqEDJdEFBl5FA" name="TakeOff"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOaahBmEeqEDJdEFBl5FA" name="Approach"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOaaxBmEeqEDJdEFBl5FA" name="Armed">
+          <eAnnotations xmi:id="_1gOabBBmEeqEDJdEFBl5FA" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_1gOabRBmEeqEDJdEFBl5FA" name="Idle">
+          <eAnnotations xmi:id="_1gOabhBmEeqEDJdEFBl5FA" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+          <ownedComment xmi:id="_1gOabxBmEeqEDJdEFBl5FA" annotatedElement="_1gOabRBmEeqEDJdEFBl5FA">
+            <body>&lt;p>&lt;/p></body>
+          </ownedComment>
+        </subvertex>
+        <transition xmi:id="_1gOacBBmEeqEDJdEFBl5FA" name="idle" source="_1gOaHRBmEeqEDJdEFBl5FA" target="_1gOabRBmEeqEDJdEFBl5FA"/>
+        <transition xmi:id="_1gOacRBmEeqEDJdEFBl5FA" name="takeoff" source="_1gOaHBBmEeqEDJdEFBl5FA" target="_1gOaaRBmEeqEDJdEFBl5FA" guard="_1gOachBmEeqEDJdEFBl5FA">
+          <ownedRule xmi:id="_1gOachBmEeqEDJdEFBl5FA" constrainedElement="_1gOacRBmEeqEDJdEFBl5FA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOacxBmEeqEDJdEFBl5FA">
+              <language></language>
+              <body>Airspeed>0</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_1gOadBBmEeqEDJdEFBl5FA" name="" event="_1gOa4RBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOadRBmEeqEDJdEFBl5FA" name="stop" source="_1gOaHBBmEeqEDJdEFBl5FA" target="_1gOaaxBmEeqEDJdEFBl5FA">
+          <trigger xmi:id="_1gOadhBmEeqEDJdEFBl5FA" name="" event="_1gOawhBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOadxBmEeqEDJdEFBl5FA" name="land" source="_1gOaHxBmEeqEDJdEFBl5FA" target="_1gOaHBBmEeqEDJdEFBl5FA">
+          <trigger xmi:id="_1gOaeBBmEeqEDJdEFBl5FA" name="" event="_1gOa1RBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOaeRBmEeqEDJdEFBl5FA" name="climb" source="_1gOaaRBmEeqEDJdEFBl5FA" target="_1gOaLRBmEeqEDJdEFBl5FA" guard="_1gOaehBmEeqEDJdEFBl5FA">
+          <ownedRule xmi:id="_1gOaehBmEeqEDJdEFBl5FA" constrainedElement="_1gOaeRBmEeqEDJdEFBl5FA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaexBmEeqEDJdEFBl5FA">
+              <language></language>
+              <body>Airpeed>10 and Altitude>MinAGL</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_1gOafBBmEeqEDJdEFBl5FA" name="" event="_1gOaxhBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOafRBmEeqEDJdEFBl5FA" name="sland" source="_1gOaahBmEeqEDJdEFBl5FA" target="_1gOaHxBmEeqEDJdEFBl5FA">
+          <trigger xmi:id="_1gOafhBmEeqEDJdEFBl5FA" name="" event="_1gOa1RBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOafxBmEeqEDJdEFBl5FA" name="start" source="_1gOaaxBmEeqEDJdEFBl5FA" target="_1gOaHBBmEeqEDJdEFBl5FA" guard="_1gOagBBmEeqEDJdEFBl5FA">
+          <ownedRule xmi:id="_1gOagBBmEeqEDJdEFBl5FA" constrainedElement="_1gOafxBmEeqEDJdEFBl5FA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOagRBmEeqEDJdEFBl5FA">
+              <language></language>
+              <body>Airspeed>0</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_1gOaghBmEeqEDJdEFBl5FA" name="" event="_1gOavxBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOagxBmEeqEDJdEFBl5FA" name="disarm" source="_1gOaaxBmEeqEDJdEFBl5FA" target="_1gOabRBmEeqEDJdEFBl5FA">
+          <trigger xmi:id="_1gOahBBmEeqEDJdEFBl5FA" name="" event="_1gOa3xBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOahRBmEeqEDJdEFBl5FA" name="arm" source="_1gOabRBmEeqEDJdEFBl5FA" target="_1gOaaxBmEeqEDJdEFBl5FA">
+          <trigger xmi:id="_1gOahhBmEeqEDJdEFBl5FA" name="" event="_1gOavBBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOahxBmEeqEDJdEFBl5FA" name="done" source="_1gOabRBmEeqEDJdEFBl5FA" target="_1gOaHhBmEeqEDJdEFBl5FA"/>
+        <transition xmi:id="_1gOaiBBmEeqEDJdEFBl5FA" name="takeoff1" source="_1gOaaxBmEeqEDJdEFBl5FA" target="_1gOaaRBmEeqEDJdEFBl5FA" guard="_1gOaiRBmEeqEDJdEFBl5FA">
+          <ownedRule xmi:id="_1gOaiRBmEeqEDJdEFBl5FA" constrainedElement="_1gOaiBBmEeqEDJdEFBl5FA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_1gOaihBmEeqEDJdEFBl5FA">
+              <language></language>
+              <body>Airspeed>0</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:id="_1gOaixBmEeqEDJdEFBl5FA" name="" event="_1gOa4RBmEeqEDJdEFBl5FA"/>
+        </transition>
+        <transition xmi:id="_1gOajBBmEeqEDJdEFBl5FA" name="stop1" source="_1gOaHxBmEeqEDJdEFBl5FA" target="_1gOaaxBmEeqEDJdEFBl5FA">
+          <trigger xmi:id="_1gOajRBmEeqEDJdEFBl5FA" name="" event="_1gOawhBmEeqEDJdEFBl5FA"/>
+        </transition>
+      </region>
+    </ownedBehavior>
+    <ownedOperation xmi:id="_1gOajhBmEeqEDJdEFBl5FA" name="ExternalPowerOn"/>
+    <ownedOperation xmi:id="_1gOajxBmEeqEDJdEFBl5FA" name="ApuGenBatteryOn"/>
+    <ownedOperation xmi:id="_1gOakBBmEeqEDJdEFBl5FA" name="SetMaxAirspeedAltitudeHeading"/>
+    <ownedOperation xmi:id="_1gOakRBmEeqEDJdEFBl5FA" name="ParkingBrakeOff"/>
+    <ownedOperation xmi:id="_1gOakhBmEeqEDJdEFBl5FA" name="ArmUAV"/>
+    <ownedOperation xmi:id="_1gOakxBmEeqEDJdEFBl5FA" name="SetHydrolicsAuto"/>
+    <ownedOperation xmi:id="_1gOalBBmEeqEDJdEFBl5FA" name="SetFlapsDegree"/>
+    <ownedOperation xmi:id="_1gOalRBmEeqEDJdEFBl5FA" name="StartTaxiing"/>
+    <ownedOperation xmi:id="_1gOalhBmEeqEDJdEFBl5FA" name="ExternalPowerOff"/>
+    <ownedOperation xmi:id="_1gOalxBmEeqEDJdEFBl5FA" name="ApuGenMasterSwitchOff"/>
+    <ownedOperation xmi:id="_1gOamBBmEeqEDJdEFBl5FA" name="StopUAV"/>
+    <ownedOperation xmi:id="_1gOamRBmEeqEDJdEFBl5FA" name="ParkingBrakeOn"/>
+    <ownedOperation xmi:id="_1gOamhBmEeqEDJdEFBl5FA" name="EnablePushback"/>
+    <ownedOperation xmi:id="_1gOamxBmEeqEDJdEFBl5FA" name="DisablePushback"/>
+    <ownedOperation xmi:id="_1gOanBBmEeqEDJdEFBl5FA" name="IncreaseAltitude"/>
+    <ownedOperation xmi:id="_1gOanRBmEeqEDJdEFBl5FA" name="IncreaseVerticalSpeed"/>
+    <ownedOperation xmi:id="_1gOanhBmEeqEDJdEFBl5FA" name="DecreaseElevation"/>
+    <ownedOperation xmi:id="_1gOanxBmEeqEDJdEFBl5FA" name="DecreaseVerticalSpeed"/>
+    <ownedOperation xmi:id="_1gOaoBBmEeqEDJdEFBl5FA" name="TurnRight"/>
+    <ownedOperation xmi:id="_1gOaoRBmEeqEDJdEFBl5FA" name="YokeStraight"/>
+    <ownedOperation xmi:id="_1gOaohBmEeqEDJdEFBl5FA" name="TurnLeft"/>
+    <ownedOperation xmi:id="_1gOaoxBmEeqEDJdEFBl5FA" name="MoveYoke"/>
+    <ownedOperation xmi:id="_1gOapBBmEeqEDJdEFBl5FA" name="CloseLandingGear"/>
+    <ownedOperation xmi:id="_1gOapRBmEeqEDJdEFBl5FA" name="DecreaseAirspeed"/>
+    <ownedOperation xmi:id="_1gOaphBmEeqEDJdEFBl5FA" name="TurnApproachBtnOn"/>
+    <ownedOperation xmi:id="_1gOapxBmEeqEDJdEFBl5FA" name="TurnLocalizerOn"/>
+    <ownedOperation xmi:id="_1gOaqBBmEeqEDJdEFBl5FA" name="ReduceFlaps"/>
+    <ownedOperation xmi:id="_1gOaqRBmEeqEDJdEFBl5FA" name="DecreaseAltitude"/>
+    <ownedOperation xmi:id="_1gOaqhBmEeqEDJdEFBl5FA" name="SpeedBrakeOn"/>
+    <ownedOperation xmi:id="_1gOaqxBmEeqEDJdEFBl5FA" name="Land"/>
+    <ownedOperation xmi:id="_1gOarBBmEeqEDJdEFBl5FA" name="FailSafe"/>
+    <ownedOperation xmi:id="_1gOarRBmEeqEDJdEFBl5FA" name="SetAPModeOn"/>
+    <ownedOperation xmi:id="_1gOarhBmEeqEDJdEFBl5FA" name="LevelAltitude"/>
+    <ownedOperation xmi:id="_1gOarxBmEeqEDJdEFBl5FA" name="AltitudeHold"/>
+    <ownedOperation xmi:id="_1gOasBBmEeqEDJdEFBl5FA" name="ResetFlaps"/>
+    <ownedOperation xmi:id="_1gOasRBmEeqEDJdEFBl5FA" name="ActivateMCAS"/>
+    <ownedOperation xmi:id="_1gOashBmEeqEDJdEFBl5FA" name="DeactivateMCAS"/>
+    <ownedOperation xmi:id="_1gOasxBmEeqEDJdEFBl5FA" name="DisarmUAV"/>
+    <ownedOperation xmi:id="_1gOatBBmEeqEDJdEFBl5FA" name="APModeOff"/>
+    <ownedOperation xmi:id="_1gOatRBmEeqEDJdEFBl5FA" name="Takeoff"/>
+    <ownedOperation xmi:id="_1gOathBmEeqEDJdEFBl5FA" name="ReturnToLaunch"/>
+    <ownedOperation xmi:id="_1gOatxBmEeqEDJdEFBl5FA" name="Loiter"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOauBBmEeqEDJdEFBl5FA" name="" operation="_1gOajhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOauRBmEeqEDJdEFBl5FA" name="" operation="_1gOajxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOauhBmEeqEDJdEFBl5FA" name="" operation="_1gOakBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOauxBmEeqEDJdEFBl5FA" name="" operation="_1gOakRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOavBBmEeqEDJdEFBl5FA" name="ArmUAV()" operation="_1gOakhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOavRBmEeqEDJdEFBl5FA" name="" operation="_1gOakxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOavhBmEeqEDJdEFBl5FA" name="" operation="_1gOalBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOavxBmEeqEDJdEFBl5FA" name="StartTaxiing()" operation="_1gOalRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOawBBmEeqEDJdEFBl5FA" name="" operation="_1gOalhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOawRBmEeqEDJdEFBl5FA" name="" operation="_1gOalxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOawhBmEeqEDJdEFBl5FA" name="StopUAV()" operation="_1gOamBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOawxBmEeqEDJdEFBl5FA" name="" operation="_1gOamRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOaxBBmEeqEDJdEFBl5FA" name="" operation="_1gOamhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOaxRBmEeqEDJdEFBl5FA" name="" operation="_1gOamxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOaxhBmEeqEDJdEFBl5FA" name="IncreaseAltitude()" operation="_1gOanBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOaxxBmEeqEDJdEFBl5FA" name="" operation="_1gOanRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOayBBmEeqEDJdEFBl5FA" name="" operation="_1gOanhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOayRBmEeqEDJdEFBl5FA" name="" operation="_1gOanxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOayhBmEeqEDJdEFBl5FA" name="" operation="_1gOaoBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOayxBmEeqEDJdEFBl5FA" name="" operation="_1gOaoRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOazBBmEeqEDJdEFBl5FA" name="" operation="_1gOaohBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOazRBmEeqEDJdEFBl5FA" name="" operation="_1gOaoxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOazhBmEeqEDJdEFBl5FA" name="" operation="_1gOapBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOazxBmEeqEDJdEFBl5FA" name="" operation="_1gOapRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa0BBmEeqEDJdEFBl5FA" name="" operation="_1gOaphBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa0RBmEeqEDJdEFBl5FA" name="" operation="_1gOapxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa0hBmEeqEDJdEFBl5FA" name="" operation="_1gOaqBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa0xBmEeqEDJdEFBl5FA" name="" operation="_1gOaqRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa1BBmEeqEDJdEFBl5FA" name="" operation="_1gOaqhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa1RBmEeqEDJdEFBl5FA" name="Land()" operation="_1gOaqxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa1hBmEeqEDJdEFBl5FA" name="FailSafe()" operation="_1gOarBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa1xBmEeqEDJdEFBl5FA" name="" operation="_1gOarRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa2BBmEeqEDJdEFBl5FA" name="LevelAltitude()" operation="_1gOarhBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa2RBmEeqEDJdEFBl5FA" name="" operation="_1gOarxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa2hBmEeqEDJdEFBl5FA" name="" operation="_1gOasBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa2xBmEeqEDJdEFBl5FA" name="" operation="_1gOasRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa3BBmEeqEDJdEFBl5FA" name="" operation="_1gOashBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_1gOa3RBmEeqEDJdEFBl5FA" name="Turns" submachineState="_1gOaKxBmEeqEDJdEFBl5FA">
+    <region xmi:id="_1gOa3hBmEeqEDJdEFBl5FA" name="Region1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa3xBmEeqEDJdEFBl5FA" name="DisarmUAV()" operation="_1gOasxBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa4BBmEeqEDJdEFBl5FA" name="" operation="_1gOatBBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa4RBmEeqEDJdEFBl5FA" name="Takeoff()" operation="_1gOatRBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa4hBmEeqEDJdEFBl5FA" name="ReturnToLaunch()" operation="_1gOathBmEeqEDJdEFBl5FA"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_1gOa4xBmEeqEDJdEFBl5FA" name="Loiter()" operation="_1gOatxBmEeqEDJdEFBl5FA"/>
+  <profileApplication xmi:id="_1gOa5BBmEeqEDJdEFBl5FA">
+    <eAnnotations xmi:id="_1gOa5RBmEeqEDJdEFBl5FA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

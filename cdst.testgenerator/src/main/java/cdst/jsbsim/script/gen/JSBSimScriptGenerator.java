@@ -20,31 +20,80 @@ import java.util.HashMap;
  */
 public class JSBSimScriptGenerator {
 	public static void main(String[] args) {
-		String ttPath = "TransitionTree-FSM1.txt";
+		String ttPath = "TransitionTree-Ex.txt";
 		String scriptsGenPath = "jsbsim-scripts";
 		String stateScriptsPath = "jsbsim-state-scripts";
+		String scriptTemp = "script-templates";
 		
 		ArrayList<String> testPaths = loadTestPaths(ttPath);
 		
+		HashMap<String, String> scriptTempMap = loadScriptTemplates(scriptTemp);
+		
 		HashMap<String, String> stateScripts = loadStateScripts(stateScriptsPath);
 		
-		generateTestScripts(testPaths, stateScripts, scriptsGenPath);
+		generateTestScripts(testPaths, stateScripts, scriptsGenPath, scriptTempMap);
+	}
+
+	private static HashMap<String, String> loadScriptTemplates(String scriptTemp) {
+		HashMap<String, String> scriptTempMap = new HashMap<>(2);
+		File folder = new File(scriptTemp);
+		File[] listOfFiles = folder.listFiles();
+		for (int i = 0; i < listOfFiles.length; i++) {
+			if (listOfFiles[i].isFile()) {
+				String dataFile=scriptTemp+"/"+listOfFiles[i].getName();
+				BufferedReader file=null;
+				try {
+					file=new BufferedReader(new FileReader(dataFile));
+					String line=null;
+					String script = "";
+					while((line = file.readLine()) != null) {
+						if(!line.isEmpty()) {
+							script += line;
+							script += "\n";
+						}
+					}
+					scriptTempMap.put(listOfFiles[i].getName().replace(".xml", "").trim(), script);
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}finally {
+					try {
+						file.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		return scriptTempMap;
 	}
 
 	private static void generateTestScripts(ArrayList<String> testPaths, HashMap<String, String> stateScripts,
-			String scriptsGenPath) {
+			String scriptsGenPath, HashMap<String, String> scriptTempMap) {
 		String scriptName = "test-script-";
 		int sCount = 1;
 		for(String tp:testPaths) {
 			String []splitTP = tp.split(",");
+			String fileName=scriptsGenPath+"/"+scriptName+sCount+".xml";
+			String initalScript = scriptTempMap.get("ScriptInitialPart");
+			writeToFile(fileName, initalScript, true);
 			for(String sTp : splitTP) {
 				if(sTp.contains("{")) {
 					String state = sTp.substring(sTp.indexOf("{")+1, sTp.indexOf("}")-1).trim();
+					if(state.contains(":")) {
+						String []parts = state.split(":");
+						state = parts[0];
+					}
 					String stateScript = stateScripts.get(state);
-					String fileName=scriptsGenPath+"/"+scriptName+sCount+".xml";
-					writeToFile(fileName, stateScript, true);
+					if(stateScript != null)
+						writeToFile(fileName, stateScript, true);
+					else 
+						System.out.println(state);
 				}
 			}
+			String finalScript = scriptTempMap.get("ScriptFinalPart");
+			writeToFile(fileName, finalScript, true);
 			sCount++;
 		}
 	}
@@ -60,12 +109,14 @@ public class JSBSimScriptGenerator {
 				try {
 					file=new BufferedReader(new FileReader(dataFile));
 					String line=null;
+					String script = "";
 					while((line = file.readLine()) != null) {
 						if(!line.isEmpty()) {
-//							System.out.println(line);
-							stateScripts.put(listOfFiles[i].getName(), line);
+							script += line;
+							script += "\n";
 						}
 					}
+					stateScripts.put(listOfFiles[i].getName().replace(".xml", "").trim(), script);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				} catch (IOException e) {
@@ -90,7 +141,6 @@ public class JSBSimScriptGenerator {
 			String line=null;
 			while((line = file.readLine()) != null) {
 				if(!line.isEmpty()) {
-//					System.out.println(line);
 					testPaths.add(line);
 				}
 			}

@@ -1,0 +1,16 @@
+<event name="Set autopilot for 800 ft.">
+  <description>Set Autopilot for 800 ft after a two second delay. </description>
+  <notify/>
+  <condition logic="AND"> 
+  sim-time-sec >= 350
+  sim-time-sec le 450
+  </condition>
+  <delay>2.0</delay>
+  <set name="ap/altitude_setpoint" value="800.0"/>
+  <set name="ap/altitude_hold" value="800.0"/>
+  <!--Turns Reset-->
+  <set name="fcs/flap-cmd-norm" value="0"/>
+  <set name="guidance/specified-heading-rad" value="1.75"/>
+  <set name="guidance/heading-selector-switch" value="1"/>
+  <set name="ap/roll-attitude-mode" value="1"/>
+</event>

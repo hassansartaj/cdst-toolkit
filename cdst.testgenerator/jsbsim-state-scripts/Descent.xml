@@ -1,0 +1,10 @@
+<event name="Set autopilot for 500 ft.">
+  <description>Set Autopilot for 500 ft after a two second delay. </description>
+  <notify/>
+  <condition logic="AND">
+  sim-time-sec >= 450
+  sim-time-sec lt 550
+  </condition>
+  <delay>2.0</delay>
+  <set name="ap/altitude_setpoint" value="500.0"/>
+</event>

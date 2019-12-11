@@ -1,0 +1,12 @@
+<event name="Adjust throttle/flaps">
+  <description>Remove flaps at 50 ft and set heading to 100; acquire heading.</description>
+  <notify/>
+  <condition logic="AND">
+	position/h-agl-ft lt 950
+	sim-time-sec >= 950
+  </condition>
+  <set name="fcs/flap-cmd-norm" value="0"/>
+  <set name="guidance/specified-heading-rad" value="1.75"/>
+  <set name="guidance/heading-selector-switch" value="1"/>
+  <set name="ap/roll-attitude-mode" value="1"/>
+</event>

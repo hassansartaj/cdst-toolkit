@@ -1,0 +1,9 @@
+
+<event name="Begin Taxiing">
+  <description>Release brakes and get rolling with flaps at 10 degrees. </description>
+  <condition> sim-time-sec >= 2.0 </condition>
+  <set name="fcs/left-brake-cmd-norm" value="0"/>
+  <set name="fcs/right-brake-cmd-norm" value="0"/>
+  <set name="fcs/center-brake-cmd-norm" value="0"/>
+  <set name="fcs/flap-cmd-norm" value="0.33"/>
+</event>

@@ -1,0 +1,14 @@
+
+    <event name="Terminate">
+      <description>
+        Terminate this simulation after specified time
+      </description>
+      <condition>
+        sim-time-sec >= 600
+      </condition>
+      <set name="simulation/terminate" value="1"/>
+      <notify/>
+    </event>
+
+  </run>
+</runscript>
