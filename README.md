@@ -19,7 +19,13 @@ The tool takes flattened state machine (aircraft behavioral model), applies N+ t
 The tool supports two methods to record cockpit display, one is to use an external camera to record the cockpit display during hardware-in-the-loop simulation, and the second way is to record the screenshots of the computer screen on which the (software-in-the-loop) simulation is running. Moreover, the tool allows to record images after a specified time interval and according to aircraft flight states.
 
 # Research Paper for Citation
-
+Reference:
+```
+Iqbal, Muhammad Zohaib, Hassan Sartaj, Muhammad Uzair Khan, Fitash Ul Haq, and Ifrah Qaisar. "A Model-
+Based Testing Approach for Cockpit Display Systems of Avionics." In 2019 ACM/IEEE 22nd International 
+Conference on Model Driven Engineering Languages and Systems (MODELS), pp. 67-77. IEEE, 2019.
+```
+Bibtex:
 ```
 @inproceedings{iqbal2019model,
   title={A Model-Based Testing Approach for Cockpit Display Systems of Avionics},
