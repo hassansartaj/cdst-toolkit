@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import cdst.camrecorder.CameraRecorder;
 import cdst.screenrecorder.ScreenshotRecorder;
+import cdst.utils.EditingCell;
 import cdst.utils.ModelReader;
 import cdst.utils.StateModel;
 import javafx.application.Application;
@@ -21,18 +22,18 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
-
-
+import javafx.util.Callback;
 /**
  * A class to start image capturer application UI
  * 
@@ -42,10 +43,19 @@ import javafx.stage.Stage;
 public class RecorderMain extends Application {
 	private int totalTime=0, captureTime=0;
 	private ArrayList<String> states = null;
+//	private TableColumn tbcDuration=null;
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
+			Callback<TableColumn, TableCell> cellFactory = new Callback<TableColumn, TableCell>() {
+	            @Override
+	            public TableCell call(TableColumn p) {
+	                return new EditingCell();
+	            }
+	        };
+			
 			final DirectoryChooser dirChooser = new DirectoryChooser();
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("CDRecorder.fxml"));
 			ObservableList<Node> children = root.getChildren();
@@ -356,7 +366,7 @@ public class RecorderMain extends Application {
 													if (cn1 instanceof TableView) {
 														if(cn1.idProperty().getValue().equals("statesTable")) {
 															TableView<StateModel> statesTable = (TableView<StateModel>) cn1;
-//															TableColumn tbcDuration=null;
+															statesTable.setEditable(true);
 															for(TableColumn tbc: statesTable.getColumns()) {
 																if(tbc.idProperty().getValue().equals("name")) {
 																	tbc.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -364,9 +374,13 @@ public class RecorderMain extends Application {
 																else if(tbc.idProperty().getValue().equals("duration")) {
 																	tbc.setCellValueFactory(new PropertyValueFactory<>("duration"));
 //																	tbc.setCellFactory(TextFieldTableCell.forTableColumn());
-//																	tbc.setOnEditCommit(
-//																			(TableColumn.CellEditEvent<StateModel, Integer> t) -> 
-//																	(t.getTableView().getItems().get(t.getTablePosition().getRow())).setDuration(t.getNewValue()));
+//																	tbc.setOnEditCommit(new EventHandler<CellEditEvent<StateModel, Integer>>() {
+//																		@Override
+//																		public void handle(CellEditEvent<StateModel, Integer> t) {
+//																			((StateModel) t.getTableView().getItems().get(t.getTablePosition().getRow()))
+//																					.setDuration(t.getNewValue());
+//																		}
+//																	});
 																}
 																else if(tbc.idProperty().getValue().equals("unit")) {
 																	tbc.setCellValueFactory(new PropertyValueFactory<>("unit"));
@@ -406,43 +420,44 @@ public class RecorderMain extends Application {
 						pathTF.setText("model/Plane.uml");
 					}
 				}
-//				else if (c instanceof TableView) {
-//					if(c.idProperty().getValue().equals("statesTable")) {
-//						TableView<StateModel> statesTable = (TableView<StateModel>) c;
-//						for(TableColumn tbc: statesTable.getColumns()) {
-//							if(tbc.idProperty().getValue().equals("name")) {
-//								tbc.setCellValueFactory(new PropertyValueFactory<>("name"));
-//							}
-//							else if(tbc.idProperty().getValue().equals("duration")) {
-//								tbc.setCellValueFactory(new PropertyValueFactory<>("duration"));
-//								tbc.setEditable(true);
-//							}
-//							else if(tbc.idProperty().getValue().equals("unit")) {
-//								tbc.setCellValueFactory(new PropertyValueFactory<>("unit"));
+				else if (c instanceof TableView) {
+					if(c.idProperty().getValue().equals("statesTable")) {
+						TableView<StateModel> statesTable = (TableView<StateModel>) c;
+						for(TableColumn tbc: statesTable.getColumns()) {
+							if(tbc.idProperty().getValue().equals("duration")) {
+								tbc.setCellValueFactory(new PropertyValueFactory<>("duration"));
+								tbc.setCellFactory(cellFactory);
+								tbc.setOnEditCommit(new EventHandler<CellEditEvent<StateModel, Integer>>() {
+									@Override
+									public void handle(CellEditEvent<StateModel, Integer> t) {
+										((StateModel) t.getTableView().getItems().get(t.getTablePosition().getRow()))
+										.setDuration(t.getNewValue());
+									}
+								});
+							}
+						}
+//						String umlFilePath=null;
+//						for(Node cn: children) {
+//							if(cn instanceof TextField) {
+//								if(cn.idProperty().getValue().equals("mpathTF")) {
+//									TextField pathTF = (TextField) cn;
+//									umlFilePath = pathTF.getText();
+//									break;
+//								}
 //							}
 //						}
-////						String umlFilePath=null;
-////						for(Node cn: children) {
-////							if(cn instanceof TextField) {
-////								if(cn.idProperty().getValue().equals("mpathTF")) {
-////									TextField pathTF = (TextField) cn;
-////									umlFilePath = pathTF.getText();
-////									break;
-////								}
-////							}
-////						}
-//						
-////						ObservableList<StateModel> statesData = FXCollections.observableArrayList(
-////								new StateModel("Standing", 12, "Seconds"),
-////								new StateModel("Taxiing", 18, "Seconds"),
-////								new StateModel("TakeOff", 30, "Seconds"),
-////								new StateModel("Climb", 100, "Seconds"),
-////								new StateModel("Cruise", 90, "Seconds"),
-////								new StateModel("Descent", 50, "Seconds"),
-////								new StateModel("StraightAndLevel", 40, "Seconds"),
-////								new StateModel("Approach", 20, "Seconds"),
-////								new StateModel("Landing", 10, "Seconds"));
-//						
+						
+//						ObservableList<StateModel> statesData = FXCollections.observableArrayList(
+//								new StateModel("Standing", 12, "Seconds"),
+//								new StateModel("Taxiing", 18, "Seconds"),
+//								new StateModel("TakeOff", 30, "Seconds"),
+//								new StateModel("Climb", 100, "Seconds"),
+//								new StateModel("Cruise", 90, "Seconds"),
+//								new StateModel("Descent", 50, "Seconds"),
+//								new StateModel("StraightAndLevel", 40, "Seconds"),
+//								new StateModel("Approach", 20, "Seconds"),
+//								new StateModel("Landing", 10, "Seconds"));
+						
 //						if (states != null) {
 //							ObservableList<StateModel> statesData = FXCollections.observableArrayList();
 //							for (String state : states) {
@@ -451,10 +466,9 @@ public class RecorderMain extends Application {
 //							}
 //							statesTable.setItems(statesData);
 //						}
-//					}
-//				}
+					}
+				}
 			}
-			
 			
 			//display scene
 			Scene scene = new Scene(root);
