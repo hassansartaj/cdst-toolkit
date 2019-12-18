@@ -5,21 +5,34 @@ The CDST toolkit automates the testing of Cockpit Display Systems (CDS). The too
 ## Architecture
 The seven modules of CDST toolkit are distributed among four projects. 
 
-**(i) CDST Core:-** 
+**(1) CDST Core:-** 
 The main purpose of the Core module is to prepare the test evaluation environment, perform test evaluation, and report results. This module contains three sub-modules 
 (i) CDS Model Generator, (ii) Comparator, and (iii) Reporting Module.
 
-**(ii) CDS Constraint Specifier:-** 
-The tool presents interactive UI to write OCL constraints used for test evaluation.
+* *CDS Model Generator* generates the CDS model using the XML file of the CDS under test, CDS profile, and the mapping file. 
+* *Comparator* is used to prepare the test evaluation environment and perform test evaluation. 
+* *Reporting Module* generates a test report at the end of the test evaluation. 
 
-**(iii) Test Path & Script Generator:-** 
-The tool takes flattened state machine (aircraft behavioral model), applies N+ test strategy, and generates transition tree. This module contains sub-module '*Test Execution Module*'.
 
-**(iv) Cockpit Display Recorder:-** 
+**(2) CDS Constraint Specifier:-** 
+The tool presents interactive UI to write OCL constraints used for test evaluation. The tool is developed specifically to assist the CDS test engineers.
+
+**(3) Test Path & Script Generator:-** 
+The tool takes flattened state machine (aircraft behavioral model), applies N+ test strategy, and generates transition tree. The transition tree containing flight test paths is used to generate JSBSim test scripts. 
+This module contains sub-module '*Test Execution Module*'. 
+* The function of '*Test Execution Module*' is to take all the generated test scripts as input and execute each script individually to run the simulation.
+
+**(4) Cockpit Display Recorder:-** 
 The tool supports two methods to record cockpit display, one is to use an external camera to record the cockpit display during hardware-in-the-loop simulation, and the second way is to record the screenshots of the computer screen on which the (software-in-the-loop) simulation is running. Moreover, the tool allows to record images after a specified time interval and according to aircraft flight states.
 
 # Research Paper for Citation
-
+Reference:
+```
+Iqbal, Muhammad Zohaib, Hassan Sartaj, Muhammad Uzair Khan, Fitash Ul Haq, and Ifrah Qaisar. "A Model-
+Based Testing Approach for Cockpit Display Systems of Avionics." In 2019 ACM/IEEE 22nd International 
+Conference on Model Driven Engineering Languages and Systems (MODELS), pp. 67-77. IEEE, 2019.
+```
+Bibtex:
 ```
 @inproceedings{iqbal2019model,
   title={A Model-Based Testing Approach for Cockpit Display Systems of Avionics},
