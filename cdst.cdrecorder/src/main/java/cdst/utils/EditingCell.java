@@ -15,9 +15,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+
 /**
- * @author Hassan Sartaj
- * @version 1.0
+ * A class to support javafx table cell editing.
+ *
  */
 public class EditingCell extends TableCell<StateModel, Integer> {
 	private TextField textField;

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import cdst.camrecorder.CameraRecorder;
 import cdst.screenrecorder.ScreenshotRecorder;
@@ -43,6 +44,7 @@ import javafx.util.Callback;
 public class RecorderMain extends Application {
 	private int totalTime=0, captureTime=0;
 	private ArrayList<String> states = null;
+	private HashMap<String, Integer> stateDurationMap=new HashMap<>();
 //	private TableColumn tbcDuration=null;
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
@@ -201,9 +203,18 @@ public class RecorderMain extends Application {
 													captureTime = AppController.convertToSeconds(cUnit, captureTime);
 											}
 										}
+										else if(cn instanceof TableView) {
+											if(cn.idProperty().getValue().equals("statesTable")) {
+												TableView<StateModel> statesTable = (TableView<StateModel>) cn;
+												if(!stateDurationMap.isEmpty()) stateDurationMap.clear();
+												for(StateModel sm:statesTable.getItems()) {
+													stateDurationMap.put(sm.getName(), sm.getDuration());
+												}
+											}
+										}
 									}
 									primaryStage.hide();
-									ScreenshotRecorder imgCap = new ScreenshotRecorder(imagesDir, captureTime);
+									ScreenshotRecorder imgCap = new ScreenshotRecorder(imagesDir, captureTime, stateDurationMap);
 									imgCap.start();
 									try {
 										imgCap.join(totalTime*1000);
@@ -318,9 +329,18 @@ public class RecorderMain extends Application {
 													captureTime = AppController.convertToSeconds(cUnit, captureTime);
 											}
 										}
+										else if(cn instanceof TableView) {
+											if(cn.idProperty().getValue().equals("statesTable")) {
+												TableView<StateModel> statesTable = (TableView<StateModel>) cn;
+												if(!stateDurationMap.isEmpty()) stateDurationMap.clear();
+												for(StateModel sm:statesTable.getItems()) {
+													stateDurationMap.put(sm.getName(), sm.getDuration());
+												}
+											}
+										}
 									}
 									primaryStage.hide();
-									CameraRecorder camRecorder = new CameraRecorder(imagesDir, captureTime);
+									CameraRecorder camRecorder = new CameraRecorder(imagesDir, captureTime, stateDurationMap);
 									camRecorder.start();
 									try {
 										camRecorder.join(totalTime*1000);
