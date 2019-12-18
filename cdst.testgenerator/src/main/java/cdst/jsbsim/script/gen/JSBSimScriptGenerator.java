@@ -40,7 +40,7 @@ public class JSBSimScriptGenerator {
 		File[] listOfFiles = folder.listFiles();
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
-				String dataFile=scriptTemp+"/"+listOfFiles[i].getName();
+				String dataFile=scriptTemp+File.separator+listOfFiles[i].getName();
 				BufferedReader file=null;
 				try {
 					file=new BufferedReader(new FileReader(dataFile));
@@ -75,7 +75,7 @@ public class JSBSimScriptGenerator {
 		int sCount = 1;
 		for(String tp:testPaths) {
 			String []splitTP = tp.split(",");
-			String fileName=scriptsGenPath+"/"+scriptName+sCount+".xml";
+			String fileName=scriptsGenPath+File.separator+scriptName+sCount+".xml";
 			String initalScript = scriptTempMap.get("ScriptInitialPart");
 			writeToFile(fileName, initalScript, true);
 			for(String sTp : splitTP) {
@@ -104,7 +104,7 @@ public class JSBSimScriptGenerator {
 		File[] listOfFiles = folder.listFiles();
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
-				String dataFile=stateScriptsPath+"/"+listOfFiles[i].getName();
+				String dataFile=stateScriptsPath+File.separator+listOfFiles[i].getName();
 				BufferedReader file=null;
 				try {
 					file=new BufferedReader(new FileReader(dataFile));

@@ -17,7 +17,7 @@ public class JSBSimScriptExecuter {
 		File[] listOfFiles = folder.listFiles();
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
-				String scriptFile=scriptsFolder+"/"+listOfFiles[i].getName();
+				String scriptFile=scriptsFolder+File.separator+listOfFiles[i].getName();
 				try {
 					String jsbSimCmd = "./JSBSim --script="+scriptFile+"--realtime";
 					Runtime.getRuntime().exec(args[0]);
