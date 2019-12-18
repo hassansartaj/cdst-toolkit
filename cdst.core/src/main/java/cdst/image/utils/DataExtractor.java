@@ -39,13 +39,13 @@ public class DataExtractor {
 		fpCount=0;
 		for(String state : statesList)
 		{
-			String imagesDir=imagesRootDir+"/"+state;
+			String imagesDir=imagesRootDir+File.separator+state;
 			File folder = new File(imagesDir);
 			File[] listOfFiles = folder.listFiles();
 			Logger.getLogger().println("Processing:: "+imagesDir+" ...");
 			for (int i = 0; i < listOfFiles.length; i++) {
 				if (listOfFiles[i].isFile()) {
-					String imgFile=imagesDir+"/"+listOfFiles[i].getName();
+					String imgFile=imagesDir+File.separator+listOfFiles[i].getName();
 					Logger.getLogger().println("Processing:: "+listOfFiles[i].getName()+" ...");
 					ImageProcessor imgpro = new ImageProcessor(imgFile);
 					for(CDSModelElement cdsElem:cdsElements) {
@@ -83,13 +83,13 @@ public class DataExtractor {
 	
 	public static void extactImageData(ArrayList<CDSModelElement> cdsElements, String state, String imagesRootDir, boolean doTrial) throws IOException, InterruptedException, TesseractException {
 		fpCount=0;		
-		String imagesDir=imagesRootDir+"/"+state;
+		String imagesDir=imagesRootDir+File.separator+state;
 		File folder = new File(imagesDir);
 		File[] listOfFiles = folder.listFiles();
 		Logger.getLogger().println("Processing:: "+imagesDir+" ...");
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
-				String imgFile=imagesDir+"/"+listOfFiles[i].getName();
+				String imgFile=imagesDir+File.separator+listOfFiles[i].getName();
 				Logger.getLogger().println("Processing:: "+listOfFiles[i].getName()+" ...");
 				ImageProcessor imgpro = new ImageProcessor(imgFile);
 				for(CDSModelElement cdsElem:cdsElements) {
@@ -137,13 +137,13 @@ public class DataExtractor {
 	public static void extactSimulatorData(ArrayList<CDSModelElement> cdsElements, ArrayList<String> statesList, String simDataRootDir, boolean doTrial) throws IOException, InterruptedException {
 		for(String state : statesList)
 		{
-			String simDataDir=simDataRootDir+"/"+state;
+			String simDataDir=simDataRootDir+File.separator+state;
 			File folder = new File(simDataDir);
 			File[] listOfFiles = folder.listFiles();
 			Logger.getLogger().println("Processing:: "+simDataDir+" ...");
 			for (int i = 0; i < listOfFiles.length; i++) {
 				if (listOfFiles[i].isFile()) {
-					String dataFile=simDataDir+"/"+listOfFiles[i].getName();
+					String dataFile=simDataDir+File.separator+listOfFiles[i].getName();
 					System.out.println("File: "+dataFile);
 					BufferedReader file=null;
 					try {
@@ -219,7 +219,7 @@ public class DataExtractor {
 		Logger.getLogger().println("Processing:: "+simDataRootDir+" ...");
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
-				String dataFile=simDataRootDir+"/"+listOfFiles[i].getName();
+				String dataFile=simDataRootDir+File.separator+listOfFiles[i].getName();
 				System.out.println("File: "+dataFile);
 				BufferedReader file=null;
 				try {

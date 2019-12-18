@@ -75,8 +75,7 @@ public class CDSDriver {
 		statesList.addAll(states);
 		boolean doTrial = false;
 		
-		TextOCR.tessdataDir="tessdata/tessdata_standard";
-		String[] all_tessdata = { "tessdata/tessdata_best", "tessdata/tessdata_fast", "tessdata/tessdata_standard", "tessdata/tessdata_old"};
+		String[] all_tessdata = {"tessdata/tessdata_old", "tessdata/tessdata_best", "tessdata/tessdata_fast", "tessdata/tessdata_standard"};
 		TextOCR.tessdataDir=all_tessdata[0];
 //		DataExtractor.extactImageData(cdsElements, statesList, imagesRootDir, doTrial);
 		//setup ocl evaluator (load model as well)
