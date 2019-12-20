@@ -45,8 +45,6 @@ import javafx.stage.WindowEvent;
  */
 public class OCLGenMain extends Application {
 	private ArrayList<ClassInfo> classesInfo;
-	
-
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -336,11 +334,41 @@ public class OCLGenMain extends Application {
 						Button undoBtn = (Button) c;
 						undoBtn.setText("");
 						undoBtn.setGraphic(new ImageView("icons/icons8-undo-30.png"));
+						undoBtn.setOnAction(new EventHandler<ActionEvent>() {
+							@Override
+							public void handle(ActionEvent arg0) {
+								if(codeArea.getUndoManager().isUndoAvailable()) {
+									codeArea.getUndoManager().undo();
+								}
+								else {
+									Alert alert = new Alert(AlertType.ERROR);
+									alert.setTitle("Undo Error");
+									alert.setHeaderText("Nothing to undo");
+									alert.setContentText("Please build the constraint!");
+									alert.showAndWait();
+								}
+							}
+						});
 					}
 					else if(c.idProperty().getValue().equals("redoBtn")) {
 						Button redoBtn = (Button) c;
 						redoBtn.setText("");
 						redoBtn.setGraphic(new ImageView("icons/icons8-redo-30.png"));
+						redoBtn.setOnAction(new EventHandler<ActionEvent>() {
+							@Override
+							public void handle(ActionEvent arg0) {
+								if(codeArea.getUndoManager().isRedoAvailable()) {
+									codeArea.getUndoManager().redo();
+								}
+								else {
+									Alert alert = new Alert(AlertType.ERROR);
+									alert.setTitle("Redo Error");
+									alert.setHeaderText("Nothing to redo");
+									alert.setContentText("Please continue building constraints!");
+									alert.showAndWait();
+								}
+							}
+						});
 					}
 					else if(c.idProperty().getValue().equals("buildBtn")) {
 						Button buildBtn = (Button) c;
