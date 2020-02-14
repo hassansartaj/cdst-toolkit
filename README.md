@@ -25,15 +25,21 @@ This module contains sub-module '*Test Execution Module*'.
 **(4) Cockpit Display Recorder:-** 
 The tool supports two methods to record cockpit display, one is to use an external camera to record the cockpit display during hardware-in-the-loop simulation, and the second way is to record the screenshots of the computer screen on which the (software-in-the-loop) simulation is running. Moreover, the tool allows to record images after a specified time interval and according to aircraft flight states.
 
-# Research Paper for Citation
-Reference:
+# Research Papers for Citation
+References:
 ```
+1. CDS Testing Approach Paper
 Iqbal, Muhammad Zohaib, Hassan Sartaj, Muhammad Uzair Khan, Fitash Ul Haq, and Ifrah Qaisar. "A Model-
 Based Testing Approach for Cockpit Display Systems of Avionics." In 2019 ACM/IEEE 22nd International 
 Conference on Model Driven Engineering Languages and Systems (MODELS), pp. 67-77. IEEE, 2019.
+
+2. CDST Toolkit Paper
+Sartaj, Hassan, Muhammad Zohaib Iqbal, and Muhammad Uzair Khan. "CDST: A Toolkit for Testing 
+Cockpit Display Systems of Avionics." arXiv preprint arXiv:2001.07869 (2020) (Accepted at ICST2020). 
 ```
 Bibtex:
 ```
+1. CDS Testing Approach Paper
 @inproceedings{iqbal2019model,
   title={A Model-Based Testing Approach for Cockpit Display Systems of Avionics},
   author={Iqbal, Muhammad Zohaib and Sartaj, Hassan and Khan, Muhammad Uzair and Haq, Fitash Ul and Qaisar, Ifrah},
@@ -41,6 +47,15 @@ Bibtex:
   pages={67--77},
   year={2019},
   organization={IEEE}
+}
+
+2. CDST Toolkit Paper
+@article{sartaj2020cdst,
+  title={CDST: A Toolkit for Testing Cockpit Display Systems of Avionics},
+  author={Sartaj, Hassan and Iqbal, Muhammad Zohaib and Khan, Muhammad Uzair},
+  journal={arXiv preprint arXiv:2001.07869},
+  year={2020}
+  note = {(Accepted at ICST2020)}
 }
 ```
 
