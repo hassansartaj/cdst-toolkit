@@ -112,3 +112,5 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
 
 ## Dataset
 * pfd-ds-icst: This dataset contains simulation data (images) recorded for 275 minutes (used for ICST paper)
+* pfd-sim-ds: This dataset contains simulator raw data for the PFD experimental simulation
+* gcs-cds-sim-ds: This dataset contains simulator raw data for the GCS-CDS experimental simulation
