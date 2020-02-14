@@ -1,1 +1,3 @@
-The dataset inside "pfd-ds-icst" is distributed in compressed directories according to aircraft flight states.
+1. The dataset inside "pfd-ds-icst" is distributed in compressed directories according to aircraft flight states.
+2. The dataset inside "pfd-sim-ds" is simulator raw data for the PFD simulation.
+3. The dataset inside "gcs-cds-sim-ds" is simulator raw data for the GCS-CDS simulation.
