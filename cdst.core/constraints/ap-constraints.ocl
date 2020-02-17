@@ -1,0 +1,54 @@
+--Standing [Idle+Armed]
+context ArduPlane inv: self.oclIsInState(Armed) and self.airspeedindicator.airspeed>=0 and self.airspeedindicator.airspeed<=1
+context ArduPlane inv: self.oclIsInState(Armed) and (self.altimeter.altitude>=0 and self.altimeter.altitude<=584) or (self.altimeter.altitude>=584 and self.altimeter.altitude<=684)
+context ArduPlane inv: self.oclIsInState(Armed) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=1) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-1)
+
+--Taxiing
+context ArduPlane inv: self.oclIsInState(Taxiing) and self.airspeedindicator.airspeed>=1 and self.airspeedindicator.airspeed<=10
+context ArduPlane inv: self.oclIsInState(Taxiing) and self.altimeter.altitude>=0 or self.altimeter.altitude<=584
+context ArduPlane inv: self.oclIsInState(Taxiing) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=1) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-1)
+
+--TakeOff
+context ArduPlane inv: self.oclIsInState(TakeOff) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=50
+context ArduPlane inv: self.oclIsInState(TakeOff) and self.altimeter.altitude>584 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(TakeOff) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=45) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-45)
+
+--Climb
+context ArduPlane inv: self.oclIsInState(Climb) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=100
+context ArduPlane inv: self.oclIsInState(Climb) and self.altimeter.altitude>=584 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(Climb) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=45) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-45)
+
+--Cruise
+context ArduPlane inv: self.oclIsInState(Cruise) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=100
+context ArduPlane inv: self.oclIsInState(Cruise) and self.altimeter.altitude>=584 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(Cruise) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=45) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-45)
+	
+--Descent
+context ArduPlane inv: self.oclIsInState(Descent) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=100
+context ArduPlane inv: self.oclIsInState(Descent) and self.altimeter.altitude>=584 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(Descent) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=45) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-45)
+
+--AltitudeHold
+context ArduPlane inv: self.oclIsInState(AltitudeHold) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=100
+context ArduPlane inv: self.oclIsInState(AltitudeHold) and self.altimeter.altitude>=684 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(AltitudeHold) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=1) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-1)
+
+--Circle
+context ArduPlane inv: self.oclIsInState(Circle) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=100
+context ArduPlane inv: self.oclIsInState(Circle) and self.altimeter.altitude>=584 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(Circle) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=45) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-45)
+
+--Loiter
+context ArduPlane inv: self.oclIsInState(Loiter) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<=100
+context ArduPlane inv: self.oclIsInState(Loiter) and self.altimeter.altitude>=684 and self.altimeter.altitude<=1000
+context ArduPlane inv: self.oclIsInState(Loiter) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=45) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-45)
+
+--Approach
+context ArduPlane inv: self.oclIsInState(Approach) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<100
+context ArduPlane inv: self.oclIsInState(Approach) and self.altimeter.altitude>=584 and self.altimeter.altitude<684
+context ArduPlane inv: self.oclIsInState(Approach) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=1) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-1)
+
+--Landing
+context ArduPlane inv: self.oclIsInState(Landing) and self.airspeedindicator.airspeed>=10 and self.airspeedindicator.airspeed<50
+context ArduPlane inv: self.oclIsInState(Landing) and self.altimeter.altitude>=584 and self.altimeter.altitude<634
+context ArduPlane inv: self.oclIsInState(Landing) and (self.turncoordinator.roll>=0 and self.turncoordinator.roll<=1) or (self.turncoordinator.roll<=0 and self.turncoordinator.roll>=-1)

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object_implementation impl_name="GCS-CDS" class="A661_CDS">
+	<built_object_implementation>
+	<object name="AirspeedIndicator" class="TransformGroup" guid="7347d8a1-a85e-41ca-ac55-780659846765">
+        <model>
+          <prop name="IsVisible">TRUE</prop>
+          <prop name="PenAttributes">Local</prop>
+          <prop name="IsOutlined">FALSE</prop>
+          <prop name="PenColor">stdWhite</prop>
+          <prop name="FillAttributes">Local</prop>
+          <prop name="IsFilled">TRUE</prop>
+          <prop name="FillColor">stdWhite</prop>
+          <xyprop name="Position" x="818" y="310"/>
+          <xyprop name="Size" x="72" y="23"/>
+          <prop name="DataString" capacity="11">0</prop>
+          <prop name="FontId">Verdana</prop>
+          <prop name="IsBold">FALSE</prop>
+          <prop name="IsItalic">FALSE</prop>
+          <prop name="IsAntialiased">TRUE</prop>
+          <prop name="IsStrikethrough">FALSE</prop>
+          <prop name="IsUnderlined">FALSE</prop>
+          <prop name="Alignment">LEFT</prop>
+          <prop name="PointSize">13</prop>
+          <prop name="Thickness">2</prop>
+          <prop name="TabIndex">0</prop>
+          <prop name="CaretBlinkPeriod_mSecs">500</prop>
+          <prop name="CaretColor">stdWhite</prop>
+          <prop name="Enabled">FALSE</prop>
+          <prop name="OvertypeMode">FALSE</prop>
+        </model>
+    </object>
+	<object name="TurnCoordinator" class="TransformGroup" guid="88f8eb06-7536-4ca6-ba0c-feecce041ab2">
+        <model>
+          <prop name="IsVisible">TRUE</prop>
+          <prop name="PenAttributes">Local</prop>
+          <prop name="IsOutlined">FALSE</prop>
+          <prop name="PenColor">stdWhite</prop>
+          <prop name="FillAttributes">Local</prop>
+          <prop name="IsFilled">TRUE</prop>
+          <prop name="FillColor">stdWhite</prop>
+          <xyprop name="Position" x="670" y="558"/>
+          <xyprop name="Size" x="93" y="29"/>
+          <prop name="DataString" capacity="11">0</prop>
+          <prop name="FontId">Verdana</prop>
+          <prop name="IsBold">FALSE</prop>
+          <prop name="IsItalic">FALSE</prop>
+          <prop name="IsAntialiased">TRUE</prop>
+          <prop name="IsStrikethrough">FALSE</prop>
+          <prop name="IsUnderlined">FALSE</prop>
+          <prop name="Alignment">LEFT</prop>
+          <prop name="PointSize">13</prop>
+          <prop name="Thickness">2</prop>
+          <prop name="TabIndex">0</prop>
+          <prop name="CaretBlinkPeriod_mSecs">500</prop>
+          <prop name="CaretColor">stdWhite</prop>
+          <prop name="Enabled">FALSE</prop>
+          <prop name="OvertypeMode">FALSE</prop>
+        </model>
+    </object>
+    <object name="Altimeter" class="TransformGroup" guid="129f7c35-8914-48c0-9895-568cf3fb54a6">
+        <model>
+          <prop name="IsVisible">TRUE</prop>
+          <prop name="PenAttributes">Local</prop>
+          <prop name="IsOutlined">FALSE</prop>
+          <prop name="PenColor">vxtGray95</prop>
+          <prop name="FillAttributes">Local</prop>
+          <prop name="IsFilled">TRUE</prop>
+          <prop name="FillColor">stdWhite</prop>
+          <xyprop name="Position" x="518" y="303"/>
+          <xyprop name="Size" x="94" y="30"/>
+          <prop name="DataString" capacity="11">0</prop>
+          <prop name="FontId">Verdana</prop>
+          <prop name="IsBold">FALSE</prop>
+          <prop name="IsItalic">FALSE</prop>
+          <prop name="IsAntialiased">TRUE</prop>
+          <prop name="IsStrikethrough">FALSE</prop>
+          <prop name="IsUnderlined">FALSE</prop>
+          <prop name="Alignment">LEFT</prop>
+          <prop name="PointSize">13</prop>
+          <prop name="Thickness">2</prop>
+          <prop name="TabIndex">0</prop>
+          <prop name="CaretBlinkPeriod_mSecs">500</prop>
+          <prop name="CaretColor">stdWhite</prop>
+          <prop name="Enabled">FALSE</prop>
+          <prop name="OvertypeMode">FALSE</prop>
+        </model>
+    </object>
+    </built_object_implementation>
+</object_implementation>
