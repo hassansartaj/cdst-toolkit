@@ -92,36 +92,36 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
 * Import all modules or a single module in Eclipse IDE
 * To use the 'Core' module 
    * `cdst.core` requires the dependent project `cdst.textocr`
-   * First update the 'cdst.textocr' Gradle project
-   * For `cdst.core`, first update the project and then run maven clean from Eclipse or using the command: mvn clean
+   * First update the `cdst.textocr` Gradle project
+   * For `cdst.core`, first update the project and then run maven clean from Eclipse or using the command: `mvn clean`
    * For the example test evaluation, run 'CDSDriver' as Java application
 * To use the 'CDS Constraints Specifier' module
-   * First update `cdst.oclgenerator` project and then run maven clean from Eclipse or using the command: mvn clean
+   * First update `cdst.oclgenerator` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * Run 'OCLGenMain' as Java application
 * To use the 'Test Path & Script Generator' module
-   * First update `cdst.testgenerator` project and then run maven clean from Eclipse or using the command: mvn clean
+   * First update `cdst.testgenerator` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * For the example test generation, run 'MainDriver' as Java application
    * For the example test script generation, run 'JSBSimScriptGenerator' as Java application
    * For the example test script  generation, run 'JSBSimScriptExecutor' as Java application
 * To use the 'Cockpit Display Recorder' module
-   * First update `cdst.cdrecorder` project and then run maven clean from Eclipse or using the command: mvn clean
+   * First update `cdst.cdrecorder` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * Run 'RecorderMain' as Java application
 
 ## Building CDST Toolkit
 * Building the 'Core' module 
    * `cdst.core` requires the dependent project `cdst.textocr`
-   * First update the `cdst.textocr` Gradle project and then run gradle tasks using Eclipse or commands: gradle test, gradle build, gradle clean, gradle tasks
-   * For `cdst.core`, run maven clean and install from Eclipse or using the command: mvn clean install
+   * First update the `cdst.textocr` Gradle project and then run gradle tasks using Eclipse or commands: `gradle test`, `gradle build`, `gradle clean`, `gradle tasks`
+   * For `cdst.core`, run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'CDS Constraints Specifier' module
-   * For `cdst.oclgenerator`, project run maven clean and install from Eclipse or using the command: mvn clean install
+   * For `cdst.oclgenerator`, project run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'Test Path & Script Generator' module
-   * For `cdst.testgenerator`, project run maven clean and install from Eclipse or using the command: mvn clean install
+   * For `cdst.testgenerator`, project run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'Cockpit Display Recorder' module
-   * For `cdst.cdrecorder` project, run maven clean and install from Eclipse or using the command: mvn clean install
+   * For `cdst.cdrecorder` project, run maven clean and install from Eclipse or using the command: `mvn clean install`
 
 ## Dataset
 * `pfd-ds-icst`: This dataset contains simulation data (images) recorded for 275 minutes (used for ICST paper)
-* `pfd-ds`: This dataset contains simulation data (images) for the PFD case study
+* `pfd-ds`: This dataset contains simulation data (images) for the PFD case study (used for MODELS paper)
 * `pfd-sim-ds`: This dataset contains simulator raw data for the PFD experimental simulation
 * `gcs-cds-ds`: This dataset contains simulation data (images) for the GCS-CDS case study
 * `gcs-cds-sim-ds`: This dataset contains simulator raw data for the GCS-CDS experimental simulation
