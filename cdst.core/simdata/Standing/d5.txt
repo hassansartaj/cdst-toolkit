@@ -1,2 +1,0 @@
-DateTime	Altimeter:altitude	AirspeedTape:airspeed	HI:heading	RC:roll
-2019-10-10_11-58-52	1500	170	11	25

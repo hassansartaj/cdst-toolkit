@@ -33,6 +33,11 @@ context Aircraft inv: self.oclIsInState(StraightAndLevel) and self.airspeedtape.
 context Aircraft inv: self.oclIsInState(StraightAndLevel) and self.altitudetape.altitude>=1655 and self.altitudetape.altitude<=10000
 context Aircraft inv: self.oclIsInState(StraightAndLevel) and (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
 
+--Approach
+context Aircraft inv: self.oclIsInState(Approach) and self.airspeedtape.airspeed>=40 and self.airspeedtape.airspeed<200
+context Aircraft inv: self.oclIsInState(Approach) and self.altitudetape.altitude>=1655 and self.altitudetape.altitude<10000
+context Aircraft inv: self.oclIsInState(Approach) and (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
+
 --Landing
 context Aircraft inv: self.oclIsInState(Landing) and self.airspeedtape.airspeed>=40 and self.airspeedtape.airspeed<200
 context Aircraft inv: self.oclIsInState(Landing) and self.altitudetape.altitude>=1655 and self.altitudetape.altitude<10000

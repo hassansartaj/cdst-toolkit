@@ -1,4 +1,0 @@
---Standing
-context Aircraft inv: self.oclIsInState(Standing) and self.airspeedtape.airspeed>=0 and self.airspeedtape.airspeed<=10
-context Aircraft inv: self.oclIsInState(Standing) and self.altitudetape.altitude>=0 and self.altitudetape.altitude<=1655
-context Aircraft inv: self.oclIsInState(Standing) and (self.attitudeindicator.roll>=0 and self.attitudeindicator.roll<=1) or (self.attitudeindicator.roll<=0 and self.attitudeindicator.roll>=-1)
