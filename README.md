@@ -1,6 +1,6 @@
 # CDST Toolkit
 The CDST toolkit automates the testing of Cockpit Display Systems (CDS). The toolkit consists of seven modules, (i) *CDS Model Generator*, (ii) *Comparator*, (iii)
-*Reporting Module*, (iv) *CDS Constraint Specifier*, (v) *Test Case(Path) & Script Generator*, (vi) *Test Execution Module*, and (vii) *Cockpit Display Recorder*. The toolkit is aimed to assist the avionics engineers in the process of testing CDS i.e., test generation, execution, and evaluation.
+*Reporting Module*, (iv) *CDS Constraint Specifier*, (v) *Test Case (Path) & Script Generator*, (vi) *Test Execution Module*, and (vii) *Cockpit Display Recorder*. The toolkit is aimed to assist the avionics engineers in the process of testing CDS i.e., test generation, execution, and evaluation.
 
 ## Architecture
 The seven modules of CDST toolkit are distributed among four projects. 
@@ -17,7 +17,7 @@ The main purpose of the Core module is to prepare the test evaluation environmen
 **(2) CDS Constraint Specifier:-** 
 The tool presents interactive UI to write OCL constraints used for test evaluation. The tool is developed specifically to assist the CDS test engineers.
 
-**(3) Test Case(Path) & Script Generator:-** 
+**(3) Test Case (Path) & Script Generator:-** 
 The tool takes a UML state machine (aircraft behavioral model), flattens it, and applies N+ test strategy, and generates transition tree. The transition tree containing flight test paths is used to generate JSBSim test scripts. 
 This module contains sub-module '*Test Execution Module*'. 
 * The function of '*Test Execution Module*' is to take all the generated test scripts as input and execute each script individually to run the simulation.
@@ -98,7 +98,7 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
 * To use the 'CDS Constraints Specifier' module
    * First update `cdst.oclgenerator` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * Run 'OCLGenMain' as Java application
-* To use the 'Test Case(Path) & Script Generator' module
+* To use the 'Test Case (Path) & Script Generator' module
    * First update `cdst.testgenerator` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * For the example test generation, run 'MainDriver' as Java application
    * For the example test script generation, run 'JSBSimScriptGenerator' as Java application
@@ -114,7 +114,7 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
    * For `cdst.core`, run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'CDS Constraints Specifier' module
    * For `cdst.oclgenerator`, project run maven clean and install from Eclipse or using the command: `mvn clean install`
-* Building the 'Test Case(Path) & Script Generator' module
+* Building the 'Test Case (Path) & Script Generator' module
    * For `cdst.testgenerator`, project run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'Cockpit Display Recorder' module
    * For `cdst.cdrecorder` project, run maven clean and install from Eclipse or using the command: `mvn clean install`
