@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.xmi.UnresolvedReferenceException;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Package;
 import org.eclipse.uml2.uml.PackageableElement;
-import org.eclipse.uml2.uml.Transition;
 
+import cdst.sm.SMFlattener;
 import cdst.sm.SMReader;
 import cdst.sm.SMState;
 import cdst.sm.SMTransition;
@@ -21,22 +21,12 @@ import cdst.utils.ModelLoader;
 public class MainDriver {
 
 	public static void main(String[] args) {
-		ModelLoader smloader = new ModelLoader();
 		SMReader smReader = new SMReader();
-//		Object objModel = smloader.loadModel("InputFiles/MarioPackage.uml");
-//		Object objModel = smloader.loadModel("InputFiles/StateAMachine.uml");
-//		Object objModel = smloader.loadModel("InputFiles/Plane.uml");
-		Object objModel = smloader.loadModel("InputFiles/ArduPlane.uml");
-//		Object objModel = smloader.loadModel("InputFiles/PlaneTurns.uml");
-		Model sourceModel;
-		EList<PackageableElement> sourcePackagedElements = null;
-		if (objModel instanceof Model) {
-			sourceModel = (Model) objModel;
-			sourcePackagedElements = sourceModel.getPackagedElements();
-		} else if (objModel instanceof Package) {
-			Package sourcePackage = (Package) objModel;
-			sourcePackagedElements = sourcePackage.getPackagedElements();
-		}
+		EList<PackageableElement> smElements = loadStateMachine("InputFiles/ArduPlane1.uml");
+		String fsmPath = SMFlattener.flattenStateMachine(smElements);
+		
+		EList<PackageableElement> sourcePackagedElements = loadStateMachine(fsmPath);
+		
 		try {
 			smReader.processTheModel(sourcePackagedElements);
 		} catch (UnresolvedReferenceException e) {
@@ -53,17 +43,7 @@ public class MainDriver {
 		TestCase testCases=new TestCase();
 		ArrayList<SMTransition> modifiedTransitions = testCases.getPathReadyTransitions(transitions);
 		
-		//System.out.println("\nTestPathsGeneration :");
-		//for turns
-//		ArrayList<String>doneStates = new ArrayList<>();
-//		for(SMTransition t:modifiedTransitions) {
-//			if(!doneStates.contains(t.getSourceState())) {
-//				testCases.generateTestPaths(modifiedTransitions, null,null,new TestPath(), t.getSourceState());
-//				doneStates.add(t.getSourceState());
-//			}
-//		}
-		testCases.generateTestPaths(modifiedTransitions, null,null,new TestPath(), "Idle");
-//		testCases.generateTestPaths(modifiedTransitions, null,null,new TestPath(), "Straight");
+		testCases.generateTestPaths(modifiedTransitions, null,null,new TestPath(), SMFlattener.fInitialState);
 		testCases.printTestPaths();
 		System.out.println("Transition Tree has been generated in \"TransitionTree.txt\"");
 		//========================================
@@ -92,4 +72,26 @@ public class MainDriver {
 			writer.close();
 		}
 	}
+
+	/**
+	 * A method to load the UML state machine elements from the specified path.
+	 * 
+	 * @param modelPath
+	 * @return state machine elements
+	 */
+	private static EList<PackageableElement> loadStateMachine(String modelPath) {
+		ModelLoader smloader = new ModelLoader();
+		Object objModel = smloader.loadModel(modelPath);
+		Model sourceModel;
+		EList<PackageableElement> sourcePackagedElements = null;
+		if (objModel instanceof Model) {
+			sourceModel = (Model) objModel;
+			sourcePackagedElements = sourceModel.getPackagedElements();
+		} else if (objModel instanceof Package) {
+			Package sourcePackage = (Package) objModel;
+			sourcePackagedElements = sourcePackage.getPackagedElements();
+		}
+		return sourcePackagedElements;
+	}
 }
+
