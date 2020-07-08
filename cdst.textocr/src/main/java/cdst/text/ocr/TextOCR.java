@@ -13,7 +13,9 @@ import org.bytedeco.javacpp.tesseract.TessBaseAPI;
  */
 public class TextOCR {
 	
-	public static String tessdataDir="tessdata/tessdata_standard";
+	public static String tessdataDir="tessdata/tessdata_old";
+	
+	
 	/**
 	 * A method that extracts text from input image using TessBaseAPI
 	 * 
@@ -29,14 +31,15 @@ public class TextOCR {
 			System.err.println("Could not initialize tesseract.");
 			System.exit(1);
 		}
-
-		PIX image = pixRead(imgFile);
 		
+//		api.ReadConfigFile(tessdataDir+"/configs/digits");
+		api.SetVariable("debug_file", "/dev/null");
+
+		PIX image = pixRead(imgFile);		
 		api.SetImage(image);
 		// Get OCR result
 		outText = api.GetUTF8Text();
-		String string = outText.getString();
-
+		String string=outText.getString();
 		// Destroy used object and release memory
 		api.End();
 		outText.deallocate();
