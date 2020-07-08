@@ -44,7 +44,6 @@ public class CDSDriverExp {
 
 		String genModelDir = "model/";
 		String modelPath = "model/CDSModel.uml";
-//		String modelPath = "model/PFDModel.uml";
 		String aircraftName = prop.getProperty("aircraftName");
 		String profilePath = prop.getProperty("profilePath");
 		String xmlPath = prop.getProperty("cdsXmlPath");
@@ -105,8 +104,7 @@ public class CDSDriverExp {
 					{
 						if(!v.getAircaftData().isEmpty()) {
 							if(constraint.contains(v.getAircaftData().get(0).getPropertyName())) {
-								//						Logger.getLogger().println("["+state+"] Evaluating:: "+constraint+" ...");
-
+								Logger.getLogger().println("["+state+"] Evaluating:: "+constraint+" ...");
 								ArrayList<ClassifierTuple> tuples = OCLEvaluator.getInstanceModel(modelPath, constraint);
 								OCLEvaluator.updateInstanceModel(tuples, v.getAircaftData());
 								String res = OCLEvaluator.evaluateConstraint(tuples, constraint);
