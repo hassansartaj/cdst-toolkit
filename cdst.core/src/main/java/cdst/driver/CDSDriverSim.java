@@ -70,7 +70,6 @@ public class CDSDriverSim {
 		ArrayList<String> statesList = new ArrayList<>();
 		statesList.addAll(states);
 		boolean doTrial = false;
-//		DataExtractor.extactSimulatorData(cdsElements, statesList, simDataRootDir, doTrial);
 		DataExtractor.extactSimulatorData(cdsElements, simDataRootDir, doTrial);
 		//setup ocl evaluator (load model as well)
 		OCLEvaluator.setupOCLEvalutor(modelPath);
