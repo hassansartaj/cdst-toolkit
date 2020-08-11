@@ -38,8 +38,9 @@ Download [PDF](https://www.researchgate.net/publication/337510742_A_Model-Based_
 ```
 2. CDST Toolkit Paper
 _____________________
-Sartaj, Hassan, Muhammad Zohaib Iqbal, and Muhammad Uzair Khan. "CDST: A Toolkit for Testing 
-Cockpit Display Systems of Avionics." arXiv preprint arXiv:2001.07869 (2020) (Accepted at ICST2020). 
+Sartaj, Hassan, Muhammad Zohaib Iqbal, and Muhammad Uzair Khan. "CDST: A Toolkit for Testing Cockpit Display
+Systems." In 2020 IEEE 13th International Conference on Software Testing, Validation and Verification (ICST),
+pp. 436-441. IEEE, 2020.
 ```
 
 Download [PDF](https://www.researchgate.net/publication/338762667_CDST_A_Toolkit_for_Testing_Cockpit_Display_Systems_of_Avionics)
@@ -59,13 +60,15 @@ _____________________________
 
 2. CDST Toolkit Paper
 _____________________
-@article{sartaj2020cdst,
-  title={CDST: A Toolkit for Testing Cockpit Display Systems of Avionics},
+@inproceedings{sartaj2020cdst,
+  title={CDST: A Toolkit for Testing Cockpit Display Systems},
   author={Sartaj, Hassan and Iqbal, Muhammad Zohaib and Khan, Muhammad Uzair},
-  journal={arXiv preprint arXiv:2001.07869},
-  year={2020}
-  note = {(Accepted at ICST2020)}
+  booktitle={2020 IEEE 13th International Conference on Software Testing, Validation and Verification (ICST)},
+  pages={436--441},
+  year={2020},
+  organization={IEEE}
 }
+
 ```
 
 # Getting CDST
