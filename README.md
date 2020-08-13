@@ -43,7 +43,7 @@ Display Systems." In 2020 IEEE 13th International Conference on Software Testing
 Verification (ICST), pp. 436-441. IEEE, 2020.
 ```
 
-Download [PDF](https://www.researchgate.net/publication/338762667_CDST_A_Toolkit_for_Testing_Cockpit_Display_Systems_of_Avionics)
+Download [PDF](https://www.researchgate.net/publication/343627970_CDST_A_Toolkit_for_Testing_Cockpit_Display_Systems)
 
 Bibtex:
 ```
