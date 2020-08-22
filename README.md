@@ -1,23 +1,23 @@
 # CDST Toolkit
-The CDST toolkit automates the testing of Cockpit Display Systems (CDS). The toolkit consists of seven modules, (i) *CDS Model Generator*, (ii) *Comparator*, (iii)
-*Reporting Module*, (iv) *CDS Constraint Specifier*, (v) *Test Case (Path) & Script Generator*, (vi) *Test Execution Module*, and (vii) *Cockpit Display Recorder*. The toolkit is aimed to assist the avionics engineers in the process of testing CDS i.e., test generation, execution, and evaluation.
+The CDST toolkit automates the testing of Cockpit Display Systems (CDS). The toolkit consists of seven modules, (i) *CDS Model Generator*, (ii) *CDS Comparator*, (iii)
+*Reporting Module*, (iv) *CDS Constraint Specifier*, (v) *Test Path & Script Generator*, (vi) *Test Execution Module*, and (vii) *Cockpit Display Recorder*. The toolkit is aimed to assist the avionics engineers in the process of testing CDS i.e., test generation, execution, and evaluation.
 
 ## Architecture
 The seven modules of CDST toolkit are distributed among four projects. 
 
 **(1) CDST Core:-** 
 The main purpose of the Core module is to prepare the test evaluation environment, perform test evaluation, and report results. This module contains three sub-modules 
-(i) CDS Model Generator, (ii) Comparator, and (iii) Reporting Module.
+(i) CDS Model Generator, (ii) CDS Comparator, and (iii) Reporting Module.
 
 * *CDS Model Generator* generates the CDS model using the XML file of the CDS under test, CDS profile, and the mapping file. 
-* *Comparator* is used to prepare the test evaluation environment and perform test evaluation. 
+* *CDS Comparator* is used to prepare the test evaluation environment and perform test evaluation. 
 * *Reporting Module* generates a test report at the end of the test evaluation. 
 
 
 **(2) CDS Constraint Specifier:-** 
 The tool presents interactive UI to write OCL constraints used for test evaluation. The tool is developed specifically to assist the CDS test engineers.
 
-**(3) Test Case (Path) & Script Generator:-** 
+**(3) Test Path & Script Generator:-** 
 The tool takes a UML state machine (aircraft behavioral model), flattens it, and applies N+ test strategy, and generates transition tree. The transition tree containing flight test paths is used to generate JSBSim test scripts. 
 This module contains sub-module '*Test Execution Module*'. 
 * The function of '*Test Execution Module*' is to take all the generated test scripts as input and execute each script individually to run the simulation.
@@ -101,7 +101,7 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
 * To use the 'CDS Constraints Specifier' module
    * First update `cdst.oclgenerator` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * Run 'OCLGenMain' as Java application
-* To use the 'Test Case (Path) & Script Generator' module
+* To use the 'Test Path & Script Generator' module
    * First update `cdst.testgenerator` project and then run maven clean from Eclipse or using the command: `mvn clean`
    * For the example test generation, run 'MainDriver' as Java application
    * For the example test script generation, run 'JSBSimScriptGenerator' as Java application
@@ -117,7 +117,7 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
    * For `cdst.core`, run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'CDS Constraints Specifier' module
    * For `cdst.oclgenerator`, project run maven clean and install from Eclipse or using the command: `mvn clean install`
-* Building the 'Test Case (Path) & Script Generator' module
+* Building the 'Test Path & Script Generator' module
    * For `cdst.testgenerator`, project run maven clean and install from Eclipse or using the command: `mvn clean install`
 * Building the 'Cockpit Display Recorder' module
    * For `cdst.cdrecorder` project, run maven clean and install from Eclipse or using the command: `mvn clean install`
@@ -126,5 +126,5 @@ git clone https://github.com/hassansartaj/cdst-toolkit.git
 * `pfd-ds-icst`: This dataset contains simulation data (images) recorded for 275 minutes (used for ICST paper)
 * `pfd-ds`: This dataset contains simulation data (images) for the PFD case study (used for MODELS paper)
 * `pfd-sim-ds`: This dataset contains simulator raw data for the PFD experimental simulation
-* `gcs-cds-ds`: This dataset contains simulation data (images) for the GCS-CDS case study
+* `gcs-cds-ds`: This dataset contains simulation data (images) for the GCS-CDS case study (used for SoSyM paper)
 * `gcs-cds-sim-ds`: This dataset contains simulator raw data for the GCS-CDS experimental simulation
