@@ -29,10 +29,35 @@ public class Register {
 	 * @param state
 	 * @param data
 	 */
-	public void addImageData(String image, String state, AircraftData data) {
+	public ImageData addImageData(String image, String state, AircraftData data) {
 		ImageData imgData = new ImageData(state, image);
-		imgData.addAircaftData(data);;
+		imgData.addAircaftData(data);
 		imageData.add(imgData);
+		return imgData;
+	}
+	
+	/**
+	 * A method to remove the duplicate image data corresponding to the state
+	 * 
+	 * @param image
+	 * @param state
+	 */
+	public void removeImageData(String image, String state) {
+//		int index=-1;
+		ArrayList<Integer> indices=new ArrayList<>(1);
+		for(int i=0;i<imageData.size();i++) {
+			ImageData iData = imageData.get(i);
+			if(iData.getImage().equals(image) && iData.getState().equals(state)) {
+//				index=i;
+				indices.add(i);
+//				break;
+			}
+		}
+		int count=0;
+		for(int index:indices) {
+			imageData.remove(index-count);
+			count++;
+		}
 	}
 	
 	/**

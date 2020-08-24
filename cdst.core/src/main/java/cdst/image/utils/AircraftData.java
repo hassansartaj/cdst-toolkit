@@ -59,4 +59,15 @@ public class AircraftData {
 	public void setCdsElementName(String cdsElementName) {
 		this.cdsElementName = cdsElementName;
 	}
+	
+	@Override
+	public boolean equals(Object arg) {
+		if(arg instanceof AircraftData) {
+			AircraftData aData = (AircraftData) arg;
+			if(this.getPropertyName().equals(aData.getPropertyName()) && this.getValue() == aData.getValue()) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

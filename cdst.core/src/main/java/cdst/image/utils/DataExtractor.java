@@ -8,14 +8,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import cdst.model.CDSModelElement;
 import cdst.model.ElementVisualProperty;
-import snt.oclsolver.util.Logger;
-
 import net.sourceforge.tess4j.TesseractException;
+import snt.oclsolver.util.Logger;
 
 /**
  * A class that process the images to extract the data
@@ -25,6 +26,9 @@ import net.sourceforge.tess4j.TesseractException;
  */
 public class DataExtractor {
 	public static int fpCount=0;
+	public static int droppedCount=0;
+	private final static double SIMILARITY_THRESHOLD = 100.0;
+	public static boolean isDuplicate=false;
 	/**
 	 * A method that process the images from root directory, extract the data, and store in register
 	 * 
@@ -37,40 +41,50 @@ public class DataExtractor {
 	 */
 	public static void extactImageData(ArrayList<CDSModelElement> cdsElements, ArrayList<String> statesList, String imagesRootDir, boolean doTrial) throws IOException, InterruptedException, TesseractException {
 		fpCount=0;
+		droppedCount=0;
 		for(String state : statesList)
 		{
 			String imagesDir=imagesRootDir+File.separator+state;
 			File folder = new File(imagesDir);
 			File[] listOfFiles = folder.listFiles();
+
 			Logger.getLogger().println("Processing:: "+imagesDir+" ...");
 			for (int i = 0; i < listOfFiles.length; i++) {
 				if (listOfFiles[i].isFile()) {
 					String imgFile=imagesDir+File.separator+listOfFiles[i].getName();
-					Logger.getLogger().println("Processing:: "+listOfFiles[i].getName()+" ...");
-					ImageProcessor imgpro = new ImageProcessor(imgFile);
-					for(CDSModelElement cdsElem:cdsElements) {
-						String cdsElementName = cdsElem.getCdsElementName();
-						String propertyName = cdsElem.getAircraftProperty();
-						int x = 0, y = 0, w = 0, h = 0;
-						for(ElementVisualProperty vp : cdsElem.getCdsVisualProperties()) {
-							if(vp.getName().equals("PosX"))
-								x = vp.getValue();
-							else if(vp.getName().equals("PosY"))
-								y = vp.getValue();
-							else if(vp.getName().equals("SizeX"))
-								w = vp.getValue();
-							else if(vp.getName().equals("SizeY"))
-								h = vp.getValue();
-						}
-						if(!(x==0 || y==0 || w==0 || h==0)) {
-							int value = imgpro.getImageData(x, y, w, h);
-							if(imgpro.isPredictedOk()) {
-								AircraftData aData = new AircraftData(cdsElementName, propertyName, value);
-								Register.getRegister().addImageData(imgFile, state, aData);
+					double result = 0.0;
+					if(i>0) {
+						String imgFilePre=imagesDir+File.separator+listOfFiles[i-1].getName();
+						result = ImageComparator.compare_image(imgFile, imgFilePre, ImageComparator.Method.HIST_CORREL);
+					}
+					if (result<SIMILARITY_THRESHOLD) {
+						Logger.getLogger().println("Processing:: "+listOfFiles[i].getName()+" ...");
+						ImageProcessor imgpro = new ImageProcessor(imgFile);
+						for(CDSModelElement cdsElem:cdsElements) {
+							String cdsElementName = cdsElem.getCdsElementName();
+							String propertyName = cdsElem.getAircraftProperty();
+							int x = 0, y = 0, w = 0, h = 0;
+							for(ElementVisualProperty vp : cdsElem.getCdsVisualProperties()) {
+								if(vp.getName().equals("PosX"))
+									x = vp.getValue();
+								else if(vp.getName().equals("PosY"))
+									y = vp.getValue();
+								else if(vp.getName().equals("SizeX"))
+									w = vp.getValue();
+								else if(vp.getName().equals("SizeY"))
+									h = vp.getValue();
 							}
-							else fpCount++;
+							if(!(x==0 || y==0 || w==0 || h==0)) {
+								int value = imgpro.getImageData(x, y, w, h);
+								if(imgpro.isPredictedOk()) {
+									AircraftData aData = new AircraftData(cdsElementName, propertyName, value);
+									Register.getRegister().addImageData(imgFile, state, aData);
+								}
+								else fpCount++;
+							}
 						}
 					}
+					else droppedCount++;
 
 				} else if (listOfFiles[i].isDirectory()) {
 					Logger.getLogger().println("Directory " + listOfFiles[i].getName());
@@ -80,9 +94,10 @@ public class DataExtractor {
 			if(doTrial)	break;
 		}
 	}
-	
+
 	public static void extactImageData(ArrayList<CDSModelElement> cdsElements, String state, String imagesRootDir, boolean doTrial) throws IOException, InterruptedException, TesseractException {
-		fpCount=0;		
+		fpCount=0;	
+		droppedCount=0;
 		String imagesDir=imagesRootDir+File.separator+state;
 		File folder = new File(imagesDir);
 		File[] listOfFiles = folder.listFiles();
@@ -90,31 +105,42 @@ public class DataExtractor {
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
 				String imgFile=imagesDir+File.separator+listOfFiles[i].getName();
-				Logger.getLogger().println("Processing:: "+listOfFiles[i].getName()+" ...");
-				ImageProcessor imgpro = new ImageProcessor(imgFile);
-				for(CDSModelElement cdsElem:cdsElements) {
-					String cdsElementName = cdsElem.getCdsElementName();
-					String propertyName = cdsElem.getAircraftProperty();
-					int x = 0, y = 0, w = 0, h = 0;
-					for(ElementVisualProperty vp : cdsElem.getCdsVisualProperties()) {
-						if(vp.getName().equals("PosX"))
-							x = vp.getValue();
-						else if(vp.getName().equals("PosY"))
-							y = vp.getValue();
-						else if(vp.getName().equals("SizeX"))
-							w = vp.getValue();
-						else if(vp.getName().equals("SizeY"))
-							h = vp.getValue();
-					}
-					if(!(x==0 || y==0 || w==0 || h==0)) {
-						int value = imgpro.getImageData(x, y, w, h);
-						if(imgpro.isPredictedOk()) {
-							AircraftData aData = new AircraftData(cdsElementName, propertyName, value);
-							Register.getRegister().addImageData(imgFile, state, aData);
-						}
-						else fpCount++;
-					}
+				isDuplicate=false;
+				double result = 0.0;
+				if(i>0) {
+					String imgFilePre=imagesDir+File.separator+listOfFiles[i-1].getName();
+					result = ImageComparator.compare_image(imgFile, imgFilePre, ImageComparator.Method.HIST_CORREL);
+					BigDecimal bd = new BigDecimal(result).setScale(5, RoundingMode.HALF_UP);
+					result = bd.doubleValue();
 				}
+				if (result<SIMILARITY_THRESHOLD) 
+				{
+					ImageProcessor imgpro = new ImageProcessor(imgFile);
+					for (CDSModelElement cdsElem : cdsElements) {
+						String cdsElementName = cdsElem.getCdsElementName();
+						String propertyName = cdsElem.getAircraftProperty();
+						int x = 0, y = 0, w = 0, h = 0;
+						for (ElementVisualProperty vp : cdsElem.getCdsVisualProperties()) {
+							if (vp.getName().equals("PosX"))
+								x = vp.getValue();
+							else if (vp.getName().equals("PosY"))
+								y = vp.getValue();
+							else if (vp.getName().equals("SizeX"))
+								w = vp.getValue();
+							else if (vp.getName().equals("SizeY"))
+								h = vp.getValue();
+						}
+						if (!(x == 0 || y == 0 || w == 0 || h == 0)) {
+							int value = imgpro.getImageData(x, y, w, h);
+							if (imgpro.isPredictedOk()) {
+								AircraftData aData = new AircraftData(cdsElementName, propertyName, value);
+								Register.getRegister().addImageData(imgFile, state, aData);
+							} else
+								fpCount++;
+						}
+					} 
+				}
+				else droppedCount++;
 
 			} else if (listOfFiles[i].isDirectory()) {
 				Logger.getLogger().println("Directory " + listOfFiles[i].getName());
@@ -203,7 +229,7 @@ public class DataExtractor {
 			if(doTrial)	break;
 		}
 	}
-	
+
 	/**
 	 * A method to extract data when the simulator data files are available in root directory.
 	 * 

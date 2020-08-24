@@ -74,4 +74,19 @@ public class ImageData {
 	public void addAircaftData(AircraftData aircaftData) {
 		this.aircaftData.add(aircaftData);
 	}
+	
+	public boolean isDuplicateAircraftData(ArrayList<AircraftData> prevAircaftData) {
+		int size = prevAircaftData.size();
+		int count=0;
+		for(AircraftData aData:this.aircaftData) {
+			for(AircraftData preData:prevAircaftData) {
+				if(aData.equals(preData)) {
+					count++;
+				}
+			}
+		}
+		if(count == size)
+			return true;
+		return false;
+	}
 }
