@@ -28,15 +28,25 @@ The tool supports two methods to record cockpit display, one is to use an extern
 # Research Papers for Citation
 References:
 ```
-1. CDS Testing Approach Paper
-_____________________________
+1. CDS Testing Approach Paper - Journal
+_______________________________________
+Sartaj, Hassan, Muhammad Zohaib Iqbal, and Muhammad Uzair Khan (2021). "Testing cockpit display systems of 
+aircraft using a model-based approach." Software and Systems Modeling: 1-26.
+DOI: https://doi.org/10.1007/s10270-020-00844-z
+
+```
+Download [PDF](https://www.researchgate.net/publication/348208118_Testing_cockpit_display_systems_of_aircraft_using_a_model-based_approach)
+```
+
+2. CDS Testing Approach Paper - Conference
+__________________________________________
 Iqbal, Muhammad Zohaib, Hassan Sartaj, Muhammad Uzair Khan, Fitash Ul Haq, and Ifrah Qaisar. "A Model-
 Based Testing Approach for Cockpit Display Systems of Avionics." In 2019 ACM/IEEE 22nd International 
 Conference on Model Driven Engineering Languages and Systems (MODELS), pp. 67-77. IEEE, 2019.
 ```
 Download [PDF](https://www.researchgate.net/publication/337510742_A_Model-Based_Testing_Approach_for_Cockpit_Display_Systems_of_Avionics)
 ```
-2. CDST Toolkit Paper
+3. CDST Toolkit Paper
 _____________________
 Sartaj, Hassan, Muhammad Zohaib Iqbal, and Muhammad Uzair Khan. "CDST: A Toolkit for Testing Cockpit 
 Display Systems." In 2020 IEEE 13th International Conference on Software Testing, Validation and 
@@ -47,8 +57,20 @@ Download [PDF](https://www.researchgate.net/publication/343627970_CDST_A_Toolkit
 
 Bibtex:
 ```
-1. CDS Testing Approach Paper
-_____________________________
+1. CDS Testing Approach Paper - Journal
+_______________________________________
+@article{sartajtesting,
+  title={Testing cockpit display systems of aircraft using a model-based approach},
+  author={Sartaj, Hassan and Iqbal, Muhammad Zohaib and Khan, Muhammad Uzair},
+  journal={Software and Systems Modeling},
+  pages={1--26},
+  year={2021},
+  publisher={Springer}
+}
+
+2. CDS Testing Approach Paper - Conference
+__________________________________________
+
 @inproceedings{iqbal2019model,
   title={A Model-Based Testing Approach for Cockpit Display Systems of Avionics},
   author={Iqbal, Muhammad Zohaib and Sartaj, Hassan and Khan, Muhammad Uzair and Haq, Fitash Ul and Qaisar, Ifrah},
@@ -58,7 +80,7 @@ _____________________________
   organization={IEEE}
 }
 
-2. CDST Toolkit Paper
+3. CDST Toolkit Paper
 _____________________
 @inproceedings{sartaj2020cdst,
   title={CDST: A Toolkit for Testing Cockpit Display Systems},
