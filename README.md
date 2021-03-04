@@ -1,7 +1,7 @@
 # CDST Toolkit
 The CDST toolkit automates the testing of Cockpit Display Systems (CDS). The toolkit comprises seven modules, (i) *CDS Model Generator*, (ii) *CDS Comparator*, (iii)
 *Reporting Module*, (iv) *CDS Constraint Specifier*, (v) *Test Path & Script Generator*, (vi) *Test Execution Module*, and (vii) *Cockpit Display Recorder*. The toolkit is aimed to assist the avionics engineers in the process of testing CDS i.e., test generation, execution, and evaluation.
-
+Further details can be found in the relevant research papers. 
 
 # Related Research Papers
 References:
