@@ -12,7 +12,7 @@ References:
 1. CDS Testing Approach Paper - Journal
 _______________________________________
 Sartaj, Hassan, Muhammad Zohaib Iqbal, and Muhammad Uzair Khan (2021). "Testing cockpit display systems of 
-aircraft using a model-based approach." Software and Systems Modeling: 1-26.
+aircraft using a model-based approach." Software and Systems Modeling 20(6):1977–200.
 DOI: https://doi.org/10.1007/s10270-020-00844-z
 
 ```
@@ -41,12 +41,15 @@ Bibtex:
 1. CDS Testing Approach Paper - Journal
 _______________________________________
 @article{sartajtesting,
-  title={Testing cockpit display systems of aircraft using a model-based approach},
   author={Sartaj, Hassan and Iqbal, Muhammad Zohaib and Khan, Muhammad Uzair},
+  title={Testing cockpit display systems of aircraft using a model-based approach},
   journal={Software and Systems Modeling},
-  pages={1--26},
+  volume={20},
+  number={6},
+  pages={1977--2002},
   year={2021},
-  publisher={Springer}
+  publisher={Springer Berlin Heidelberg Berlin/Heidelberg},
+  doi={10.1007/s10270-020-00844-z}
 }
 
 2. CDS Testing Approach Paper - Conference
@@ -58,7 +61,8 @@ __________________________________________
   booktitle={2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems (MODELS)},
   pages={67--77},
   year={2019},
-  organization={IEEE}
+  organization={IEEE},
+  doi={10.1109/MODELS.2019.00-14}
 }
 
 3. CDST Toolkit Paper
@@ -69,14 +73,15 @@ _____________________
   booktitle={2020 IEEE 13th International Conference on Software Testing, Validation and Verification (ICST)},
   pages={436--441},
   year={2020},
-  organization={IEEE}
+  organization={IEEE},
+  doi={10.1109/ICST46399.2020.00058}
 }
 
 ```
 
 # Getting CDST
 
-The source code of the complete toolkit can be obtained from the github repository:
+The source code of the complete toolkit can be obtained from the GitHub repository:
 ```
 git clone https://github.com/hassansartaj/cdst-toolkit.git
 ```
